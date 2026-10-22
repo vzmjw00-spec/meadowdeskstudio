@@ -10,7 +10,10 @@ body{background:var(--cream);color:var(--ink);font:15px/1.5 -apple-system,BlinkM
 .serif,h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
 a{color:inherit}
 .wrap{max-width:980px;margin:0 auto;padding:0 16px}
-header{background:var(--choc);color:var(--cream);padding:40px 0 32px}
+header{background:var(--choc);color:var(--cream);padding:28px 0 32px}
+.hero{background:var(--choc)} .hero img{display:block;width:100%;height:62vh;max-height:560px;object-fit:cover;object-position:center 22%}
+th{text-align:left;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--caramel);padding:8px 6px;border-bottom:1px solid var(--caramel)}
+a.real{color:var(--choc);font-weight:600}
 header h1{font-size:40px;line-height:1.05} header h1 em{color:var(--gold)}
 header p{opacity:.85;margin-top:12px;max-width:620px}
 .updated{display:inline-block;margin-top:16px;background:rgba(255,255,255,.1);border-radius:20px;padding:6px 14px;font-size:13px}
@@ -41,6 +44,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:13px}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head><body>
+<div class="hero"><img src="img/look-09.jpg" alt="A woman in the burgundy skirt, grey crewneck, and heeled boots from the capsule"></div>
 <header><div class="wrap">
   <span class="eyebrow" style="color:var(--gold)">MeadowDesk · Live page</span>
   <h1>Winter That<br><em>Looks Expensive</em></h1>
@@ -178,7 +182,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:13px}
     <div class="pr"><b>$178</b><span>Camel · 66% wool, 28% polyester, 6% elastane</span></div>
     <a class="shop" href="https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?color_name=camel&amp;colorProductCode=CZ816" target="_blank" rel="noopener">Shop it →</a><p class="second">Also in Brown Grey Glen Plaid, same price <a class="shop" href="https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?colorProductCode=CZ819" target="_blank" rel="noopener">Shop →</a></p>
   </div>
-  <div class="swap" id="p14-save"><div><span class="eyebrow">Cheaper swap</span><p>The navy ponte trousers (11), $44.90.</p></div></div>
+  <div class="swap" id="p14-save"><div><span class="eyebrow">Cheaper swap</span><p>The navy ponte trousers (11), $44.90.</p><a class="shop" href="#p11">See the ponte trousers ↓</a></div></div>
 </article><article class="piece" id="p15">
   <img class="ph" src="img/15-boot.jpg" alt="Italian Leather Block Heel Boot" loading="lazy">
   <div class="txt">
@@ -297,7 +301,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:13px}
 <p style="font-size:12px;color:var(--muted);margin-top:14px">Outfit photos are AI-generated to show how the pieces work together. Product photos belong to the stores</p>
 </div></section>
 <section id="dont"><div class="wrap"><span class="eyebrow">Don't buy this winter</span><h2>Sounds expensive, isn't</h2>
-<div class="tw"><table><tr><td>Uniqlo Souffle Yarn Sweater</td><td>8% wool, 58% acrylic</td><td>$49.90</td><td>Quince cashmere crewneck, 100% cashmere, $50</td></tr><tr><td>Gap &quot;CashSoft&quot; Crew</td><td>no cashmere: cotton, nylon, acrylic</td><td>$69.95</td><td>Quince cashmere turtleneck, $89.90</td></tr><tr><td>Quince &quot;Cotton Cashmere&quot; Crew (a best-seller)</td><td>3% cashmere</td><td>$29.90</td><td>Quince cashmere crewneck, $50</td></tr><tr><td>Gap Factory Relaxed Wrap Topcoat (a best-seller)</td><td>100% polyester</td><td>$74.99 on sale</td><td>Quince merino wrap coat, 100% wool, $200</td></tr><tr><td>Gap &quot;Wool-Blend&quot; Peacoat</td><td>31% wool, 65% polyester</td><td>$198</td><td>Quince merino wrap coat, $200</td></tr><tr><td>Uniqlo Double Face Relaxed Long Coat</td><td>33% wool</td><td>$149.90</td><td>Quince Cocoon Coat, 90% wool + 10% cashmere, $175</td></tr><tr><td>H&amp;M Wool-Blend Pea Coat</td><td>2% wool, 98% polyester</td><td>$69.99</td><td>H&amp;M Tie-Belt Coat, honest 100% polyester, $59.99</td></tr><tr><td>H&amp;M Wool-Blend Coat</td><td>25% wool, 70% polyester</td><td>$79.99</td><td>Quince Cocoon Coat, 90% wool + 10% cashmere, $175</td></tr><tr><td>H&amp;M &quot;Handmade&quot; Double-Breasted Coat</td><td>100% polyester</td><td>$89.99</td><td>H&amp;M Tie-Belt Coat, same fabric, $59.99</td></tr></table></div></div></section>
+<div class="tw"><table><tr><th>Sounds expensive</th><th>What's inside</th><th>Price</th><th>Real thing instead</th></tr><tr><td>Uniqlo Souffle Yarn Sweater</td><td>8% wool, 58% acrylic</td><td>$49.90</td><td><a class="real" href="#p03">Quince cashmere crewneck, 100% cashmere, $50 ↑</a></td></tr><tr><td>Gap &quot;CashSoft&quot; Crew</td><td>no cashmere: cotton, nylon, acrylic</td><td>$69.95</td><td><a class="real" href="#p04">Quince cashmere turtleneck, $89.90 ↑</a></td></tr><tr><td>Quince &quot;Cotton Cashmere&quot; Crew (a best-seller)</td><td>3% cashmere</td><td>$29.90</td><td><a class="real" href="#p03">Quince cashmere crewneck, $50 ↑</a></td></tr><tr><td>Gap Factory Relaxed Wrap Topcoat (a best-seller)</td><td>100% polyester</td><td>$74.99 on sale</td><td><a class="real" href="#p01">Quince merino wrap coat, 100% wool, $200 ↑</a></td></tr><tr><td>Gap &quot;Wool-Blend&quot; Peacoat</td><td>31% wool, 65% polyester</td><td>$198</td><td><a class="real" href="#p01">Quince merino wrap coat, $200 ↑</a></td></tr><tr><td>Uniqlo Double Face Relaxed Long Coat</td><td>33% wool</td><td>$149.90</td><td><a class="real" href="#p01-save2">Quince Cocoon Coat, 90% wool + 10% cashmere, $175 ↑</a></td></tr><tr><td>H&amp;M Wool-Blend Pea Coat</td><td>2% wool, 98% polyester</td><td>$69.99</td><td><a class="real" href="#p01-save">H&amp;M Tie-Belt Coat, honest 100% polyester, $59.99 ↑</a></td></tr><tr><td>H&amp;M Wool-Blend Coat</td><td>25% wool, 70% polyester</td><td>$79.99</td><td><a class="real" href="#p01-save2">Quince Cocoon Coat, 90% wool + 10% cashmere, $175 ↑</a></td></tr><tr><td>H&amp;M &quot;Handmade&quot; Double-Breasted Coat</td><td>100% polyester</td><td>$89.99</td><td><a class="real" href="#p01-save">H&amp;M Tie-Belt Coat, same fabric, $59.99 ↑</a></td></tr></table></div></div></section>
 <section id="updates"><div class="wrap"><span class="eyebrow">What's new</span><h2>Updates</h2>
 <p><b>October 20-22, 2026.</b> First version of the live page. We re-check prices and stock every few weeks through March and note every change here</p></div></section>
 <footer><div class="wrap">MeadowDesk · This page is for buyers of the Winter That Looks Expensive guide. Prices and stock change; the store's page is always the final word</div></footer>
