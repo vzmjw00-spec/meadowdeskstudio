@@ -1,5 +1,304 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
-<title>Winter That Looks Expensive</title>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#faf6f0;color:#2e2520;font-family:Georgia,serif;text-align:center;padding:16px}h1{font-weight:500}p{font-family:system-ui,sans-serif;color:#7a6b60}</style>
-</head><body><div><h1>Winter That Looks Expensive</h1><p>The live page is being updated. Please check back soon</p></div></body></html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Winter That Looks Expensive · Live Page</title>
+<style>
+:root{--cream:#faf6f0;--sand:#f1e8dc;--choc:#4a3426;--caramel:#b98a5e;--gold:#d9b48c;--ink:#2e2520;--muted:#7a6b60;--line:#e6dccf}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.serif,h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header{background:var(--choc);color:var(--cream);padding:40px 0 32px}
+header h1{font-size:40px;line-height:1.05} header h1 em{color:var(--gold)}
+header p{opacity:.85;margin-top:12px;max-width:620px}
+.updated{display:inline-block;margin-top:16px;background:rgba(255,255,255,.1);border-radius:20px;padding:6px 14px;font-size:13px}
+nav{position:sticky;top:0;z-index:5;background:var(--cream);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow-x:auto;padding:12px 16px;font-size:14px;font-weight:600;white-space:nowrap}
+nav a{text-decoration:none;color:var(--choc)}
+.eyebrow{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--caramel);font-weight:700}
+section{padding:36px 0 8px} section>.wrap>h2{font-size:32px;margin:4px 0 16px}
+.budgets{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.budgets div{background:var(--sand);border-radius:12px;padding:16px} .budgets b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:30px;font-weight:500}
+.piece{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);scroll-margin-top:60px}
+.piece .ph{width:140px;height:180px;object-fit:cover;border-radius:10px;background:#efe9e1}
+.piece h3{font-size:23px;line-height:1.1;margin:2px 0 6px}
+.pr b{font-size:19px;color:var(--choc);margin-right:8px} .pr span{display:block;font-size:13px;color:var(--muted)}
+.shop{display:inline-block;margin-top:10px;background:var(--choc);color:var(--cream);text-decoration:none;border-radius:24px;padding:8px 18px;font-size:14px;font-weight:600}
+.swap{margin-top:12px;background:var(--sand);border-radius:12px;padding:12px;display:grid;grid-template-columns:64px 1fr;gap:12px;scroll-margin-top:60px}
+.swap img{width:64px;height:82px;object-fit:cover;border-radius:6px;background:#fff}
+.swap:not(:has(img)){grid-template-columns:1fr}
+.swap p{font-size:14px;margin-top:2px} .swap .shop{margin-top:8px;padding:6px 14px;font-size:13px}
+.second{font-size:13px;color:var(--muted);margin-top:10px;scroll-margin-top:60px} .second .shop{margin:0 0 0 6px;padding:4px 12px;font-size:12px}
+.looks{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.look img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;border-radius:10px;background:#efe9e1}
+.look figcaption{font-size:13px;color:var(--muted);margin-top:6px} .look b{display:block;color:var(--ink);font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:13px} td{padding:10px 6px;border-bottom:1px solid var(--line);vertical-align:top} td:first-child{font-weight:600}
+.tw{overflow-x:auto}
+footer{padding:36px 0 48px;color:var(--muted);font-size:13px}
+@media(min-width:720px){header h1{font-size:56px} .piece{grid-template-columns:200px 1fr;gap:24px} .piece .ph{width:200px;height:260px} .looks{grid-template-columns:repeat(3,1fr)}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+</head><body>
+<header><div class="wrap">
+  <span class="eyebrow" style="color:var(--gold)">MeadowDesk · Live page</span>
+  <h1>Winter That<br><em>Looks Expensive</em></h1>
+  <p>The live companion to your capsule guide: today's prices, stock, and a shop link for every piece and every cheaper swap</p>
+  <span class="updated">Prices and stock checked October 20-22, 2026</span>
+</div></header>
+<nav><div class="wrap"><a href="#pieces">Pieces</a><a href="#outfits">30 outfits</a><a href="#dont">Don't buy</a><a href="#updates">What's new</a></div></nav>
+<section id="budgets"><div class="wrap">
+  <span class="eyebrow">Two budgets, same 30 outfits</span>
+  <div class="budgets" style="margin-top:12px"><div><span class="eyebrow">Invest</span><b>$2,067.10</b>$68.90 per outfit</div><div><span class="eyebrow">Save</span><b>$1,397.68</b>$46.59 per outfit</div></div>
+</div></section>
+<section id="pieces"><div class="wrap"><span class="eyebrow">The pieces</span><h2>18 pieces and 5 accessories</h2>
+<article class="piece" id="p01">
+  <img class="ph" src="img/01-coat.jpg" alt="Double-Faced Merino Wool Wrap Coat" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">01 · Quince</span>
+    <h3>Double-Faced Merino Wool Wrap Coat</h3>
+    <div class="pr"><b>$200</b><span>Caramel · 100% merino wool</span></div>
+    <a class="shop" href="https://www.quince.com/women/double-faced-merino-wool-draped-collar-wrap-coat?color=caramel" target="_blank" rel="noopener">Shop it →</a>
+    <div class="swap" id="p01-save"><img src="img/swap-coat.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>H&amp;M Tie-Belt Coat, Dark Brown, $59.99, 100% polyester, fully lined, with a removable tie belt. Want wool for less? Quince Wool Cashmere Cocoon Coat, $175, 90% wool + 10% cashmere.</p><a class="shop" href="https://www2.hm.com/en_us/productpage.1356455002.html" target="_blank" rel="noopener">Shop the swap →</a><p class="second" id="p01-save2">Want wool for less: Quince Cocoon Coat, $175 <a class="shop" href="https://www.quince.com/women/wool-cashmere-cocoon-coat?color=caramel" target="_blank" rel="noopener">Shop →</a></p></div></div>
+  </div>
+</article><article class="piece" id="p02">
+  <img class="ph" src="img/02-puffer.jpg" alt="Responsible Down Long Puffer" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">02 · Quince</span>
+    <h3>Responsible Down Long Puffer</h3>
+    <div class="pr"><b>$200</b><span>Atlas Navy · shell and lining 100% recycled polyester, fill 90% goose down / 10% feathers</span></div>
+    <a class="shop" href="https://www.quince.com/women/responsible-down-long-puffer-jacket?color=atlas-navy" target="_blank" rel="noopener">Shop it →</a>
+    <div class="swap" id="p02-save"><img src="img/swap-puffer.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Uniqlo PUFFTECH Parka, $89.90, synthetic fill.</p><a class="shop" href="https://www.uniqlo.com/us/en/products/E469871-000/00?colorDisplayCode=69" target="_blank" rel="noopener">Shop the swap →</a></div></div>
+  </div>
+</article><article class="piece" id="p03">
+  <img class="ph" src="img/03-crew.jpg" alt="Mongolian Cashmere Crewneck" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">03 · Quince</span>
+    <h3>Mongolian Cashmere Crewneck</h3>
+    <div class="pr"><b>$50</b><span>Heather Grey · 100% Grade-A Mongolian cashmere</span></div>
+    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-crewneck-sweater?color=heather-grey" target="_blank" rel="noopener">Shop it →</a>
+    <div class="swap" id="p03-save"><div><span class="eyebrow">Cheaper swap</span><p>None needed. Uniqlo&#x27;s 100% merino sweater costs the same, $49.90.</p></div></div>
+  </div>
+</article><article class="piece" id="p04">
+  <img class="ph" src="img/04-turtleneck.jpg" alt="Mongolian Cashmere Turtleneck" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">04 · Quince</span>
+    <h3>Mongolian Cashmere Turtleneck</h3>
+    <div class="pr"><b>$89.90</b><span>Brown · 100% Grade-A Mongolian cashmere</span></div>
+    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-turtleneck-sweater?color=brown" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p05">
+  <img class="ph" src="img/05-cardigan.jpg" alt="Mongolian Cashmere Cardigan" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">05 · Quince</span>
+    <h3>Mongolian Cashmere Cardigan</h3>
+    <div class="pr"><b>$79.90</b><span>Ivory · 100% Grade-A Mongolian cashmere</span></div>
+    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-cardigan-sweater?color=ivory" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p06">
+  <img class="ph" src="img/06-tee.jpg" alt="Mongolian Cashmere Tee" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">06 · Quince</span>
+    <h3>Mongolian Cashmere Tee</h3>
+    <div class="pr"><b>$44.90</b><span>Oatmeal · 100% Grade-A Mongolian cashmere</span></div>
+    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-tee-shirt?color=oatmeal" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p07">
+  <img class="ph" src="img/07-blouse.jpg" alt="Washable Stretch Silk Blouse" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">07 · Quince</span>
+    <h3>Washable Stretch Silk Blouse</h3>
+    <div class="pr"><b>$72</b><span>Ivory · 90% mulberry silk, 10% spandex</span></div>
+    <a class="shop" href="https://www.quince.com/women/washable-stretch-silk-blouse?color=ivory" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p08">
+  <img class="ph" src="img/08-ribturtle.jpg" alt="Organic Cotton Micro-Rib Turtleneck" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">08 · Quince</span>
+    <h3>Organic Cotton Micro-Rib Turtleneck</h3>
+    <div class="pr"><b>$24.90</b><span>Heather Grey · 97% organic cotton, 3% elastane</span></div>
+    <a class="shop" href="https://www.quince.com/women/organic-cotton-rib-turtleneck?color=heather-grey" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p09">
+  <img class="ph" src="img/09-blazer.jpg" alt="Italian Wool Oversized Blazer" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">09 · Quince</span>
+    <h3>Italian Wool Oversized Blazer</h3>
+    <div class="pr"><b>$100</b><span>Textured Camel · shell 55% recycled Italian wool, 35% recycled polyester, 5% recycled nylon, 5% other fibres; lined</span></div>
+    <a class="shop" href="https://www.quince.com/women/italian-wool-oversized-blazer?color=textured-camel" target="_blank" rel="noopener">Shop it →</a>
+    <div class="swap" id="p09-save"><img src="img/swap-blazer.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Uniqlo Jersey Tailored Jacket, $49.90, polyester-cotton-rayon. It holds its shape, but it is not wool.</p><a class="shop" href="https://www.uniqlo.com/us/en/products/E489108-000/00?colorDisplayCode=38" target="_blank" rel="noopener">Shop the swap →</a></div></div>
+  </div>
+</article><article class="piece" id="p10">
+  <img class="ph" src="img/10-jeans.jpg" alt="Bella Stretch Straight Jeans" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">10 · Quince</span>
+    <h3>Bella Stretch Straight Jeans</h3>
+    <div class="pr"><b>$50</b><span>Deep Rinse · 94% organic cotton, 5% elasterell-p, 1% lycra</span></div>
+    <a class="shop" href="https://www.quince.com/women/high-rise-straight-jeans--28-inseam?color=deep-rinse" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p11">
+  <img class="ph" src="img/11-ponte.jpg" alt="Ultra-Stretch Ponte Trouser" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">11 · Quince</span>
+    <h3>Ultra-Stretch Ponte Trouser</h3>
+    <div class="pr"><b>$44.90</b><span>Navy · 67% rayon, 28% nylon, 5% spandex</span></div>
+    <a class="shop" href="https://www.quince.com/women/womens-ultra-stretch-ponte-trouser---30?color=navy" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p12">
+  <img class="ph" src="img/12-skirt.jpg" alt="Australian Merino Wool Midi Skirt" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">12 · Quince</span>
+    <h3>Australian Merino Wool Midi Skirt</h3>
+    <div class="pr"><b>$80</b><span>Barolo Burgundy · 94% merino wool, 6% nylon</span></div>
+    <a class="shop" href="https://www.quince.com/women/australian-merino-wool-midi-skirt?color=barolo-burgundy" target="_blank" rel="noopener">Shop it →</a>
+    <div class="swap" id="p12-save"><div><span class="eyebrow">Cheaper swap</span><p>Not worth it. Uniqlo&#x27;s Pleated Skirt costs $59.90 and is 69% polyester, 29% rayon. Ours is 94% merino for $20 more.</p></div></div>
+  </div>
+</article><article class="piece" id="p13">
+  <img class="ph" src="img/13-dress.jpg" alt="Mongolian Cashmere Sleeveless Midi Sweater Dress" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">13 · Quince</span>
+    <h3>Mongolian Cashmere Sleeveless Midi Sweater Dress</h3>
+    <div class="pr"><b>$109.90</b><span>Teak Brown · 100% Grade-A Mongolian cashmere</span></div>
+    <a class="shop" href="https://www.quince.com/women/mongolian-cashmere-sleeveless-midi-sweater-dress?color=teak-brown" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p14">
+  <img class="ph" src="img/14-trousers.jpg" alt="Essential Trouser in Wool-Blend Flannel" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">14 · J.Crew</span>
+    <h3>Essential Trouser in Wool-Blend Flannel</h3>
+    <div class="pr"><b>$178</b><span>Camel · 66% wool, 28% polyester, 6% elastane</span></div>
+    <a class="shop" href="https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?color_name=camel&amp;colorProductCode=CZ816" target="_blank" rel="noopener">Shop it →</a><p class="second">Also in Brown Grey Glen Plaid, same price <a class="shop" href="https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?colorProductCode=CZ819" target="_blank" rel="noopener">Shop →</a></p>
+    <div class="swap" id="p14-save"><div><span class="eyebrow">Cheaper swap</span><p>The navy ponte trousers (11), $44.90.</p></div></div>
+  </div>
+</article><article class="piece" id="p15">
+  <img class="ph" src="img/15-boot.jpg" alt="Italian Leather Block Heel Boot" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">15 · Quince</span>
+    <h3>Italian Leather Block Heel Boot</h3>
+    <div class="pr"><b>$218</b><span>Chestnut · 100% Italian calf leather upper, sheep leather lining</span></div>
+    <a class="shop" href="https://www.quince.com/women/italian-leather-block-heel-boot?color=chestnut" target="_blank" rel="noopener">Shop it →</a>
+    <div class="swap" id="p15-save"><img src="img/swap-boot.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>H&amp;M Heeled Leather Boots, Dark Brown, $109, 100% sheep suede upper. A different shape: ankle height, pointed toe, slim heel. Need a steady block heel? H&amp;M Knee-High Boots, Dark Brown, $79.99, faux leather.</p><a class="shop" href="https://www2.hm.com/en_us/productpage.1346247001.html" target="_blank" rel="noopener">Shop the swap →</a><p class="second" id="p15-save2">Need a block heel: H&amp;M Knee-High Boots, $79.99 <a class="shop" href="https://www2.hm.com/en_us/productpage.1291809014.html" target="_blank" rel="noopener">Shop →</a></p></div></div>
+  </div>
+</article><article class="piece" id="p16">
+  <img class="ph" src="img/16-loafer.jpg" alt="Italian Suede Penny Loafer" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">16 · Quince</span>
+    <h3>Italian Suede Penny Loafer</h3>
+    <div class="pr"><b>$84</b><span>Cognac · 100% Italian sheep suede upper, cow leather lining</span></div>
+    <a class="shop" href="https://www.quince.com/women/women-s-leather-pointy-penny-loafer?color=cognac" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p17">
+  <img class="ph" src="img/17-shearling.jpg" alt="Australian Shearling Mid-Calf Boot" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">17 · Quince</span>
+    <h3>Australian Shearling Mid-Calf Boot</h3>
+    <div class="pr"><b>$82</b><span>Coffee Bean · suede upper, 100% Australian shearling lining and insole, non-slip rubber sole, water-repellent treatment</span></div>
+    <a class="shop" href="https://www.quince.com/unisex/women-s-australian-shearling-mid-calf-boot?color=coffee-bean" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="p18">
+  <img class="ph" src="img/18-shirt.jpg" alt="Broadcloth Shirt, Button Down" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">18 · Uniqlo</span>
+    <h3>Broadcloth Shirt, Button Down</h3>
+    <div class="pr"><b>$49.90</b><span>White · 100% cotton</span></div>
+    <a class="shop" href="https://www.uniqlo.com/us/en/products/E450260-000/00?colorDisplayCode=00" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="a1">
+  <img class="ph" src="img/A1-scarf.jpg" alt="Mongolian Cashmere Scarf" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">A1 · Quince</span>
+    <h3>Mongolian Cashmere Scarf</h3>
+    <div class="pr"><b>$54</b><span>Rich Burgundy · 100% Grade-A Mongolian cashmere</span></div>
+    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-scarf?color=rich-burgundy" target="_blank" rel="noopener">Shop it →</a>
+    <div class="swap" id="a1-save"><img src="img/swap-scarf.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Uniqlo HEATTECH Scarf, $24.90, 35% wool, 65% acrylic.</p><a class="shop" href="https://www.uniqlo.com/us/en/products/E486202-000/00?colorDisplayCode=31" target="_blank" rel="noopener">Shop the swap →</a></div></div>
+  </div>
+</article><article class="piece" id="a2">
+  <img class="ph" src="img/A2-tote.jpg" alt="Penelope Tote" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">A2 · Quince</span>
+    <h3>Penelope Tote</h3>
+    <div class="pr"><b>$158</b><span>Espresso Brown · 100% full-grain pebbled leather, suede lining</span></div>
+    <a class="shop" href="https://www.quince.com/women/italian-leather-soft-shopper-tote?color=espresso-brown" target="_blank" rel="noopener">Shop it →</a>
+    <div class="swap" id="a2-save"><img src="img/swap-tote.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Gap Factory Slouchy Vegan-Suede Tote, Chocolate, $59.99 (often on sale; $29.99 on October 22), 100% polyester faux suede. We found no real-leather tote under $80.</p><a class="shop" href="https://www.gapfactory.com/browse/product.do?pid=1179386001" target="_blank" rel="noopener">Shop the swap →</a></div></div>
+  </div>
+</article><article class="piece" id="a3">
+  <img class="ph" src="img/A3-beanie.jpg" alt="Mongolian Cashmere Ribbed Beanie" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">A3 · Quince</span>
+    <h3>Mongolian Cashmere Ribbed Beanie</h3>
+    <div class="pr"><b>$34.90</b><span>Oatmeal · 96% cashmere, 3% polyester, 1% spandex</span></div>
+    <a class="shop" href="https://www.quince.com/unisex/cashmere/beanie?color=oatmeal" target="_blank" rel="noopener">Shop it →</a>
+    <div class="swap" id="a3-save"><img src="img/swap-beanie.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Uniqlo Wool Cashmere Beanie, $29.90, 85% wool + 15% cashmere.</p><a class="shop" href="https://www.uniqlo.com/us/en/products/E488440-000/00?colorDisplayCode=05" target="_blank" rel="noopener">Shop the swap →</a></div></div>
+  </div>
+</article><article class="piece" id="a4">
+  <img class="ph" src="img/A4-belt.jpg" alt="Clean Belt" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">A4 · Uniqlo</span>
+    <h3>Clean Belt</h3>
+    <div class="pr"><b>$29.90</b><span>Dark Brown · genuine leather</span></div>
+    <a class="shop" href="https://www.uniqlo.com/us/en/products/E473471-000/00?colorDisplayCode=38" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article><article class="piece" id="a5">
+  <img class="ph" src="img/A5-beret.jpg" alt="Mongolian Cashmere Beret" loading="lazy">
+  <div class="txt">
+    <span class="eyebrow">A5 · Quince</span>
+    <h3>Mongolian Cashmere Beret</h3>
+    <div class="pr"><b>$32</b><span>Ivory · 100% cashmere</span></div>
+    <a class="shop" href="https://www.quince.com/women/100-cashmere-beret?color=ivory" target="_blank" rel="noopener">Shop it →</a>
+    
+  </div>
+</article>
+</div></section>
+<section id="outfits"><div class="wrap"><span class="eyebrow">30 outfits</span><h2>Ready-made outfits</h2>
+<div class="looks"><figure class="look" id="o1"><img src="img/look-01.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">1 · Work</span><b>Monday in camel</b><span>camel trousers, silk blouse, belt, camel blazer, loafers</span></figcaption></figure><figure class="look" id="o2"><img src="img/look-02.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">2 · Work</span><b>The collar trick</b><span>coat open over navy trousers, grey crewneck over the white shirt, loafers</span></figcaption></figure><figure class="look" id="o3"><img src="img/look-03.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">3 · Work</span><b>Friday</b><span>jeans, but with a blazer - coat open on top, ivory beret</span></figcaption></figure><figure class="look" id="o4"><img src="img/look-04.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">4 · Work</span><b>Burgundy and chocolate</b><span>skirt, brown turtleneck, heeled boots</span></figcaption></figure><figure class="look" id="o5"><img src="img/look-05.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">5 · Work</span><b>The dress for a long day</b><span>cashmere dress over the rib turtleneck, blazer, heeled boots</span></figcaption></figure><figure class="look" id="o6"><img src="img/look-06.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">6 · Work</span><b>Soft layers</b><span>navy trousers, cashmere tee, ivory cardigan, loafers</span></figcaption></figure><figure class="look" id="o7"><img src="img/look-07.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">7 · Work</span><b>Brown on camel</b><span>coat open over camel trousers, brown turtleneck, loafers, beanie, scarf</span></figcaption></figure><figure class="look" id="o8"><img src="img/look-08.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">8 · Work</span><b>Presentation day</b><span>navy trousers, silk blouse, blazer, heeled boots, tote</span></figcaption></figure><figure class="look" id="o9"><img src="img/look-09.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">9 · Work</span><b>Skirt with a collar</b><span>burgundy skirt, grey crewneck over the white shirt, heeled boots</span></figcaption></figure><figure class="look" id="o10"><img src="img/look-10.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">10 · Work</span><b>Grey and camel</b><span>camel trousers, grey crewneck, white shirt, loafers</span></figcaption></figure><figure class="look" id="o11"><img src="img/look-11.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">11 · Weekend</span><b>Snow day errands</b><span>navy puffer, jeans, grey crewneck, shearling boots, beanie, scarf</span></figcaption></figure><figure class="look" id="o12"><img src="img/look-12.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">12 · Weekend</span><b>Coffee with a friend</b><span>jeans, cashmere tee, ivory cardigan, loafers</span></figcaption></figure><figure class="look" id="o13"><img src="img/look-13.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">13 · Weekend</span><b>Brunch</b><span>coat, jeans, brown turtleneck, heeled boots, tote, beanie, scarf</span></figcaption></figure><figure class="look" id="o14"><img src="img/look-14.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">14 · Weekend</span><b>Cardigan as a sweater</b><span>jeans, cardigan buttoned over the white shirt, loafers</span></figcaption></figure><figure class="look" id="o15"><img src="img/look-15.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">15 · Weekend</span><b>Skirt and shearling</b><span>burgundy skirt, grey crewneck, shearling boots, coat, ivory beret</span></figcaption></figure><figure class="look" id="o16"><img src="img/look-16.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">16 · Weekend</span><b>The dress, relaxed</b><span>cashmere dress over the white shirt, loafers</span></figcaption></figure><figure class="look" id="o17"><img src="img/look-17.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">17 · Weekend</span><b>Easy Sunday</b><span>navy trousers, cashmere tee, cardigan, shearling boots</span></figcaption></figure><figure class="look" id="o18"><img src="img/look-18.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">18 · Weekend</span><b>Grey and denim</b><span>jeans, rib turtleneck, blazer, loafers</span></figcaption></figure><figure class="look" id="o19"><img src="img/look-19.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">19 · Evening</span><b>Dinner</b><span>burgundy skirt, silk blouse, belt, heeled boots</span></figcaption></figure><figure class="look" id="o20"><img src="img/look-20.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">20 · Evening</span><b>Dress and silk</b><span>cashmere dress over the silk blouse, heeled boots</span></figcaption></figure><figure class="look" id="o21"><img src="img/look-21.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">21 · Evening</span><b>Camel and silk</b><span>camel trousers, silk blouse, belt, heeled boots</span></figcaption></figure><figure class="look" id="o22"><img src="img/look-22.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">22 · Evening</span><b>Navy night</b><span>navy trousers, cashmere tee, blazer, heeled boots</span></figcaption></figure><figure class="look" id="o23"><img src="img/look-23.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">23 · Evening</span><b>Soft evening</b><span>burgundy skirt, cashmere tee, belt, heeled boots</span></figcaption></figure><figure class="look" id="o24"><img src="img/look-24.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">24 · Evening</span><b>Jeans for a date</b><span>jeans, silk blouse, blazer, heeled boots</span></figcaption></figure><figure class="look" id="o25"><img src="img/look-25.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">25 · Frost</span><b>Below zero</b><span>jeans, rib turtleneck under the grey crewneck, puffer, shearling boots, beanie, scarf</span></figcaption></figure><figure class="look" id="o26"><img src="img/look-26.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">26 · Frost</span><b>Cold office</b><span>camel trousers, brown turtleneck, coat, scarf, beanie, heeled boots</span></figcaption></figure><figure class="look" id="o27"><img src="img/look-27.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">27 · Frost</span><b>Navy in the snow</b><span>navy trousers, grey crewneck, puffer, shearling boots, beanie, scarf</span></figcaption></figure><figure class="look" id="o28"><img src="img/look-28.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">28 · Frost</span><b>Layered weekend</b><span>jeans, brown turtleneck, cardigan, coat, shearling boots, beanie, scarf</span></figcaption></figure><figure class="look" id="o29"><img src="img/look-29.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">29 · Frost</span><b>Skirt in the cold</b><span>burgundy skirt, rib turtleneck under the grey crewneck, coat, heeled boots, ivory beret</span></figcaption></figure><figure class="look" id="o30"><img src="img/look-30.jpg" alt="" loading="lazy">
+  <figcaption><span class="eyebrow">30 · Frost</span><b>Dress in the cold</b><span>cashmere dress over the rib turtleneck, coat, heeled boots, beanie, scarf</span></figcaption></figure></div>
+<p style="font-size:12px;color:var(--muted);margin-top:14px">Outfit photos are AI-generated to show how the pieces work together. Product photos belong to the stores</p>
+</div></section>
+<section id="dont"><div class="wrap"><span class="eyebrow">Don't buy this winter</span><h2>Sounds expensive, isn't</h2>
+<div class="tw"><table><tr><td>Uniqlo Souffle Yarn Sweater</td><td>8% wool, 58% acrylic</td><td>$49.90</td><td>Quince cashmere crewneck, 100% cashmere, $50</td></tr><tr><td>Gap &quot;CashSoft&quot; Crew</td><td>no cashmere: cotton, nylon, acrylic</td><td>$69.95</td><td>Quince cashmere turtleneck, $89.90</td></tr><tr><td>Quince &quot;Cotton Cashmere&quot; Crew (a best-seller)</td><td>3% cashmere</td><td>$29.90</td><td>Quince cashmere crewneck, $50</td></tr><tr><td>Gap Factory Relaxed Wrap Topcoat (a best-seller)</td><td>100% polyester</td><td>$74.99 on sale</td><td>Quince merino wrap coat, 100% wool, $200</td></tr><tr><td>Gap &quot;Wool-Blend&quot; Peacoat</td><td>31% wool, 65% polyester</td><td>$198</td><td>Quince merino wrap coat, $200</td></tr><tr><td>Uniqlo Double Face Relaxed Long Coat</td><td>33% wool</td><td>$149.90</td><td>Quince Cocoon Coat, 90% wool + 10% cashmere, $175</td></tr><tr><td>H&amp;M Wool-Blend Pea Coat</td><td>2% wool, 98% polyester</td><td>$69.99</td><td>H&amp;M Tie-Belt Coat, honest 100% polyester, $59.99</td></tr><tr><td>H&amp;M Wool-Blend Coat</td><td>25% wool, 70% polyester</td><td>$79.99</td><td>Quince Cocoon Coat, 90% wool + 10% cashmere, $175</td></tr><tr><td>H&amp;M &quot;Handmade&quot; Double-Breasted Coat</td><td>100% polyester</td><td>$89.99</td><td>H&amp;M Tie-Belt Coat, same fabric, $59.99</td></tr></table></div></div></section>
+<section id="updates"><div class="wrap"><span class="eyebrow">What's new</span><h2>Updates</h2>
+<p><b>October 20-22, 2026.</b> First version of the live page. We re-check prices and stock every few weeks through March and note every change here</p></div></section>
+<footer><div class="wrap">MeadowDesk · This page is for buyers of the Winter That Looks Expensive guide. Prices and stock change; the store's page is always the final word</div></footer>
+</body></html>
