@@ -60,7 +60,7 @@ body.b-save .stats .save small,body:not(.b-save) .stats .invest small{color:var(
 .tog:focus{outline:none}.tog:focus-visible,.tog button:focus-visible,.menu a:focus-visible,.steps a:focus-visible{outline:2px solid var(--caramel);outline-offset:2px}
 .next{padding:28px 0;border-top:1px solid var(--line);scroll-margin-top:64px}.next h2{font:500 28px var(--serif);color:var(--muted)}
 @media (max-height:700px){.tri{height:230px}.cover .wrap{padding-top:18px;padding-bottom:22px}.steps{gap:8px;margin-top:16px}.steps a{padding:10px 12px}}
-@media (min-width:720px){h1{font-size:60px}.steps{grid-template-columns:repeat(3,1fr)}.steps a{grid-template-columns:1fr;gap:6px;align-content:start}.steps i{display:none}}
+@media (min-width:720px){.tri{max-width:680px}h1{font-size:60px}.steps{grid-template-columns:repeat(3,1fr)}.steps a{grid-template-columns:1fr;gap:6px;align-content:start}.steps i{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.col img{transition:none}.col img.on{animation:none}.tog::before,.steps a,.stats b,.stats small{transition:none}}
 </style></head>
 <body>
@@ -121,13 +121,13 @@ document.querySelector('[data-go=budget]').addEventListener('click',function(e){
   tog.focus({preventScroll:true});tog.classList.remove('ping');void tog.offsetWidth;tog.classList.add('ping')});
 var menu=document.querySelector('.menu'),links=[].slice.call(menu.querySelectorAll('a'));
 var setOn=function(id){links.forEach(function(a){var on=a.getAttribute('href')==='#'+id;a.classList.toggle('on',on);
-  if(on)menu.scrollTo({left:a.offsetLeft-menu.offsetLeft-8,behavior:still?'auto':'smooth'})})};
+  if(on)menu.scrollTo({left:a.offsetLeft-menu.offsetLeft,behavior:still?'auto':'smooth'})})};
 var secs=[document.getElementById('overview')].concat(links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean));
 var cur0='',tick=false,spy=function(){tick=false;var id='start';secs.forEach(function(s){if(s.getBoundingClientRect().top<=140)id=s.dataset.sec||s.id});
   if(innerHeight+scrollY>=document.documentElement.scrollHeight-2)id=secs[secs.length-1].id;if(id!==cur0){cur0=id;setOn(id)}};
 addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(spy)}},{passive:true});spy();
 if(!still){var cover=document.querySelector('.cover'),nudge=function(){if(cover.getBoundingClientRect().bottom>0)return;removeEventListener('scroll',nudge);
-  if(menu.scrollLeft>0||cur0!=='start')return;menu.scrollTo({left:64,behavior:'smooth'});setTimeout(function(){var on=menu.querySelector('a.on');menu.scrollTo({left:on?Math.max(0,on.offsetLeft-menu.offsetLeft-8):0,behavior:'smooth'})},750)};addEventListener('scroll',nudge,{passive:true})}
+  if(menu.scrollLeft>0||cur0!=='start')return;menu.scrollTo({left:64,behavior:'smooth'});setTimeout(function(){var on=menu.querySelector('a.on');menu.scrollTo({left:on?Math.max(0,on.offsetLeft-menu.offsetLeft):0,behavior:'smooth'})},750)};addEventListener('scroll',nudge,{passive:true})}
 })();
 </script>
 </body></html>
