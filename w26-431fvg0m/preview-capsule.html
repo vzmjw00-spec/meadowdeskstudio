@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Winter That Looks Expensive · MeadowDesk</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/look-09.jpg" fetchpriority="high">
+<style>
+:root{--cream:#faf6f0;--sand:#f1e8dc;--choc:#4a3426;--caramel:#b98a5e;--gold:#d9b48c;--ink:#2e2520;--muted:#7a6b60;--line:#e6dccf;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Manrope",system-ui,sans-serif;--ease-out:cubic-bezier(0.23,1,0.32,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+/* обложка */
+.cover{background:var(--choc);color:var(--cream)}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;height:clamp(300px,calc(100vh - 530px),420px);height:clamp(300px,calc(100svh - 530px),420px);max-width:720px;margin:0 auto}
+.col{position:relative;overflow:hidden;background:#3d2b20}
+.col img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease;z-index:0}
+.col img.top{z-index:1}
+.col img.was{opacity:1;transition:none}
+.col img.on{opacity:1;animation:drift 9s var(--ease-out) forwards}
+@keyframes drift{from{transform:scale(1.08)}to{transform:scale(1)}}
+.cover .wrap{padding-top:24px;padding-bottom:28px}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+h1{font-family:var(--serif);font-weight:500;font-size:44px;line-height:1.02;margin-top:10px;text-wrap:balance}
+h1 em{color:var(--gold)}
+.steps{list-style:none;margin-top:22px;display:grid;gap:10px}
+.steps li{display:flex}.steps a{flex:1;display:grid;grid-template-columns:34px 1fr 16px;gap:12px;align-items:start;text-decoration:none;padding:12px 14px;border-radius:12px;background:rgba(250,246,240,.07);border:1px solid rgba(250,246,240,.12);transition:background .16s var(--ease-out),transform .16s var(--ease-out)}
+.steps a:active{transform:scale(.98);background:rgba(250,246,240,.13)}
+.steps .n{font-variant-numeric:lining-nums;font-family:var(--serif);font-size:26px;line-height:1;color:var(--gold)}
+.steps b{display:block;font-weight:600;font-size:15px}
+.steps span{font-size:14px;opacity:.78;line-height:1.4}
+.steps i{font-style:normal;opacity:.5;align-self:center}
+/* цифры и свежесть */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);padding:22px 0 18px;text-align:center}
+.stats div+div{border-left:1px solid var(--line)}
+.stats b{font-variant-numeric:lining-nums tabular-nums;display:block;font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.1}
+.stats b,.stats small{transition:color .28s var(--ease-out)}
+body.b-save .stats .invest b,body:not(.b-save) .stats .save b,body.b-save .stats .invest small,body:not(.b-save) .stats .save small{color:var(--muted)}
+body.b-save .stats .save small,body:not(.b-save) .stats .invest small{color:var(--ink);font-weight:600}
+.stats small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.checked{text-wrap:pretty;font-size:13px;color:var(--muted);padding:14px 0 22px;line-height:1.45}
+.checked a{color:var(--caramel);font-weight:600;text-decoration:none;white-space:nowrap}
+/* прилипающая полоса */
+.bar{position:sticky;top:0;z-index:20;background:rgba(250,246,240,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:10px;padding:10px 0 10px 16px;max-width:720px}
+.menu{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1;padding-right:8px;mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.menu::-webkit-scrollbar{display:none}
+.menu a{flex:none;display:flex;align-items:center;min-height:44px;font-size:13px;padding:0 14px;border-radius:999px;border:1px solid var(--line);text-decoration:none;white-space:nowrap;transition:background .16s,color .16s}
+.menu a.on{background:var(--choc);border-color:var(--choc);color:var(--cream)}
+.tog{flex:none;position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--sand);border-radius:999px;padding:3px;margin-right:16px}
+.tog button{border-radius:999px;position:relative;z-index:1;border:0;background:none;font:600 13px var(--sans);min-height:44px;padding:0 14px;color:var(--muted);cursor:pointer;transition:color .28s var(--ease-out)}
+.tog button[aria-pressed=true]{color:var(--cream)}
+.tog::before{content:"";position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:999px;background:var(--choc);transition:transform .28s var(--ease-out)}
+.tog.save::before{transform:translateX(100%)}
+.tog.ping{animation:ping .9s var(--ease-out) 2}
+@keyframes ping{50%{box-shadow:0 0 0 6px rgba(185,138,94,.35)}}
+.tog:focus{outline:none}.tog:focus-visible,.tog button:focus-visible,.menu a:focus-visible,.steps a:focus-visible{outline:2px solid var(--caramel);outline-offset:2px}
+.next{padding:28px 0;border-top:1px solid var(--line);scroll-margin-top:64px}.next h2{font:500 28px var(--serif);color:var(--muted)}
+@media (max-height:700px){.tri{height:230px}.cover .wrap{padding-top:18px;padding-bottom:22px}.steps{gap:8px;margin-top:16px}.steps a{padding:10px 12px}}
+@media (min-width:720px){.tri{max-width:680px}h1{font-size:60px}.steps{grid-template-columns:repeat(3,1fr)}.steps a{grid-template-columns:1fr;gap:6px;align-content:start}.steps i{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.col img{transition:none}.col img.on{animation:none}.tog::before,.steps a,.stats b,.stats small{transition:none}}
+
+.cap{padding:40px 0 32px;border-top:1px solid var(--line);scroll-margin-top:64px}
+.cap h2{font:500 34px/1.05 var(--serif)}
+.lead{margin-top:8px;color:var(--muted);font-size:15px;text-wrap:pretty}
+.grid{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:10px 8px;margin-top:20px}
+.tile{position:relative;display:block;width:100%;border:0;background:none;padding:0;text-align:left;cursor:pointer;font:inherit;color:inherit;-webkit-tap-highlight-color:transparent}
+.tile img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:10px;background:#efe9e1;box-shadow:0 0 0 1px var(--line);transition:box-shadow .2s var(--ease-out),transform .16s var(--ease-out)}
+.tile:active img{transform:scale(.96)}
+.tile .nm{display:block;font-size:11px;line-height:1.25;margin-top:5px;color:var(--muted)}
+.tile .ck{position:absolute;top:6px;right:6px;width:24px;height:24px;border-radius:50%;background:rgba(250,246,240,.9);box-shadow:0 0 0 1px var(--line);transition:background .2s var(--ease-out),transform .2s var(--ease-out)}
+.tile[aria-pressed=true] img{box-shadow:0 0 0 2.5px var(--caramel)}
+.tile[aria-pressed=true] .nm{color:var(--ink);font-weight:600}
+.tile[aria-pressed=true] .ck{background:var(--caramel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;box-shadow:none;transform:scale(1.08)}
+.tile:focus-visible{outline:2px solid var(--caramel);outline-offset:3px;border-radius:10px}
+.note{font-size:12px;color:var(--muted);margin-top:12px}
+.six,.nums,.next1{margin-top:22px;border-radius:14px}
+.six{background:var(--sand);padding:20px 18px}
+.six h3{font:500 26px/1.1 var(--serif)}
+.sixline{margin-top:4px;font-size:15px}.sixline b{font-variant-numeric:lining-nums}
+.sixrow{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:14px}
+.sixrow img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:6px;background:#fff}
+.then{font-size:13px;color:var(--muted);margin-top:12px;text-wrap:pretty}
+.nums{display:grid;grid-template-columns:1fr 1fr;background:var(--sand);padding:4px}
+.nums div{padding:14px 14px 12px}
+.nums div:nth-child(odd){border-right:1px solid var(--line)}
+.nums div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.nums b{display:block;font:500 30px/1 var(--serif);font-variant-numeric:lining-nums}
+.nums span{display:block;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.3}
+.next1{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;background:#fff;box-shadow:0 0 0 1px var(--line);padding:12px}
+.next1[hidden],.six[hidden],.nums[hidden]{display:none}
+.next1 img{width:96px;height:120px;object-fit:cover;border-radius:8px;background:#efe9e1}
+.eyebrow2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--caramel)}
+.nx-name{display:block;font:500 22px/1.15 var(--serif);margin-top:2px}
+.nx-meta{display:flex;gap:8px;align-items:center;margin-top:4px;font-size:14px;font-variant-numeric:lining-nums}
+.nx-gain{font-size:12px;font-weight:600;color:var(--choc);background:var(--sand);border-radius:999px;padding:2px 8px}
+.nx-act{display:flex;gap:14px;align-items:center;margin-top:10px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--choc);color:var(--cream);text-decoration:none;font-weight:600;font-size:14px}
+.lnk{font-size:14px;color:var(--ink);text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}
+.clear{margin-top:16px;background:none;border:0;font:inherit;font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;min-height:44px;cursor:pointer}
+.clear.sure{color:var(--choc);font-weight:600}
+.pop{animation:pop .35s var(--ease-out)}
+@keyframes pop{40%{transform:scale(1.12)}}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--choc);color:var(--cream);transform:translateY(110%);transition:transform .28s var(--ease-out);padding-bottom:env(safe-area-inset-bottom)}
+.dock.on{transform:none}
+.dock .wrap{display:flex;justify-content:space-between;align-items:center;min-height:52px;font-size:14px;font-variant-numeric:lining-nums}
+.dock b{font-weight:600}
+.up{position:fixed;right:16px;bottom:16px;z-index:31;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(250,246,240,.95);color:var(--choc);font-size:18px;display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s,transform .28s var(--ease-out)}
+.up.on{opacity:1;pointer-events:auto}
+body.has-dock .up{transform:translateY(-60px)}
+body.has-dock main{padding-bottom:60px}
+@media (min-width:720px){.grid{grid-template-columns:repeat(6,1fr)}}
+@media (prefers-reduced-motion:reduce){.tile img,.tile .ck,.dock,.up{transition:none}.pop{animation:none}}
+</style></head>
+<body>
+<header class="cover" id="start">
+  <div class="tri" aria-label="Outfits from the capsule">
+    <div class="col" data-looks="5,1,4,6,8,10,12,14,16,18"><img class="on" width="600" height="749" src="img/look-05.jpg" alt="Outfit 5: tweed blazer over the chocolate cashmere dress"></div>
+    <div class="col" data-looks="9,19,20,21,22,23,24,17"><img class="on" width="600" height="749" src="img/look-09.jpg" alt="Outfit 9: burgundy skirt, grey crewneck over the white shirt, heeled boots" fetchpriority="high"></div>
+    <div class="col" data-looks="11,7,25,13,27,2,28,26,3,29,15,30"><img class="on" width="600" height="749" src="img/look-11.jpg" alt="Outfit 11: navy puffer, jeans, beanie and burgundy scarf in the snow"></div>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow">MeadowDesk · Your live capsule page</span>
+    <h1>Winter That<br><em>Looks Expensive</em></h1>
+    <ol class="steps">
+      <li><a href="#capsule"><span class="n">1</span><span><b>Mark what you own.</b> Tap the pieces already in your closet</span><i aria-hidden="true">›</i></a></li>
+      <li><a href="#budget" data-go="budget"><span class="n">2</span><span><b>Pick your budget.</b> Invest or Save, and all the prices switch with it</span><i aria-hidden="true">›</i></a></li>
+      <li><a href="#outfits"><span class="n">3</span><span><b>Open tomorrow's outfit.</b> 30 outfits for work, weekends, evenings, and frost</span><i aria-hidden="true">›</i></a></li>
+    </ol>
+  </div>
+</header>
+<nav class="bar" aria-label="Sections"><div class="wrap">
+  <div class="menu">
+    <a href="#start" class="on">Start</a><a href="#capsule">Your capsule</a><a href="#pieces">Pieces</a><a href="#outfits">Outfits</a><a href="#fitting">Fitting room</a><a href="#care">Care</a><a href="#dont">Don't buy</a><a href="#updates">What's new</a>
+  </div>
+  <div class="tog" id="budget" role="group" aria-label="Budget" tabindex="-1"><button type="button" aria-pressed="true" data-b="invest">Invest</button><button type="button" aria-pressed="false" data-b="save">Save</button></div>
+</div></nav>
+<main class="wrap">
+ <div id="overview" data-sec="start">
+  <div class="stats">
+    <div><b>30</b><small>outfits</small></div>
+    <div class="invest"><b>$2,067.10</b><small>Invest</small></div>
+    <div class="save"><b>$1,397.68</b><small>Save</small></div>
+  </div>
+  <p class="checked">Prices and stock checked October 20-22, 2026. We&nbsp;recheck every two&nbsp;weeks</p>
+ </div>
+  <section id="capsule" class="cap">
+  <h2>Your capsule</h2>
+  <p class="lead">Tap everything already in your closet. The numbers below update as you go</p>
+  <ul class="grid" aria-label="Pieces in the capsule"><li><button type="button" class="tile" data-id="p01" aria-pressed="false"><img src="img/01-coat.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Merino wrap coat</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p02" aria-pressed="false"><img src="img/02-puffer.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Long down puffer</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p03" aria-pressed="false"><img src="img/03-crew.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere crewneck</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p04" aria-pressed="false"><img src="img/04-turtleneck.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere turtleneck</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p05" aria-pressed="false"><img src="img/05-cardigan.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere cardigan</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p06" aria-pressed="false"><img src="img/06-tee.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere tee</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p07" aria-pressed="false"><img src="img/07-blouse.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Silk blouse</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p08" aria-pressed="false"><img src="img/08-ribturtle.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Rib turtleneck</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p09" aria-pressed="false"><img src="img/09-blazer.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Wool blazer</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p10" aria-pressed="false"><img src="img/10-jeans.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Straight jeans</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p11" aria-pressed="false"><img src="img/11-ponte.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Navy ponte trousers</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p12" aria-pressed="false"><img src="img/12-skirt.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Merino midi skirt</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p13" aria-pressed="false"><img src="img/13-dress.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere sweater dress</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p14" aria-pressed="false"><img src="img/14-trousers.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Wool flannel trousers</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p15" aria-pressed="false"><img src="img/15-boot.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Block-heel boots</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p16" aria-pressed="false"><img src="img/16-loafer.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Suede loafers</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p17" aria-pressed="false"><img src="img/17-shearling.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Shearling boots</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p18" aria-pressed="false"><img src="img/18-shirt.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">White shirt</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a1" aria-pressed="false"><img src="img/A1-scarf.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere scarf</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a2" aria-pressed="false"><img src="img/A2-tote.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Leather tote</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a3" aria-pressed="false"><img src="img/A3-beanie.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere beanie</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a4" aria-pressed="false"><img src="img/A4-belt.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Leather belt</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a5" aria-pressed="false"><img src="img/A5-beret.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere beret</span><span class="ck" aria-hidden="true"></span></button></li></ul>
+  <p class="note">Your marks stay on this phone</p>
+  <div class="six" hidden>
+    <h3>Start with these six.</h3>
+    <p class="sixline">Four complete outfits for <b class="sixsum"></b></p>
+    <ul class="sixrow"></ul>
+    <p class="then"></p>
+  </div>
+  <div class="nums" hidden>
+    <div><b class="n-own"></b><span>of 23 pieces</span></div>
+    <div><b class="n-ready"></b><span>of 30 outfits ready</span></div>
+    <div><b class="n-near"></b><span>more need just one piece</span></div>
+    <div><b class="n-left"></b><span>left to buy</span></div>
+  </div>
+  <div class="next1" hidden>
+    <img class="nx-img" src="img/10-jeans.jpg" width="500" height="625" alt="">
+    <div class="nx-body"><span class="eyebrow2">Buy next</span><b class="nx-name"></b><span class="nx-meta"><span class="nx-price"></span><span class="nx-gain"></span></span>
+      <span class="nx-act"><a class="btn nx-shop" href="https://www.quince.com/" target="_blank" rel="noopener">Shop it</a><a class="lnk nx-more" href="#pieces">See details</a></span></div>
+  </div>
+  <button type="button" class="clear" hidden>Clear my marks</button>
+</section>
+<section id="pieces" class="next"><h2>Pieces</h2></section><section id="outfits" class="next"><h2>Outfits</h2></section><section id="fitting" class="next"><h2>Fitting room</h2></section><section id="care" class="next"><h2>Care</h2></section><section id="dont" class="next"><h2>Don't buy</h2></section><section id="updates" class="next"><h2>What's new</h2></section>
+</main>
+<div class="dock" role="status" aria-live="polite"><div class="wrap"><span>To buy <b class="d-left"></b></span><span><b class="d-ready"></b> of 30 outfits ready</span></div></div>
+<button type="button" class="up" aria-label="Back to top">&#8593;</button>
+<script>
+(function(){
+var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var cols=[].slice.call(document.querySelectorAll('.col'));
+cols.forEach(function(c,k){
+  var ids=c.dataset.looks.split(',');
+  var img=function(n,first){var i=new Image(600,749);i.alt='';i.decoding='async';i.src='img/look-'+('0'+n).slice(-2)+'.jpg';if(first){i.className='on';if(k===1)i.fetchPriority='high'}c.appendChild(i);return i};
+  var imgs=[c.querySelector('img')],cur=0,run=true;
+  if(still)return;
+  var next=function(){var j=(cur+1)%ids.length;if(!imgs[j])imgs[j]=img(ids[j]);return imgs[j]};
+  window.addEventListener('load',function(){next()});
+  setTimeout(function(){setInterval(function(){if(!run)return;var n=next();if(!n.complete)return;var old=imgs[cur];old.classList.remove('top');old.classList.add('was');cur=(cur+1)%ids.length;n.classList.remove('on','was');void n.offsetWidth;n.classList.add('on','top');setTimeout(function(){old.classList.remove('on','was')},1500);next()},4500)},1500+k*1500);
+  new IntersectionObserver(function(e){run=e[0].isIntersecting}).observe(c);
+});
+var tog=document.querySelector('.tog');
+var setB=function(v){tog.classList.toggle('save',v==='save');document.body.classList.toggle('b-save',v==='save');
+  [].forEach.call(tog.children,function(x){x.setAttribute('aria-pressed',x.dataset.b===v)});try{localStorage.setItem('mdBudget',v)}catch(e){}document.dispatchEvent(new Event('budget'))};
+try{if(localStorage.getItem('mdBudget')==='save')setB('save')}catch(e){}
+tog.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setB(b.dataset.b)});
+document.querySelector('[data-go=budget]').addEventListener('click',function(e){e.preventDefault();
+  var bar=document.querySelector('.bar');window.scrollTo({top:bar.getBoundingClientRect().top+scrollY+1,behavior:still?'auto':'smooth'});
+  tog.focus({preventScroll:true});tog.classList.remove('ping');void tog.offsetWidth;tog.classList.add('ping')});
+var menu=document.querySelector('.menu'),links=[].slice.call(menu.querySelectorAll('a'));
+var setOn=function(id){links.forEach(function(a){var on=a.getAttribute('href')==='#'+id;a.classList.toggle('on',on);
+  if(on)menu.scrollTo({left:a.offsetLeft-menu.offsetLeft,behavior:still?'auto':'smooth'})})};
+var secs=[document.getElementById('overview')].concat(links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean));
+var cur0='',tick=false,spy=function(){tick=false;var id='start';secs.forEach(function(s){if(s.getBoundingClientRect().top<=140)id=s.dataset.sec||s.id});
+  if(innerHeight+scrollY>=document.documentElement.scrollHeight-2)id=secs[secs.length-1].id;if(id!==cur0){cur0=id;setOn(id)}};
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(spy)}},{passive:true});spy();
+if(!still){var cover=document.querySelector('.cover'),nudge=function(){if(cover.getBoundingClientRect().bottom>0)return;removeEventListener('scroll',nudge);
+  if(menu.scrollLeft>0||cur0!=='start')return;menu.scrollTo({left:64,behavior:'smooth'});setTimeout(function(){var on=menu.querySelector('a.on');menu.scrollTo({left:on?Math.max(0,on.offsetLeft-menu.offsetLeft):0,behavior:'smooth'})},750)};addEventListener('scroll',nudge,{passive:true})}
+})();
+</script>
+<script>
+(function(){
+var D={"p": [{"id": "p01", "name": "Merino wrap coat", "img": "01-coat.jpg", "inv": 200, "save": 59.99, "link": "https://www.quince.com/women/double-faced-merino-wool-draped-collar-wrap-coat?color=caramel", "save_link": "https://www2.hm.com/en_us/productpage.1356455002.html", "save_name": "H&M Tie-Belt Coat"}, {"id": "p02", "name": "Long down puffer", "img": "02-puffer.jpg", "inv": 200, "save": 89.9, "link": "https://www.quince.com/women/responsible-down-long-puffer-jacket?color=atlas-navy", "save_link": "https://www.uniqlo.com/us/en/products/E469871-000/00?colorDisplayCode=69", "save_name": "Uniqlo PUFFTECH Parka"}, {"id": "p03", "name": "Cashmere crewneck", "img": "03-crew.jpg", "inv": 50, "save": 50, "link": "https://www.quince.com/women/cashmere/cashmere-crewneck-sweater?color=heather-grey", "save_link": null, "save_name": null}, {"id": "p04", "name": "Cashmere turtleneck", "img": "04-turtleneck.jpg", "inv": 89.9, "save": 89.9, "link": "https://www.quince.com/women/cashmere/cashmere-turtleneck-sweater?color=brown", "save_link": null, "save_name": null}, {"id": "p05", "name": "Cashmere cardigan", "img": "05-cardigan.jpg", "inv": 79.9, "save": 79.9, "link": "https://www.quince.com/women/cashmere/cashmere-cardigan-sweater?color=ivory", "save_link": null, "save_name": null}, {"id": "p06", "name": "Cashmere tee", "img": "06-tee.jpg", "inv": 44.9, "save": 44.9, "link": "https://www.quince.com/women/cashmere/cashmere-tee-shirt?color=oatmeal", "save_link": null, "save_name": null}, {"id": "p07", "name": "Silk blouse", "img": "07-blouse.jpg", "inv": 72, "save": 72, "link": "https://www.quince.com/women/washable-stretch-silk-blouse?color=ivory", "save_link": null, "save_name": null}, {"id": "p08", "name": "Rib turtleneck", "img": "08-ribturtle.jpg", "inv": 24.9, "save": 24.9, "link": "https://www.quince.com/women/organic-cotton-rib-turtleneck?color=heather-grey", "save_link": null, "save_name": null}, {"id": "p09", "name": "Wool blazer", "img": "09-blazer.jpg", "inv": 100, "save": 49.9, "link": "https://www.quince.com/women/italian-wool-oversized-blazer?color=textured-camel", "save_link": "https://www.uniqlo.com/us/en/products/E489108-000/00?colorDisplayCode=38", "save_name": "Uniqlo Jersey Tailored Jacket"}, {"id": "p10", "name": "Straight jeans", "img": "10-jeans.jpg", "inv": 50, "save": 50, "link": "https://www.quince.com/women/high-rise-straight-jeans--28-inseam?color=deep-rinse", "save_link": null, "save_name": null}, {"id": "p11", "name": "Navy ponte trousers", "img": "11-ponte.jpg", "inv": 44.9, "save": 44.9, "link": "https://www.quince.com/women/womens-ultra-stretch-ponte-trouser---30?color=navy", "save_link": null, "save_name": null}, {"id": "p12", "name": "Merino midi skirt", "img": "12-skirt.jpg", "inv": 80, "save": 80, "link": "https://www.quince.com/women/australian-merino-wool-midi-skirt?color=barolo-burgundy", "save_link": null, "save_name": null}, {"id": "p13", "name": "Cashmere sweater dress", "img": "13-dress.jpg", "inv": 109.9, "save": 109.9, "link": "https://www.quince.com/women/mongolian-cashmere-sleeveless-midi-sweater-dress?color=teak-brown", "save_link": null, "save_name": null}, {"id": "p14", "name": "Wool flannel trousers", "img": "14-trousers.jpg", "inv": 178, "save": 44.9, "link": "https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?color_name=camel&colorProductCode=CZ816", "save_link": "https://www.quince.com/women/womens-ultra-stretch-ponte-trouser---30?color=navy", "save_name": "Navy ponte trousers"}, {"id": "p15", "name": "Block-heel boots", "img": "15-boot.jpg", "inv": 218, "save": 109, "link": "https://www.quince.com/women/italian-leather-block-heel-boot?color=chestnut", "save_link": "https://www2.hm.com/en_us/productpage.1346247001.html", "save_name": "H&M Heeled Leather Boots"}, {"id": "p16", "name": "Suede loafers", "img": "16-loafer.jpg", "inv": 84, "save": 84, "link": "https://www.quince.com/women/women-s-leather-pointy-penny-loafer?color=cognac", "save_link": null, "save_name": null}, {"id": "p17", "name": "Shearling boots", "img": "17-shearling.jpg", "inv": 82, "save": 82, "link": "https://www.quince.com/unisex/women-s-australian-shearling-mid-calf-boot?color=coffee-bean", "save_link": null, "save_name": null}, {"id": "p18", "name": "White shirt", "img": "18-shirt.jpg", "inv": 49.9, "save": 49.9, "link": "https://www.uniqlo.com/us/en/products/E450260-000/00?colorDisplayCode=00", "save_link": null, "save_name": null}, {"id": "a1", "name": "Cashmere scarf", "img": "A1-scarf.jpg", "inv": 54, "save": 24.9, "link": "https://www.quince.com/women/cashmere/cashmere-scarf?color=rich-burgundy", "save_link": "https://www.uniqlo.com/us/en/products/E486202-000/00?colorDisplayCode=31", "save_name": "Uniqlo HEATTECH Scarf"}, {"id": "a2", "name": "Leather tote", "img": "A2-tote.jpg", "inv": 158, "save": 59.99, "link": "https://www.quince.com/women/italian-leather-soft-shopper-tote?color=espresso-brown", "save_link": "https://www.gapfactory.com/browse/product.do?pid=1179386001", "save_name": "Gap Factory Vegan-Suede Tote"}, {"id": "a3", "name": "Cashmere beanie", "img": "A3-beanie.jpg", "inv": 34.9, "save": 34.9, "link": "https://www.quince.com/unisex/cashmere/beanie?color=oatmeal", "save_link": null, "save_name": null}, {"id": "a4", "name": "Leather belt", "img": "A4-belt.jpg", "inv": 29.9, "save": 29.9, "link": "https://www.uniqlo.com/us/en/products/E473471-000/00?colorDisplayCode=38", "save_link": null, "save_name": null}, {"id": "a5", "name": "Cashmere beret", "img": "A5-beret.jpg", "inv": 32, "save": 32, "link": "https://www.quince.com/women/100-cashmere-beret?color=ivory", "save_link": null, "save_name": null}], "o": [["p14", "p07", "a4", "p09", "p16"], ["p01", "p11", "p03", "p18", "p16"], ["p01", "p10", "p09", "p18", "p16", "a5"], ["p12", "p04", "p15"], ["p13", "p08", "p09", "p15"], ["p11", "p06", "p05", "p16"], ["p01", "p14", "p04", "p16", "a3", "a1"], ["p11", "p07", "p09", "p15", "a2"], ["p12", "p03", "p18", "p15"], ["p14", "p03", "p18", "p16"], ["p02", "p10", "p03", "p17", "a3", "a1"], ["p10", "p06", "p05", "p16"], ["p01", "p10", "p04", "p15", "a2", "a3", "a1"], ["p10", "p05", "p18", "p16"], ["p12", "p03", "p17", "p01", "a5"], ["p13", "p18", "p16"], ["p11", "p06", "p05", "p17"], ["p10", "p08", "p09", "p16"], ["p12", "p07", "a4", "p15"], ["p13", "p07", "p15"], ["p14", "p07", "a4", "p15"], ["p11", "p06", "p09", "p15"], ["p12", "p06", "a4", "p15"], ["p10", "p07", "p09", "p15"], ["p10", "p08", "p03", "p02", "p17", "a3", "a1"], ["p14", "p04", "p01", "a1", "a3", "p15"], ["p11", "p03", "p02", "p17", "a3", "a1"], ["p10", "p04", "p05", "p01", "p17", "a3", "a1"], ["p12", "p08", "p03", "p01", "p15", "a5"], ["p13", "p08", "p01", "p15", "a3", "a1"]], "six": ["p01", "p15", "p04", "p12", "p07", "p14"], "then": "Then: dark jeans, camel blazer, suede loafers, white shirt, grey crewneck"},still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var byId={};D.p.forEach(function(p){byId[p.id]=p});
+var own={};try{own=JSON.parse(localStorage.getItem('mdOwn')||'{}')||{}}catch(e){own={}}
+var acc=function(id){return id.charAt(0)==='a'};
+var isSave=function(){return document.body.classList.contains('b-save')};
+var price=function(p){return isSave()?p.save:p.inv};
+var money=function(x){return '$'+x.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})};
+var stat=function(o){var r=0,n=0;D.o.forEach(function(it){var miss=it.filter(function(i){return !acc(i)&&!o[i]}).length;if(!miss)r++;else if(miss===1)n++});return {r:r,n:n}};
+var $=function(s){return document.querySelector(s)};
+var tiles=[].slice.call(document.querySelectorAll('.tile'));
+var six=$('.six'),nums=$('.nums'),nx=$('.next1'),clr=$('.clear'),dock=$('.dock');
+$('.sixrow').innerHTML=D.six.map(function(id){var p=byId[id];return '<li><img src="img/'+p.img+'" width="500" height="625" alt="'+p.name+'" loading="lazy"></li>'}).join('');
+$('.then').textContent=D.then;
+function render(){
+  var cnt=Object.keys(own).length,s=stat(own);
+  tiles.forEach(function(b){b.setAttribute('aria-pressed',own[b.dataset.id]?'true':'false')});
+  var left=D.p.reduce(function(a,p){return a+(own[p.id]?0:price(p))},0);
+  $('.sixsum').textContent=money(D.six.reduce(function(a,id){return a+price(byId[id])},0));
+  six.hidden=cnt>=3;nums.hidden=cnt<3;clr.hidden=cnt===0;
+  $('.n-own').textContent=cnt;$('.n-ready').textContent=s.r;$('.n-near').textContent=s.n;$('.n-left').textContent=money(left);
+  var best=null,bk=null;
+  D.p.forEach(function(p){if(own[p.id]||acc(p.id))return;var o2=Object.assign({},own);o2[p.id]=1;var t=stat(o2);
+    var k=[t.r-s.r,t.n-s.n,-price(p)];
+    if(!bk||k[0]>bk[0]||(k[0]===bk[0]&&(k[1]>bk[1]||(k[1]===bk[1]&&k[2]>bk[2])))){bk=k;best=p}});
+  nx.hidden=cnt<3||!best;
+  if(best){var sw=isSave()&&best.save_link;
+    $('.nx-img').src='img/'+best.img;$('.nx-img').alt=best.name;
+    $('.nx-name').textContent=sw?best.save_name:best.name;$('.nx-price').textContent=money(price(best));
+    $('.nx-gain').textContent=bk[0]>0?'+'+bk[0]+(bk[0]===1?' outfit':' outfits'):'';$('.nx-gain').hidden=!(bk[0]>0);
+    $('.nx-shop').href=sw?best.save_link:best.link;$('.nx-more').href='#'+best.id}
+  $('.d-left').textContent=money(left);$('.d-ready').textContent=s.r;
+  dock.classList.toggle('on',cnt>0);document.body.classList.toggle('has-dock',cnt>0);
+}
+tiles.forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.id;if(own[id])delete own[id];else own[id]=1;
+  try{localStorage.setItem('mdOwn',JSON.stringify(own))}catch(e){}
+  render();if(!still){var c=b.querySelector('.ck');c.classList.remove('pop');void c.offsetWidth;c.classList.add('pop')}})});
+clr.addEventListener('click',function(){
+  if(!clr.classList.contains('sure')){clr.classList.add('sure');clr.textContent='Tap again to clear all marks';
+    setTimeout(function(){clr.classList.remove('sure');clr.textContent='Clear my marks'},3000);return}
+  own={};try{localStorage.removeItem('mdOwn')}catch(e){}clr.classList.remove('sure');clr.textContent='Clear my marks';render()});
+document.addEventListener('budget',render);
+var up=$('.up'),cover=$('.cover');
+up.addEventListener('click',function(){scrollTo({top:0,behavior:still?'auto':'smooth'})});
+addEventListener('scroll',function(){up.classList.toggle('on',cover.getBoundingClientRect().bottom<0)},{passive:true});
+render();
+})();
+
+</script>
+</body></html>
