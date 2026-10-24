@@ -692,7 +692,11 @@ var acc=function(id){return id.charAt(0)==='a'};
 var isSave=function(){return document.body.classList.contains('b-save')};
 var price=function(p){return isSave()?p.save:p.inv};
 var money=function(x){return '$'+x.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})};
-var has=function(o,i){var p=byId[i];if(p&&isSave()&&p.save_same)return !!o[p.save_same];return !!o[i]};
+// в Save выбранная вещь с заменой «тем же» (брюки кэмел → ponte, решение Зины 23.10) считается как её замена; сам выбор не меняется
+var map=function(i){var p=byId[i];return p&&isSave()&&p.save_same?p.save_same:i};
+var eff=function(o){var r={};Object.keys(o).forEach(function(k){if(byId[k])r[map(k)]=1});return r};
+var has=function(o,i){return !!eff(o)[map(i)]};
+var tog=function(id){if(eff(own)[id]){delete own[id];if(isSave())D.p.forEach(function(q){if(q.save_same===id)delete own[q.id]})}else own[id]=1};
 var active=function(p){return !(isSave()&&p.save_same)};
 var stat=function(o){var r=0,n=0;D.o.forEach(function(it){var miss=it.filter(function(i){return !acc(i)&&!has(o,i)}).length;if(!miss)r++;else if(miss===1)n++});return {r:r,n:n}};
 var $=function(s){return document.querySelector(s)};
@@ -703,12 +707,12 @@ var sixIds=function(){return D.six.map(function(id){var p=byId[id];return isSave
 var drawSix=function(){$('.sixrow').innerHTML=sixIds().map(function(id){var p=byId[id],sw=isSave()&&p.save_name;return '<li><img src="img/'+(sw&&p.save_img?p.save_img:p.img)+'" width="500" height="625" alt="'+(sw?p.save_name:p.name)+'" loading="lazy"></li>'}).join('')};
 
 function render(){
-  var cnt=Object.keys(own).filter(function(k){return active(byId[k])}).length,s=stat(own);
-  tiles.forEach(function(b){b.parentNode.hidden=!active(byId[b.dataset.id]);b.setAttribute('aria-pressed',own[b.dataset.id]?'true':'false');var pr=b.querySelector('.pr');pr.textContent=money(+pr.dataset[isSave()?'save':'inv']);
+  var E=eff(own),cnt=Object.keys(E).length,s=stat(own);
+  tiles.forEach(function(b){b.parentNode.hidden=!active(byId[b.dataset.id]);b.setAttribute('aria-pressed',E[b.dataset.id]?'true':'false');var pr=b.querySelector('.pr');pr.textContent=money(+pr.dataset[isSave()?'save':'inv']);
     var p=byId[b.dataset.id],sw=isSave()&&p.save_name;b.querySelector('.nm').textContent=sw?p.save_name:p.name;
     var im=b.querySelector('img'),src='img/'+(sw&&p.save_img?p.save_img:p.img);if(im.getAttribute('src')!==src)im.setAttribute('src',src)});
-  var sum=D.p.reduce(function(a,p){return a+(own[p.id]&&active(p)?price(p):0)},0);
-  drawSix();var six6=sixIds();$('.q-meta').textContent='4 outfits for '+money(six6.reduce(function(a,id){return a+price(byId[id])},0));$('.quick').hidden=six6.every(function(id){return own[id]});$('.then').textContent=isSave()?D.then_save:D.then;$('.sixsum').textContent=money(sixIds().reduce(function(a,id){return a+price(byId[id])},0));
+  var sum=D.p.reduce(function(a,p){return a+(E[p.id]&&active(p)?price(p):0)},0);
+  drawSix();var six6=sixIds();$('.q-meta').textContent='4 outfits for '+money(six6.reduce(function(a,id){return a+price(byId[id])},0));$('.quick').hidden=six6.every(function(id){return E[id]});$('.then').textContent=isSave()?D.then_save:D.then;$('.sixsum').textContent=money(sixIds().reduce(function(a,id){return a+price(byId[id])},0));
   six.hidden=cnt>0;nums.hidden=cnt===0;clr.hidden=cnt===0;
   $('.n-own').textContent=cnt;$('.l-own').textContent=cnt===1?'piece picked':'pieces picked';$('.n-sum').textContent=money(sum);
   $('.n-ready').textContent=s.r;$('.l-ready').textContent=s.r===1?'complete outfit':'complete outfits';
@@ -726,7 +730,7 @@ function render(){
       +'<span class="nr-o">'+ls.map(function(n){return '<button type="button" class="nr-look" data-n="'+n+'">→ '+pad(n)+' '+esc(D.looks[n-1].t)+'</button>'}).join('')+'</span></div>'
       +'<button type="button" class="nr-add" data-id="'+id+'" aria-label="Add '+esc(nm)+' to my picks">Add</button></li>'}).join('');
   var best=null,bk=null;
-  D.p.forEach(function(p){if(own[p.id]||acc(p.id)||!active(p))return;var o2=Object.assign({},own);o2[p.id]=1;var t=stat(o2);
+  D.p.forEach(function(p){if(E[p.id]||acc(p.id)||!active(p))return;var o2=Object.assign({},own);o2[p.id]=1;var t=stat(o2);
     var cl=D.o.filter(function(it){return it.indexOf(p.id)>=0&&it.some(function(i){return !acc(i)&&has(own,i)})}).length;
     var k=[t.r-s.r,t.n-s.n,cl,-price(p)];
     var better=!bk;for(var x=0;!better&&x<k.length&&k[x]>=bk[x];x++)if(k[x]>bk[x])better=true;
@@ -738,7 +742,7 @@ function render(){
     $('.nx-name').textContent=sw?best.save_name:best.name;$('.nx-price').textContent=money(price(best));
     $('.nx-gain').textContent=bk[0]>0?'+'+bk[0]+(bk[0]===1?' outfit':' outfits'):(function(n){return 'brings '+n+(n===1?' outfit':' outfits')+' closer'})(bk[1]>0?bk[1]:bk[2]);
     nx.dataset.id=best.id;$('.nx-more').href='#'+best.id;$('.nx-more').hidden=!document.getElementById(best.id)}
-  pks.forEach(function(b){var p=byId[b.dataset.id],on=!!own[p.id];b.hidden=!active(p);b.setAttribute('aria-pressed',on?'true':'false');b.textContent=on?'In my picks ✓':'Add to my picks'});
+  pks.forEach(function(b){var p=byId[b.dataset.id],on=!!E[p.id];b.hidden=!active(p);b.setAttribute('aria-pressed',on?'true':'false');b.textContent=on?'In my picks ✓':'Add to my picks'});
   prs.forEach(function(s){var p=byId[s.parentNode.parentNode.parentNode.id],sv=isSave();s.querySelector('b').textContent=money(+s.dataset[sv?'save':'inv']);
     s.querySelector('b').hidden=sv&&!!p.save_same;
     s.querySelector('small').textContent=!sv?'':p.save_same?'In Save, the navy ponte trousers (11) take its place':s.dataset.sname?'Save pick: '+s.dataset.sname:'';
@@ -748,8 +752,8 @@ function render(){
   dock.classList.toggle('on',cnt>0);document.body.classList.toggle('has-dock',cnt>0);
   (window.mdHooks||[]).forEach(function(f){f()});
 }
-pks.forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.id;if(own[id])delete own[id];else own[id]=1;keep();render()})});
-tiles.forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.id;if(own[id])delete own[id];else own[id]=1;
+pks.forEach(function(b){b.addEventListener('click',function(){tog(b.dataset.id);keep();render()})});
+tiles.forEach(function(b){b.addEventListener('click',function(){tog(b.dataset.id);
   keep();
   render();if(!still){var c=b.querySelector('.ck');c.classList.remove('pop');void c.offsetWidth;c.classList.add('pop')}})});
 clr.addEventListener('click',function(){
@@ -767,7 +771,7 @@ near.addEventListener('click',function(ev){var a=ev.target.closest('.nr-add'),l=
 var up=$('.up'),cover=$('.cover');
 up.addEventListener('click',function(){scrollTo({top:0,behavior:still?'auto':'smooth'})});
 addEventListener('scroll',function(){up.classList.toggle('on',cover.getBoundingClientRect().bottom<0)},{passive:true});
-window.md={D:D,byId:byId,own:function(){return own},isSave:isSave,price:price,money:money,has:has,acc:acc,
+window.md={D:D,byId:byId,own:function(){return own},eff:function(){return eff(own)},isSave:isSave,price:price,money:money,has:has,acc:acc,
   add:function(ids){ids.forEach(function(id){own[id]=1});keep();render()}};
 render();
 })();
@@ -824,7 +828,7 @@ function upd(){
   if(!sh.hidden)fill(cur);
 }
 function fill(n){
-  cur=n;var o=L[n-1],own=M.own(),ids=items(n);
+  cur=n;var o=L[n-1],own=M.eff(),ids=items(n);
   var im=sh.querySelector('.sh-ph img');im.src='img/look-'+pad(n)+'.jpg';im.alt='Outfit '+n+': '+o.x;
   sh.querySelector('.sh-g').textContent=pad(n)+' · '+o.g;sh.querySelector('h3').textContent=o.t;
   sh.querySelector('.sh-x2').textContent=o.x.charAt(0).toUpperCase()+o.x.slice(1);
