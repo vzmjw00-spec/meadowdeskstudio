@@ -95,7 +95,17 @@ body.b-save .stats .save small,body:not(.b-save) .stats .invest small{color:var(
 .nums b{display:block;font:500 30px/1 var(--serif);font-variant-numeric:lining-nums}
 .nums span{display:block;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.3}
 .next1{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;background:#fff;box-shadow:0 0 0 1px var(--line);padding:12px}
-.next1[hidden],.six[hidden],.nums[hidden]{display:none}
+.next1[hidden],.six[hidden],.nums[hidden],.near[hidden]{display:none}
+.near{margin-top:22px;border-radius:14px;background:#fff;box-shadow:0 0 0 1px var(--line);padding:14px 12px 6px}
+.nr-list{list-style:none;margin:6px 0 0;padding:0}
+.nr-list li{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:10px 0}
+.nr-list li+li{border-top:1px solid var(--line)}
+.nr-list img{width:56px;height:70px;object-fit:cover;border-radius:6px;background:#efe9e1}
+.nr-nm{display:block;font:500 18px/1.15 var(--serif)}
+.nr-meta{display:flex;gap:8px;align-items:center;margin-top:2px;font-size:13px;font-variant-numeric:lining-nums}
+.nr-o{display:flex;flex-direction:column;align-items:flex-start}
+.nr-look{border:0;background:none;padding:6px 0;font:inherit;font-size:13px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;cursor:pointer;text-align:left;min-height:32px}
+.nr-add{min-height:44px;padding:0 16px;border:0;border-radius:999px;background:var(--choc);color:var(--cream);font:600 14px var(--sans,inherit);cursor:pointer;font-family:inherit}
 .next1 img{width:96px;height:120px;object-fit:cover;border-radius:8px;background:#efe9e1}
 .eyebrow2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--caramel)}
 .nx-name{display:block;font:500 22px/1.15 var(--serif);margin-top:2px}
@@ -347,6 +357,10 @@ body.b-save .swap.in-save .sv-flag{display:inline-block}
     <div><b class="n-sum"></b><span>total</span></div>
     <div><b class="n-ready"></b><span class="l-ready"></span></div>
     <div><b class="n-near"></b><span class="l-near"></span></div>
+  </div>
+  <div class="near" hidden>
+    <span class="eyebrow2">The missing pieces</span>
+    <ul class="nr-list"></ul>
   </div>
   <div class="next1" hidden>
     <img class="nx-img" src="img/10-jeans.jpg" width="500" height="625" alt="">
@@ -684,7 +698,7 @@ var stat=function(o){var r=0,n=0;D.o.forEach(function(it){var miss=it.filter(fun
 var $=function(s){return document.querySelector(s)};
 var tiles=[].slice.call(document.querySelectorAll('.tile'));
 var pks=[].slice.call(document.querySelectorAll('.pk')),prs=[].slice.call(document.querySelectorAll('.pc-pr'));
-var six=$('.six'),nums=$('.nums'),nx=$('.next1'),clr=$('.clear'),dock=$('.dock');
+var six=$('.six'),nums=$('.nums'),nx=$('.next1'),near=$('.near'),clr=$('.clear'),dock=$('.dock');
 var sixIds=function(){return D.six.map(function(id){var p=byId[id];return isSave()&&p.save_same?p.save_same:id})};
 var drawSix=function(){$('.sixrow').innerHTML=sixIds().map(function(id){var p=byId[id],sw=isSave()&&p.save_name;return '<li><img src="img/'+(sw&&p.save_img?p.save_img:p.img)+'" width="500" height="625" alt="'+(sw?p.save_name:p.name)+'" loading="lazy"></li>'}).join('')};
 
@@ -698,7 +712,19 @@ function render(){
   six.hidden=cnt>0;nums.hidden=cnt===0;clr.hidden=cnt===0;
   $('.n-own').textContent=cnt;$('.l-own').textContent=cnt===1?'piece picked':'pieces picked';$('.n-sum').textContent=money(sum);
   $('.n-ready').textContent=s.r;$('.l-ready').textContent=s.r===1?'complete outfit':'complete outfits';
-  $('.n-near').textContent=s.n;$('.l-near').textContent=s.n===1?'outfit is one piece away':'outfits are one piece away';
+  $('.n-near').textContent=s.n;$('.l-near').textContent=s.n===1?'outfit needs just one more piece':'outfits need just one more piece each';
+  // какой вещи не хватает: вещь → образы, которые она соберёт; в Save вместо брюк кэмел - ponte
+  var grp={};D.o.forEach(function(it,k){var m=it.filter(function(i){return !acc(i)&&!has(own,i)});if(m.length!==1)return;
+    var id=m[0];if(isSave()&&byId[id].save_same)id=byId[id].save_same;(grp[id]=grp[id]||[]).push(k+1)});
+  var rows=Object.keys(grp).sort(function(a,b){return grp[b].length-grp[a].length||price(byId[a])-price(byId[b])});
+  var esc=function(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')};
+  var pad=function(n){return (n<10?'0':'')+n};
+  near.hidden=!rows.length;
+  $('.nr-list').innerHTML=rows.map(function(id){var p=byId[id],sw=isSave()&&p.save_name,nm=sw?p.save_name:p.name,ls=grp[id];
+    return '<li><img src="img/'+esc(sw&&p.save_img?p.save_img:p.img)+'" width="500" height="625" alt="" loading="lazy">'
+      +'<div class="nr-b"><b class="nr-nm">'+esc(nm)+'</b><span class="nr-meta"><span>'+money(price(p))+'</span>'+(ls.length>1?'<span class="nx-gain">+'+ls.length+' outfits</span>':'')+'</span>'
+      +'<span class="nr-o">'+ls.map(function(n){return '<button type="button" class="nr-look" data-n="'+n+'">→ '+pad(n)+' '+esc(D.looks[n-1].t)+'</button>'}).join('')+'</span></div>'
+      +'<button type="button" class="nr-add" data-id="'+id+'" aria-label="Add '+esc(nm)+' to my picks">Add</button></li>'}).join('');
   var best=null,bk=null;
   D.p.forEach(function(p){if(own[p.id]||acc(p.id)||!active(p))return;var o2=Object.assign({},own);o2[p.id]=1;var t=stat(o2);
     var cl=D.o.filter(function(it){return it.indexOf(p.id)>=0&&it.some(function(i){return !acc(i)&&has(own,i)})}).length;
@@ -706,7 +732,7 @@ function render(){
     var better=!bk;for(var x=0;!better&&x<k.length&&k[x]>=bk[x];x++)if(k[x]>bk[x])better=true;
     if(better){bk=k;best=p}});
   if(best&&bk[0]<=0&&bk[1]<=0&&bk[2]<=0)best=null;
-  nx.hidden=cnt===0||!best;
+  nx.hidden=cnt===0||!best||rows.length>0;
   if(best){var sw=isSave()&&best.save_link;
     $('.nx-img').src='img/'+(sw&&best.save_img?best.save_img:best.img);$('.nx-img').alt=sw?best.save_name:best.name;
     $('.nx-name').textContent=sw?best.save_name:best.name;$('.nx-price').textContent=money(price(best));
@@ -735,6 +761,9 @@ var pickSix=function(){sixIds().forEach(function(id){own[id]=1});keep();render()
 $('.q-pick').addEventListener('click',function(){pickSix();nums.scrollIntoView({behavior:still?'auto':'smooth',block:'center'})});
 $('.six-pick').addEventListener('click',function(){sixIds().forEach(function(id){own[id]=1});keep();render();nums.focus({preventScroll:true})});
 $('.nx-add').addEventListener('click',function(){var id=nx.dataset.id;if(!id)return;own[id]=1;keep();render()});
+near.addEventListener('click',function(ev){var a=ev.target.closest('.nr-add'),l=ev.target.closest('.nr-look');
+  if(a){own[a.dataset.id]=1;keep();render();nums.focus({preventScroll:true})}
+  else if(l&&window.mdOpenLook)window.mdOpenLook(+l.dataset.n)});
 var up=$('.up'),cover=$('.cover');
 up.addEventListener('click',function(){scrollTo({top:0,behavior:still?'auto':'smooth'})});
 addEventListener('scroll',function(){up.classList.toggle('on',cover.getBoundingClientRect().bottom<0)},{passive:true});
@@ -810,6 +839,7 @@ function fill(n){
 function open(n){back=document.activeElement;fill(n);bg.hidden=sh.hidden=false;sh.scrollTop=0;sh.querySelector('.sh-in').scrollTop=0;document.documentElement.style.overflow='hidden';sh.querySelector('.sh-x').focus()}
 function close(go){bg.hidden=sh.hidden=true;document.documentElement.style.overflow='';if(!go&&back)back.focus({preventScroll:true})}
 cards.forEach(function(b){b.addEventListener('click',function(){open(+b.dataset.n)})});
+window.mdOpenLook=open;
 chips.forEach(function(c){c.addEventListener('click',function(){f=c.dataset.f;try{localStorage.setItem('mdLookF',f)}catch(e){}upd()})});
 sh.querySelector('.sh-x').addEventListener('click',function(){close()});bg.addEventListener('click',function(){close()});
 sh.querySelector('.sh-pick').addEventListener('click',function(){var ids=this.dataset.ids;if(ids){M.add(ids.split(','));var a=sh.querySelector('.sh-it');if(a)a.focus()}});
