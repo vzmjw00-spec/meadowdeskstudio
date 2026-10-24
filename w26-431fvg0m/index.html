@@ -1,308 +1,894 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Winter That Looks Expensive · MeadowDesk</title>
 <meta name="robots" content="noindex,nofollow">
-<title>Winter That Looks Expensive · Live Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/look-09.jpg" fetchpriority="high">
 <style>
-:root{--cream:#faf6f0;--sand:#f1e8dc;--choc:#4a3426;--caramel:#b98a5e;--gold:#d9b48c;--ink:#2e2520;--muted:#7a6b60;--line:#e6dccf}
+:root{--cream:#faf6f0;--sand:#f1e8dc;--choc:#4a3426;--caramel:#b98a5e;--gold:#d9b48c;--ink:#2e2520;--muted:#7a6b60;--line:#e6dccf;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Manrope",system-ui,sans-serif;--ease-out:cubic-bezier(0.23,1,0.32,1)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--cream);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-.serif,h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:980px;margin:0 auto;padding:0 16px}
-header{background:var(--choc);color:var(--cream);padding:28px 0 32px}
-.hero{background:var(--choc)} .hero{padding:16px 16px 0} .hero img{display:block;width:100%;max-width:520px;height:auto;margin:0 auto;border-radius:14px}
-th{text-align:left;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--caramel);padding:8px 6px;border-bottom:1px solid var(--caramel)}
-a.real{color:var(--choc);font-weight:600}
-header h1{font-size:40px;line-height:1.05} header h1 em{color:var(--gold)}
-header p{opacity:.85;margin-top:12px;max-width:620px}
-.updated{display:inline-block;margin-top:16px;background:rgba(255,255,255,.1);border-radius:20px;padding:6px 14px;font-size:13px}
-nav{position:sticky;top:0;z-index:5;background:var(--cream);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;gap:18px;overflow-x:auto;padding:12px 16px;font-size:14px;font-weight:600;white-space:nowrap}
-nav a{text-decoration:none;color:var(--choc)}
-.eyebrow{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--caramel);font-weight:700}
-section{padding:36px 0 8px} section>.wrap>h2{font-size:32px;margin:4px 0 16px}
-.budgets{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.budgets div{background:var(--sand);border-radius:12px;padding:16px} .budgets b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:30px;font-weight:500}
-.piece{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);scroll-margin-top:60px}
-.piece .ph{width:140px;height:180px;object-fit:cover;border-radius:10px;background:#efe9e1}
-.piece h3{font-size:23px;line-height:1.1;margin:2px 0 6px}
-.pr b{font-size:19px;color:var(--choc);margin-right:8px} .pr span{display:block;font-size:13px;color:var(--muted)}
-.shop{display:inline-block;margin-top:10px;background:var(--choc);color:var(--cream);text-decoration:none;border-radius:24px;padding:8px 18px;font-size:14px;font-weight:600}
-.swap{grid-column:1/-1;margin-top:4px;background:var(--sand);border-radius:12px;padding:12px;display:grid;grid-template-columns:64px 1fr;gap:12px;scroll-margin-top:60px}
-.swap img{width:64px;height:82px;object-fit:cover;border-radius:6px;background:#fff}
-.swap:not(:has(img)){grid-template-columns:1fr}
-.swap p{font-size:14px;margin-top:2px} .swap .shop{margin:8px 8px 0 0;padding:6px 14px;font-size:13px} .anc{scroll-margin-top:60px}
-.second{font-size:13px;color:var(--muted);margin-top:10px;scroll-margin-top:60px} .second .shop{margin:0 0 0 6px;padding:4px 12px;font-size:12px}
-.looks{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.look img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;border-radius:10px;background:#efe9e1}
-.look figcaption{font-size:13px;color:var(--muted);margin-top:6px} .look b{display:block;color:var(--ink);font-size:15px}
-table{width:100%;border-collapse:collapse;font-size:13px} td{padding:10px 6px;border-bottom:1px solid var(--line);vertical-align:top} td:first-child{font-weight:600}
-.tw{overflow-x:auto}
-footer{padding:36px 0 48px;color:var(--muted);font-size:13px}
-@media(min-width:720px){header h1{font-size:56px} .piece{grid-template-columns:200px 1fr;gap:24px} .piece .ph{width:200px;height:260px} .looks{grid-template-columns:repeat(3,1fr)}}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-</head><body>
-<div class="hero"><img src="img/look-09.jpg" alt="A woman in the burgundy skirt, grey crewneck, and heeled boots from the capsule"></div>
-<header><div class="wrap">
-  <span class="eyebrow" style="color:var(--gold)">MeadowDesk · Live page</span>
-  <h1>Winter That<br><em>Looks Expensive</em></h1>
-  <p>The live companion to your capsule guide: today's prices, stock, and a shop link for every piece and every cheaper swap</p>
-  <span class="updated">Prices and stock checked October 20-22, 2026</span>
-</div></header>
-<nav><div class="wrap"><a href="#pieces">Pieces</a><a href="#outfits">30 outfits</a><a href="#dont">Don't buy</a><a href="#updates">What's new</a></div></nav>
-<section id="budgets"><div class="wrap">
-  <span class="eyebrow">Two budgets, same 30 outfits</span>
-  <div class="budgets" style="margin-top:12px"><div><span class="eyebrow">Invest</span><b>$2,067.10</b>$68.90 per outfit</div><div><span class="eyebrow">Save</span><b>$1,397.68</b>$46.59 per outfit</div></div>
-</div></section>
-<section id="pieces"><div class="wrap"><span class="eyebrow">The pieces</span><h2>18 pieces and 5 accessories</h2>
-<article class="piece" id="p01">
-  <img class="ph" src="img/01-coat.jpg" alt="Double-Faced Merino Wool Wrap Coat" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">01 · Quince</span>
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+/* обложка */
+.cover{background:var(--choc);color:var(--cream)}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;height:clamp(300px,calc(100vh - 530px),420px);height:clamp(300px,calc(100svh - 530px),420px);max-width:720px;margin:0 auto}
+.col{position:relative;overflow:hidden;background:#3d2b20}
+.col img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease;z-index:0}
+.col img.top{z-index:1}
+.col img.was{opacity:1;transition:none}
+.col img.on{opacity:1;animation:drift 9s var(--ease-out) forwards}
+@keyframes drift{from{transform:scale(1.08)}to{transform:scale(1)}}
+.cover .wrap{padding-top:24px;padding-bottom:28px}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+h1{font-family:var(--serif);font-weight:500;font-size:44px;line-height:1.02;margin-top:10px;text-wrap:balance}
+h1 em{color:var(--gold)}
+.steps{list-style:none;margin-top:22px;display:grid;gap:10px}
+.steps li{display:flex}.steps a{flex:1;display:grid;grid-template-columns:34px 1fr 16px;gap:12px;align-items:start;text-decoration:none;padding:12px 14px;border-radius:12px;background:rgba(250,246,240,.07);border:1px solid rgba(250,246,240,.12);transition:background .16s var(--ease-out),transform .16s var(--ease-out)}
+.steps a:active{transform:scale(.98);background:rgba(250,246,240,.13)}
+.steps .n{font-variant-numeric:lining-nums;font-family:var(--serif);font-size:26px;line-height:1;color:var(--gold)}
+.steps b{display:block;font-weight:600;font-size:15px}
+.steps span{font-size:14px;opacity:.78;line-height:1.4}
+.steps i{font-style:normal;opacity:.5;align-self:center}
+/* цифры и свежесть */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);padding:22px 0 18px;text-align:center}
+.stats div+div{border-left:1px solid var(--line)}
+.stats b{font-variant-numeric:lining-nums tabular-nums;display:block;font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.1}
+.stats b,.stats small{transition:color .28s var(--ease-out)}
+body.b-save .stats .invest b,body:not(.b-save) .stats .save b,body.b-save .stats .invest small,body:not(.b-save) .stats .save small{color:var(--muted)}
+body.b-save .stats .save small,body:not(.b-save) .stats .invest small{color:var(--ink);font-weight:600}
+.stats small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.checked{text-wrap:pretty;font-size:13px;color:var(--muted);padding:14px 0 22px;line-height:1.45}
+.checked a{color:var(--caramel);font-weight:600;text-decoration:none;white-space:nowrap}
+/* прилипающая полоса */
+.bar{position:sticky;top:0;z-index:20;background:rgba(250,246,240,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:10px;padding:10px 0 10px 16px;max-width:720px}
+.menu{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1;padding-right:8px;mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.menu::-webkit-scrollbar{display:none}
+.menu a{flex:none;display:flex;align-items:center;min-height:44px;font-size:13px;padding:0 14px;border-radius:999px;border:1px solid var(--line);text-decoration:none;white-space:nowrap;transition:background .16s,color .16s}
+.menu a.on{background:var(--choc);border-color:var(--choc);color:var(--cream)}
+.tog{flex:none;position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--sand);border-radius:999px;padding:3px;margin-right:16px}
+.tog button{border-radius:999px;position:relative;z-index:1;border:0;background:none;font:600 13px var(--sans);min-height:44px;padding:0 14px;color:var(--muted);cursor:pointer;transition:color .28s var(--ease-out)}
+.tog button[aria-pressed=true]{color:var(--cream)}
+.tog::before{content:"";position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:999px;background:var(--choc);transition:transform .28s var(--ease-out)}
+.tog.save::before{transform:translateX(100%)}
+.tog.ping{animation:ping .9s var(--ease-out) 2}
+@keyframes ping{50%{box-shadow:0 0 0 6px rgba(185,138,94,.35)}}
+.tog:focus{outline:none}.tog:focus-visible,.tog button:focus-visible,.menu a:focus-visible,.steps a:focus-visible{outline:2px solid var(--caramel);outline-offset:2px}
+.next{padding:28px 0;border-top:1px solid var(--line);scroll-margin-top:64px}.next h2{font:500 28px var(--serif);color:var(--muted)}
+@media (max-height:700px){.tri{height:230px}.cover .wrap{padding-top:18px;padding-bottom:22px}.steps{gap:8px;margin-top:16px}.steps a{padding:10px 12px}}
+@media (min-width:720px){.tri{max-width:680px}h1{font-size:60px}.steps{grid-template-columns:repeat(3,1fr)}.steps a{grid-template-columns:1fr;gap:6px;align-content:start}.steps i{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.col img{transition:none}.col img.on{animation:none}.tog::before,.steps a,.stats b,.stats small{transition:none}}
+
+.cap{padding:40px 0 32px;border-top:1px solid var(--line);scroll-margin-top:64px}
+.cap h2{font:500 34px/1.05 var(--serif)}
+.lead{margin-top:8px;color:var(--muted);font-size:15px;text-wrap:pretty}
+.grid{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:10px 8px;margin-top:20px}
+.grid li{display:flex}.grid li[hidden]{display:none}
+.tile{position:relative;display:flex;flex-direction:column;width:100%;border:0;background:none;padding:0;text-align:left;cursor:pointer;font:inherit;color:inherit;-webkit-tap-highlight-color:transparent}
+.tile img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:10px;background:#efe9e1;box-shadow:0 0 0 1px var(--line);transition:box-shadow .2s var(--ease-out),transform .16s var(--ease-out)}
+.tile:active img{transform:scale(.96)}
+.tile .nm{display:block;font-size:11px;line-height:1.25;margin-top:5px;color:var(--muted)}
+.tile .pr{display:block;font-size:12px;font-weight:600;color:var(--ink);font-variant-numeric:lining-nums;margin-top:auto;padding-top:1px}
+.tile .ck{position:absolute;top:6px;right:6px;width:24px;height:24px;border-radius:50%;background:rgba(250,246,240,.9);box-shadow:0 0 0 1px var(--line);transition:background .2s var(--ease-out),transform .2s var(--ease-out)}
+.tile[aria-pressed=true] img{box-shadow:0 0 0 2.5px var(--caramel)}
+.tile[aria-pressed=true] .nm{color:var(--ink);font-weight:600}
+.tile[aria-pressed=true] .ck{background:var(--caramel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;box-shadow:none;transform:scale(1.08)}
+.tile:focus-visible{outline:2px solid var(--caramel);outline-offset:3px;border-radius:10px}
+.note{font-size:12px;color:var(--muted);margin-top:12px}
+.six,.nums,.next1{margin-top:22px;border-radius:14px}
+.six{background:var(--sand);padding:20px 18px}
+.six h3{font:500 26px/1.1 var(--serif)}
+.sixline{margin-top:4px;font-size:15px}.sixline b{font-variant-numeric:lining-nums}
+.sixrow{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:14px}
+.sixrow img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:6px;background:#fff}
+.six-pick,.nx-add{border:0;cursor:pointer;font-family:inherit}
+.six-pick{margin-top:14px}
+.then{font-size:13px;color:var(--muted);margin-top:12px;text-wrap:pretty}
+.nums{display:grid;grid-template-columns:1fr 1fr;background:var(--sand);padding:4px}
+.nums div{padding:14px 14px 12px}
+.nums div:nth-child(odd){border-right:1px solid var(--line)}
+.nums div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.nums b{display:block;font:500 30px/1 var(--serif);font-variant-numeric:lining-nums}
+.nums span{display:block;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.3}
+.next1{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;background:#fff;box-shadow:0 0 0 1px var(--line);padding:12px}
+.next1[hidden],.six[hidden],.nums[hidden],.near[hidden]{display:none}
+.near{margin-top:22px;border-radius:14px;background:#fff;box-shadow:0 0 0 1px var(--line);padding:14px 12px 6px}
+.nr-list{list-style:none;margin:6px 0 0;padding:0}
+.nr-list li{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:10px 0}
+.nr-list li+li{border-top:1px solid var(--line)}
+.nr-list img{width:56px;height:70px;object-fit:cover;border-radius:6px;background:#efe9e1}
+.nr-nm{display:block;font:500 18px/1.15 var(--serif)}
+.nr-meta{display:flex;gap:8px;align-items:center;margin-top:2px;font-size:13px;font-variant-numeric:lining-nums}
+.nr-o{display:flex;flex-direction:column;align-items:flex-start}
+.nr-look{border:0;background:none;padding:6px 0;font:inherit;font-size:13px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;cursor:pointer;text-align:left;min-height:32px}
+.nr-add{min-height:44px;padding:0 16px;border:0;border-radius:999px;background:var(--choc);color:var(--cream);font:600 14px var(--sans,inherit);cursor:pointer;font-family:inherit}
+.next1 img{width:96px;height:120px;object-fit:cover;border-radius:8px;background:#efe9e1}
+.eyebrow2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--caramel)}
+.nx-name{display:block;font:500 22px/1.15 var(--serif);margin-top:2px}
+.nx-meta{display:flex;gap:8px;align-items:center;margin-top:4px;font-size:14px;font-variant-numeric:lining-nums}
+.nx-gain{font-size:12px;font-weight:600;color:var(--choc);background:var(--sand);border-radius:999px;padding:2px 8px}
+.nx-act{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;margin-top:10px}
+.nx-act>*{white-space:nowrap}
+.nx-add{padding:0 16px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--choc);color:var(--cream);text-decoration:none;font-weight:600;font-size:14px}
+.lnk{font-size:14px;color:var(--ink);text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}
+.clear{margin-top:16px;background:none;border:0;font:inherit;font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;min-height:44px;cursor:pointer}
+.clear.sure{color:var(--choc);font-weight:600}
+.pop{animation:pop .35s var(--ease-out)}
+@keyframes pop{40%{transform:scale(1.12)}}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--choc);color:var(--cream);transform:translateY(110%);transition:transform .28s var(--ease-out);padding-bottom:env(safe-area-inset-bottom)}
+.dock.on{transform:none}
+.dock .wrap{display:flex;justify-content:space-between;align-items:center;min-height:52px;font-size:14px;font-variant-numeric:lining-nums}
+.dock b{font-weight:600}
+.up{position:fixed;right:16px;bottom:16px;z-index:31;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(250,246,240,.95);color:var(--choc);font-size:18px;display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s,transform .28s var(--ease-out)}
+.up.on{opacity:1;pointer-events:auto}
+body.has-dock .up{transform:translateY(calc(-60px - env(safe-area-inset-bottom)))}
+body.has-dock main{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media (min-width:720px){.grid{grid-template-columns:repeat(6,1fr)}}
+@media (prefers-reduced-motion:reduce){.tile img,.tile .ck,.dock,.up{transition:none}.pop{animation:none}}
+.nums:focus{outline:none}.nums:focus-visible{outline:2px solid var(--caramel);outline-offset:2px}
+.six:focus{outline:none}.lnk[hidden]{display:none}
+.quick{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;padding:8px 8px 8px 16px;border-radius:14px;background:var(--sand);font-size:14px;font-weight:600}
+.quick[hidden]{display:none}
+.quick small{display:block;font-weight:400;font-size:12px;color:var(--muted);font-variant-numeric:lining-nums}
+.q-pick{border:0;cursor:pointer;font-family:inherit;white-space:nowrap;flex:none}
+.pcs{padding:40px 0 32px;border-top:1px solid var(--line);scroll-margin-top:64px}
+.pcs h2{font:500 34px/1.05 var(--serif)}
+.pc{margin-top:28px;scroll-margin-top:72px}
+.pc details p .lnk,.swap p .lnk{display:inline;min-height:0;padding:12px 0}
+.pc+.pc{padding-top:28px;border-top:1px solid var(--line)}
+.pc.hl{animation:hl 1.6s var(--ease-out)}
+@keyframes hl{0%,30%{background:var(--sand)}100%{background:transparent}}
+.zoom{display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;-webkit-tap-highlight-color:transparent}
+.pc{display:grid;grid-template-columns:132px 1fr;gap:0 14px;align-items:start}
+.ph{grid-row:1/span 4;grid-column:1;overflow:hidden;border-radius:10px}
+.ph img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:#efe9e1;transition:transform .2s var(--ease-out)}
+.pc-b{display:contents}
+.pc-b>.eyebrow2,.pc-b>h3,.pc-b>.pc-meta{grid-column:2}
+.pc-role,.pc-buy,.pc details,.swap{grid-column:1/-1}
+.pc h3{font:500 22px/1.15 var(--serif);margin-top:4px;text-wrap:balance}
+.pc-meta{font-size:13px;color:var(--muted);margin-top:6px}
+.pc-role{font:italic 500 17px/1.35 var(--serif);margin-top:14px;color:var(--choc);text-wrap:pretty}
+.pc-buy{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:14px}
+.pc-pr b[hidden]{display:none}
+.pc-pr b{font:500 30px/1 var(--serif);font-variant-numeric:lining-nums}
+.pc-pr{display:flex;flex-direction:column}
+.pc-pr small{order:-1;font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--caramel);margin-bottom:6px}
+.pc-pr small:empty{display:none}
+.pc-act{display:flex;align-items:center;gap:14px}
+.pk{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--choc);background:none;color:var(--choc);font:600 14px/1 inherit;font-family:inherit;cursor:pointer;white-space:nowrap}
+.pk[aria-pressed=true]{background:var(--choc);color:var(--cream)}
+.pk[hidden]{display:none}
+.pc details{border-top:1px solid var(--line);margin-top:12px}
+.pc details+details{margin-top:0}
+.pc summary{list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:48px;font-weight:600;font-size:15px;cursor:pointer}
+.pc summary::-webkit-details-marker{display:none}
+.pc summary::after{content:"+";font:400 22px/1 var(--serif);color:var(--caramel);transition:transform .2s var(--ease-out)}
+.pc details[open] summary::after{transform:rotate(45deg)}
+.pc details p{font-size:15px;line-height:1.55;padding-bottom:14px;text-wrap:pretty}
+.also-ph img{display:block;width:62%;height:auto;border-radius:10px;margin-bottom:10px}
+.swap{margin-top:16px;padding:14px;border-radius:14px;background:var(--sand);scroll-margin-top:72px}
+.swap.has-img{display:grid;grid-template-columns:84px 1fr;gap:14px;align-items:start}
+.swap img{width:84px;height:105px;object-fit:cover;border-radius:8px;background:#fff}
+.swap p{font-size:14px;line-height:1.5;margin-top:4px;text-wrap:pretty}
+.swap .lnk{margin-right:14px}
+.sv-flag{display:none;margin-left:8px;font-size:11px;font-weight:600;color:var(--cream);background:var(--choc);border-radius:999px;padding:2px 8px}
+body.b-save .swap.in-save{box-shadow:0 0 0 2px var(--choc)}
+body.b-save .swap.in-save .sv-flag{display:inline-block}
+.anc{display:block;height:0;scroll-margin-top:72px}
+.swap.has-img .anc{position:absolute}
+.swap{position:relative}
+.pcs-sub{font:500 28px/1.1 var(--serif);margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+.pcs-sub+.pc{border-top:0;padding-top:0}
+.warm{margin-top:36px;padding:20px 18px;border-radius:14px;background:var(--sand)}
+.warm h3{font:500 26px/1.1 var(--serif);margin-top:4px}
+.warm p{font-size:15px;line-height:1.5;margin-top:8px}
+.warm ul{margin:10px 0 0 18px;font-size:14px;line-height:1.5}
+.warm li+li{margin-top:6px}
+.warm a{color:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;padding:4px 0}
+.lb{position:fixed;inset:0;z-index:60;background:#1e1612;display:flex;align-items:center;justify-content:center;touch-action:pinch-zoom}
+.lb[hidden]{display:none}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;transition:transform .25s var(--ease-out);touch-action:pinch-zoom}
+.lb.zm img{transform:scale(2);cursor:zoom-out}
+.lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:0;background:rgba(250,246,240,.14);color:#faf6f0;font-size:22px;cursor:pointer}
+.lb .x{top:max(12px,env(safe-area-inset-top));right:12px}
+.lb .pv{left:8px;top:50%;margin-top:-24px}.lb .nx{right:8px;top:50%;margin-top:-24px}
+.lb .lb-cap{position:absolute;left:16px;right:16px;bottom:max(16px,env(safe-area-inset-bottom));color:#faf6f0;font-size:14px;text-align:center}
+@media (hover:hover){.lb img{cursor:zoom-in}.ph:hover img{transform:scale(2)}}
+@media (min-width:720px){.pc{grid-template-columns:260px 1fr;gap:0 28px}.ph{grid-row:1/span 6}.pc-role,.pc-buy,.pc details,.swap{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.pc.hl{animation:none}.lb img,.ph img,.pc summary::after{transition:none}}
+.lb button[hidden]{display:none}
+.swap .sw2{scroll-margin-top:72px}
+.ofs{padding:40px 0 32px;border-top:1px solid var(--line);scroll-margin-top:64px}
+.ofs h2{font:500 34px/1.05 var(--serif)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);font:500 14px/1 inherit;font-family:inherit;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed=true]{background:var(--choc);border-color:var(--choc);color:var(--cream)}
+.chip:focus-visible,.look:focus-visible,.sh-it:focus-visible{outline:2px solid var(--caramel);outline-offset:2px}
+.of-empty{margin-top:18px;padding:16px;border-radius:14px;background:var(--sand);font-size:14px;color:var(--muted)}
+.of-empty[hidden]{display:none}
+.lks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:18px 10px;margin-top:16px}
+.lks li[hidden]{display:none}
+.look{position:relative;display:block;width:100%;border:0;padding:0;background:none;text-align:left;cursor:pointer;font:inherit;color:inherit;-webkit-tap-highlight-color:transparent}
+.look img{display:block;width:100%;height:auto;aspect-ratio:600/749;object-fit:cover;border-radius:12px;background:#efe9e1;transition:transform .16s var(--ease-out)}
+.look:active img{transform:scale(.97)}
+.lk-t{display:block;margin-top:7px;font:500 17px/1.2 var(--serif)}
+.lk-n{font:600 11px/1 inherit;font-family:inherit;letter-spacing:.08em;color:var(--caramel);margin-right:2px}
+.lk-badge{position:absolute;top:8px;left:8px;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;background:rgba(250,246,240,.94);color:var(--choc)}
+.lk-badge.rd{background:var(--choc);color:var(--cream)}
+.lk-badge[hidden]{display:none}
+.sh-bg{position:fixed;inset:0;z-index:50;background:rgba(46,37,32,.45)}
+.sh-bg[hidden],.sheet[hidden]{display:none}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:51;max-height:92dvh;display:flex;flex-direction:column;background:var(--cream);border-radius:20px 20px 0 0;box-shadow:0 -8px 30px rgba(46,37,32,.18);padding-bottom:env(safe-area-inset-bottom);animation:shUp .28s var(--ease-out)}
+@keyframes shUp{from{transform:translateY(40%);opacity:.6}}
+.sh-grip{width:40px;height:4px;border-radius:2px;background:var(--line);margin:10px auto 0;flex:none}
+.sh-x{position:absolute;top:8px;right:10px;width:44px;height:44px;border-radius:50%;border:0;background:var(--sand);color:var(--choc);font-size:22px;cursor:pointer;z-index:2}
+.sh-in{overflow-y:auto;overscroll-behavior:contain;padding:14px 16px 20px}
+.sh-ph{display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in}
+.sh-ph img{display:block;width:100%;max-height:52dvh;object-fit:contain;border-radius:12px;background:#efe9e1}
+.sh-b{padding-top:14px}
+.sh-b h3{font:500 28px/1.1 var(--serif);margin-top:4px}
+.sh-x2{font-size:15px;line-height:1.5;color:var(--muted);margin-top:6px;text-wrap:pretty}
+.sh-items{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px 10px;margin-top:16px}
+.sh-it{display:block;text-decoration:none;color:inherit}
+.sh-it img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:8px;background:#efe9e1}
+.sh-it .nm{display:block;font-size:12px;line-height:1.25;margin-top:5px;color:var(--ink)}
+.sh-it .pr{display:block;font-size:12px;font-weight:600;font-variant-numeric:lining-nums;margin-top:2px}
+.sh-it .in{display:inline-block;margin-top:4px;font-size:10px;font-weight:600;color:var(--cream);background:var(--caramel);border-radius:999px;padding:2px 7px}
+.sh-pick{margin-top:18px;border:0;cursor:pointer;font-family:inherit;width:100%;justify-content:center}
+.sh-pick:disabled{background:var(--sand);color:var(--muted);cursor:default}
+.sh-nav{display:flex;justify-content:space-between;margin-top:6px}
+.sh-nav button{background:none;border:0;font:inherit;font-size:14px;cursor:pointer;color:var(--ink);padding:0 4px}
+.sh-nav button[hidden]{display:none}
+@media (min-width:720px){.lks{grid-template-columns:repeat(3,1fr)}.sheet{left:50%;right:auto;width:560px;transform:translateX(-50%);bottom:auto;top:50%;translate:0 -50%;border-radius:20px;max-height:88dvh;animation:none}.sh-grip{display:none}}
+@media (prefers-reduced-motion:reduce){.sheet{animation:none}.look img{transition:none}}
+.sh-sv{font-size:13px;font-weight:600;color:var(--caramel);margin-top:6px}
+.sh-sv[hidden]{display:none}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ref{padding:40px 0 32px;border-top:1px solid var(--line);scroll-margin-top:64px}
+.ref h2{font:500 34px/1.05 var(--serif)}
+.fit-open{margin-top:16px;border:0;cursor:pointer;font-family:inherit}
+.fit-n{font-weight:400;opacity:.8;margin-left:4px}
+.checks{list-style:none;margin-top:18px;border-top:1px solid var(--line)}
+.checks li{border-bottom:1px solid var(--line)}
+.checks label{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;padding:13px 0;min-height:48px;cursor:pointer;font-size:15px;line-height:1.45}
+.checks input{appearance:none;-webkit-appearance:none;width:24px;height:24px;margin:0;border-radius:7px;border:1.5px solid var(--caramel);background:#fff;cursor:pointer;display:grid;place-items:center}
+.checks input:checked{background:var(--caramel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.checks input:focus-visible{outline:2px solid var(--choc);outline-offset:2px}
+.checks input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+.ck-clear{margin-top:6px;background:none;border:0;font:inherit;font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ref details{border-top:1px solid var(--line)}
+.ref details:first-of-type{margin-top:14px}
+.ref details:last-of-type{border-bottom:1px solid var(--line)}
+.ref summary{list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:52px;font-weight:600;font-size:16px;cursor:pointer}
+.ref summary::-webkit-details-marker{display:none}
+.ref summary::after{content:"+";font:400 22px/1 var(--serif);color:var(--caramel);transition:transform .2s var(--ease-out)}
+.ref details[open] summary::after{transform:rotate(45deg)}
+.ref details p{font-size:15px;line-height:1.55;padding-bottom:14px}
+.note2{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.5}
+.traps{list-style:none;display:grid;gap:12px;margin-top:16px}
+.trap{padding:16px;border-radius:14px;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.trap h3{font:500 21px/1.2 var(--serif);margin-top:4px}
+.tr-in{font-size:14px;margin-top:6px;font-variant-numeric:lining-nums}
+.tr-in b{color:#8a3b2e}
+.tr-real{display:block;margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--sand);color:var(--ink);text-decoration:none;font-size:14px;line-height:1.4;min-height:44px}
+.tr-real span{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--caramel);margin-bottom:2px}
+.log{list-style:none;margin-top:16px}
+.log li{padding:14px 0;border-top:1px solid var(--line)}
+.log b{font-variant-numeric:lining-nums}
+.log p{font-size:15px;margin-top:4px;line-height:1.5}
+.fin{margin:24px calc(50% - 50vw) 0;padding:44px 20px 40px;background:var(--choc);color:var(--cream);text-align:center}
+.fin h2{font:500 32px/1.12 var(--serif)}
+.fin h2 em{color:var(--gold)}
+.fin-imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:22px}
+.fin-imgs img{width:100%;height:auto;aspect-ratio:600/749;object-fit:cover;display:block}
+.fin-small{font-size:12px;opacity:.7;margin-top:18px;line-height:1.5}
+.fin-brand{font:italic 500 20px/1 var(--serif);color:var(--gold);margin-top:18px}
+.fm{position:fixed;inset:0;z-index:55;background:var(--cream);display:flex;flex-direction:column;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.fm[hidden]{display:none}
+.fm-top{display:flex;justify-content:space-between;align-items:center;padding:8px 12px 8px 16px;font-size:13px;color:var(--muted);font-variant-numeric:lining-nums}
+.fm-x{width:44px;height:44px;border-radius:50%;border:0;background:var(--sand);color:var(--choc);font-size:22px;cursor:pointer}
+.fm-in{flex:1;overflow-y:auto;padding:0 16px 16px}
+.fm-img{display:block;width:100%;max-height:38dvh;object-fit:contain;border-radius:12px;background:#efe9e1}
+.fm-in .fm-n{display:block;margin-top:14px}
+.fm-t{font:500 26px/1.15 var(--serif);margin-top:4px}
+.fm-sv{font-size:13px;font-weight:600;color:var(--caramel);margin-top:6px}
+.fm-sv[hidden],.fm-r[hidden],.fm-nav button[hidden]{display:none}
+.fm-f{font-size:20px;font-weight:600;margin-top:12px;line-height:1.35}
+.fm-r{font-size:17px;line-height:1.5;margin-top:12px}
+.fm-nav{display:flex;justify-content:space-between;padding:8px 16px 12px}
+.fm-nav button{width:56px;height:48px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:24px;color:var(--choc);cursor:pointer}
+.ch-l{align-self:center;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+@media (min-width:720px){.traps{grid-template-columns:1fr 1fr}.fin{margin:24px 0 0;border-radius:20px}}
+@media (prefers-reduced-motion:reduce){.ref summary::after{transition:none}}
+</style></head>
+<body>
+<header class="cover" id="start">
+  <div class="tri" aria-label="Outfits from the capsule">
+    <div class="col" data-looks="5,1,4,6,8,10,12,14,16,18"><img class="on" width="600" height="749" src="img/look-05.jpg" alt="Outfit 5: tweed blazer over the chocolate cashmere dress"></div>
+    <div class="col" data-looks="9,19,20,21,22,23,24,17"><img class="on" width="600" height="749" src="img/look-09.jpg" alt="Outfit 9: burgundy skirt, grey crewneck over the white shirt, heeled boots" fetchpriority="high"></div>
+    <div class="col" data-looks="11,7,25,13,27,2,28,26,3,29,15,30"><img class="on" width="600" height="749" src="img/look-11.jpg" alt="Outfit 11: navy puffer, jeans, beanie and burgundy scarf in the snow"></div>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow">MeadowDesk · Your live capsule page</span>
+    <h1>Winter That<br><em>Looks Expensive</em></h1>
+    <ol class="steps">
+      <li><a href="#capsule"><span class="n">1</span><span><b>Pick what you like.</b> Tap the pieces you want and see what they add up to</span><i aria-hidden="true">›</i></a></li>
+      <li><a href="#budget" data-go="budget"><span class="n">2</span><span><b>Pick your budget.</b> Invest or Save, and all the prices switch with it</span><i aria-hidden="true">›</i></a></li>
+      <li><a href="#outfits"><span class="n">3</span><span><b>Open tomorrow's outfit.</b> 30 outfits for work, weekends, evenings, and frost</span><i aria-hidden="true">›</i></a></li>
+    </ol>
+  </div>
+</header>
+<nav class="bar" aria-label="Sections"><div class="wrap">
+  <div class="menu">
+    <a href="#start" class="on">Start</a><a href="#capsule">Your capsule</a><a href="#pieces">Pieces</a><a href="#outfits">Outfits</a><a href="#fitting">Fitting room</a><a href="#care">Care</a><a href="#dont">Don't buy</a><a href="#updates">What's new</a>
+  </div>
+  <div class="tog" id="budget" role="group" aria-label="Budget" tabindex="-1"><button type="button" aria-pressed="true" data-b="invest">Invest</button><button type="button" aria-pressed="false" data-b="save">Save</button></div>
+</div></nav>
+<main class="wrap">
+ <div id="overview" data-sec="start">
+  <div class="stats">
+    <div><b>30</b><small>outfits</small></div>
+    <div class="invest"><b>$2,067.10</b><small>Invest</small></div>
+    <div class="save"><b>$1,352.78</b><small>Save</small></div>
+  </div>
+  <p class="checked">Prices and stock checked October 20-22, 2026. We&nbsp;recheck every two&nbsp;weeks</p>
+ </div>
+  <section id="capsule" class="cap">
+  <h2>Your capsule</h2>
+  <p class="lead">Tap the pieces you'd like to buy. You'll see the total and how many outfits they make</p>
+  <div class="quick"><span>Not sure where to start? <small class="q-meta"></small></span><button type="button" class="btn q-pick">Pick all six</button></div>
+  <ul class="grid" aria-label="Pieces in the capsule"><li><button type="button" class="tile" data-id="p01" aria-pressed="false"><img src="img/01-coat.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Merino wrap coat</span><span class="pr" data-inv="200" data-save="59.99">$200.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p02" aria-pressed="false"><img src="img/02-puffer.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Long down puffer</span><span class="pr" data-inv="200" data-save="89.9">$200.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p03" aria-pressed="false"><img src="img/03-crew.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere crewneck</span><span class="pr" data-inv="50" data-save="50">$50.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p04" aria-pressed="false"><img src="img/04-turtleneck.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere turtleneck</span><span class="pr" data-inv="89.9" data-save="89.9">$89.90</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p05" aria-pressed="false"><img src="img/05-cardigan.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere cardigan</span><span class="pr" data-inv="79.9" data-save="79.9">$79.90</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p06" aria-pressed="false"><img src="img/06-tee.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere tee</span><span class="pr" data-inv="44.9" data-save="44.9">$44.90</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p07" aria-pressed="false"><img src="img/07-blouse.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Silk blouse</span><span class="pr" data-inv="72" data-save="72">$72.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p08" aria-pressed="false"><img src="img/08-ribturtle.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Rib turtleneck</span><span class="pr" data-inv="24.9" data-save="24.9">$24.90</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p09" aria-pressed="false"><img src="img/09-blazer.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Wool blazer</span><span class="pr" data-inv="100" data-save="49.9">$100.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p10" aria-pressed="false"><img src="img/10-jeans.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Straight jeans</span><span class="pr" data-inv="50" data-save="50">$50.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p11" aria-pressed="false"><img src="img/11-ponte.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Navy ponte trousers</span><span class="pr" data-inv="44.9" data-save="44.9">$44.90</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p12" aria-pressed="false"><img src="img/12-skirt.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Merino midi skirt</span><span class="pr" data-inv="80" data-save="80">$80.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p13" aria-pressed="false"><img src="img/13-dress.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere sweater dress</span><span class="pr" data-inv="109.9" data-save="109.9">$109.90</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p14" aria-pressed="false"><img src="img/14-trousers.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Wool flannel trousers</span><span class="pr" data-inv="178" data-save="0">$178.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p15" aria-pressed="false"><img src="img/15-boot.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Block-heel boots</span><span class="pr" data-inv="218" data-save="109">$218.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p16" aria-pressed="false"><img src="img/16-loafer.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Suede loafers</span><span class="pr" data-inv="84" data-save="84">$84.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p17" aria-pressed="false"><img src="img/17-shearling.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Shearling boots</span><span class="pr" data-inv="82" data-save="82">$82.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="p18" aria-pressed="false"><img src="img/18-shirt.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">White shirt</span><span class="pr" data-inv="49.9" data-save="49.9">$49.90</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a1" aria-pressed="false"><img src="img/A1-scarf.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere scarf</span><span class="pr" data-inv="54" data-save="24.9">$54.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a2" aria-pressed="false"><img src="img/A2-tote.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Leather tote</span><span class="pr" data-inv="158" data-save="59.99">$158.00</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a3" aria-pressed="false"><img src="img/A3-beanie.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere beanie</span><span class="pr" data-inv="34.9" data-save="34.9">$34.90</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a4" aria-pressed="false"><img src="img/A4-belt.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Leather belt</span><span class="pr" data-inv="29.9" data-save="29.9">$29.90</span><span class="ck" aria-hidden="true"></span></button></li><li><button type="button" class="tile" data-id="a5" aria-pressed="false"><img src="img/A5-beret.jpg" width="500" height="625" alt="" loading="lazy"><span class="nm">Cashmere beret</span><span class="pr" data-inv="32" data-save="32">$32.00</span><span class="ck" aria-hidden="true"></span></button></li></ul>
+  <p class="note">Your picks stay on this phone</p>
+  <div class="six" tabindex="-1" hidden>
+    <h3>Not sure where to start? Start with these six.</h3>
+    <p class="sixline">Four complete outfits for <b class="sixsum"></b></p>
+    <ul class="sixrow"></ul>
+    <button type="button" class="btn six-pick">Pick all six</button>
+    <p class="then"></p>
+  </div>
+  <div class="nums" tabindex="-1" hidden>
+    <div><b class="n-own"></b><span class="l-own"></span></div>
+    <div><b class="n-sum"></b><span>total</span></div>
+    <div><b class="n-ready"></b><span class="l-ready"></span></div>
+    <div><b class="n-near"></b><span class="l-near"></span></div>
+  </div>
+  <div class="near" hidden>
+    <span class="eyebrow2">The missing pieces</span>
+    <ul class="nr-list"></ul>
+  </div>
+  <div class="next1" hidden>
+    <img class="nx-img" src="img/10-jeans.jpg" width="500" height="625" alt="">
+    <div class="nx-body"><span class="eyebrow2">Add next</span><b class="nx-name"></b><span class="nx-meta"><span class="nx-price"></span><span class="nx-gain"></span></span>
+      <span class="nx-act"><button type="button" class="btn nx-add">Add to my picks</button><a class="lnk nx-more" href="#pieces">See details</a></span></div>
+  </div>
+  <button type="button" class="clear" hidden>Clear my picks</button>
+</section>
+<section id="pieces" class="pcs"><h2>Pieces</h2><p class="lead">18 pieces and 5 accessories. Tap a photo to see it full screen</p><article class="pc" id="p01">
+  <button type="button" class="zoom ph" data-big="img/big/01-coat.jpg" aria-label="Double-Faced Merino Wool Wrap Coat, full screen"><img src="img/big/01-coat.jpg" width="900" height="1125" alt="Double-Faced Merino Wool Wrap Coat, Caramel" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">01 · Quince</span>
     <h3>Double-Faced Merino Wool Wrap Coat</h3>
-    <div class="pr"><b>$200</b><span>Caramel · 100% merino wool</span></div>
-    <a class="shop" href="https://www.quince.com/women/double-faced-merino-wool-draped-collar-wrap-coat?color=caramel" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Caramel · 100% merino wool</p>
+    <p class="pc-role">The piece everyone sees first, all winter long.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="200" data-save="59.99" data-sname="H&amp;M Tie-Belt Coat"><b>$200.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p01" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/double-faced-merino-wool-draped-collar-wrap-coat?color=caramel" data-inv="https://www.quince.com/women/double-faced-merino-wool-draped-collar-wrap-coat?color=caramel" data-save="https://www2.hm.com/en_us/productpage.1356455002.html" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>All-wool, double-faced, in the one color quiet-luxury wardrobes always come back to. A wrap coat has no buttons to strain and no logo to date it.</p></details><details><summary>In the fitting room</summary><p>Put it on over your thickest sweater. The shoulders should not pull, and you should be able to cross your arms without the back seam tightening.</p></details><details><summary>Wear it with</summary><p>Every outfit in this capsule. Open over the camel trousers for a tonal look, or belted over jeans on weekends.</p></details><details><summary>Don't be fooled</summary><p>Gap Factory&#x27;s best-selling Relaxed Wrap Topcoat looks almost the same at $74.99 on sale, but it is 100% polyester. H&amp;M&#x27;s Wool-Blend Pea Coat, $69.99, is 2% wool.</p></details>
+    <div class="swap in-save has-img" id="p01-save"><img src="img/big/swap-coat.jpg" alt="H&amp;M Tie-Belt Coat" loading="lazy"><div><span class="eyebrow2">Cheaper swap</span><span class="sv-flag">In your Save budget</span><p>H&amp;M Tie-Belt Coat, Dark Brown, $59.99, 100% polyester, fully lined, with a removable tie belt.</p><p id="p01-save2" class="sw2">Want wool for less? Quince Wool Cashmere Cocoon Coat, $175, 90% wool + 10% cashmere.</p><a class="lnk" href="https://www2.hm.com/en_us/productpage.1356455002.html" target="_blank" rel="noopener">Shop the swap →</a><a class="lnk" href="https://www.quince.com/women/wool-cashmere-cocoon-coat?color=caramel" target="_blank" rel="noopener">Shop the Cocoon Coat →</a></div></div>
   </div>
-  <div class="swap" id="p01-save"><img src="img/swap-coat.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>H&amp;M Tie-Belt Coat, Dark Brown, $59.99, 100% polyester, fully lined, with a removable tie belt. Want wool for less? Quince Wool Cashmere Cocoon Coat, $175, 90% wool + 10% cashmere.</p><a class="shop" href="https://www2.hm.com/en_us/productpage.1356455002.html" target="_blank" rel="noopener">Shop the swap →</a><span id="p01-save2" class="anc"></span><a class="shop" href="https://www.quince.com/women/wool-cashmere-cocoon-coat?color=caramel" target="_blank" rel="noopener">Shop the Cocoon Coat →</a></div></div>
-</article><article class="piece" id="p02">
-  <img class="ph" src="img/02-puffer.jpg" alt="Responsible Down Long Puffer" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">02 · Quince</span>
+</article><article class="pc" id="p02">
+  <button type="button" class="zoom ph" data-big="img/big/02-puffer.jpg" aria-label="Responsible Down Long Puffer, full screen"><img src="img/big/02-puffer.jpg" width="900" height="1125" alt="Responsible Down Long Puffer, Atlas Navy" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">02 · Quince</span>
     <h3>Responsible Down Long Puffer</h3>
-    <div class="pr"><b>$200</b><span>Atlas Navy · shell and lining 100% recycled polyester, fill 90% goose down / 10% feathers</span></div>
-    <a class="shop" href="https://www.quince.com/women/responsible-down-long-puffer-jacket?color=atlas-navy" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Atlas Navy · shell and lining 100% recycled polyester, fill 90% goose down / 10% feathers</p>
+    <p class="pc-role">For the days when even a wool coat is not enough.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="200" data-save="89.9" data-sname="Uniqlo PUFFTECH Parka"><b>$200.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p02" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/responsible-down-long-puffer-jacket?color=atlas-navy" data-inv="https://www.quince.com/women/responsible-down-long-puffer-jacket?color=atlas-navy" data-save="https://www.uniqlo.com/us/en/products/E469871-000/00?colorDisplayCode=69" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>A matte navy instead of shiny black. Matte reads calm and grown-up; shine reads sporty.</p></details><details><summary>In the fitting room</summary><p>Check the color by a window: it should not glare. The hem should cover your hips when you sit.</p></details><details><summary>Wear it with</summary><p>Jeans or ponte trousers, shearling boots, and the beanie.</p></details>
+    <div class="swap in-save has-img" id="p02-save"><img src="img/big/swap-puffer.jpg" alt="Uniqlo PUFFTECH Parka" loading="lazy"><div><span class="eyebrow2">Cheaper swap</span><span class="sv-flag">In your Save budget</span><p>Uniqlo PUFFTECH Parka, $89.90, synthetic fill.</p><a class="lnk" href="https://www.uniqlo.com/us/en/products/E469871-000/00?colorDisplayCode=69" target="_blank" rel="noopener">Shop the swap →</a></div></div>
   </div>
-  <div class="swap" id="p02-save"><img src="img/swap-puffer.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Uniqlo PUFFTECH Parka, $89.90, synthetic fill.</p><a class="shop" href="https://www.uniqlo.com/us/en/products/E469871-000/00?colorDisplayCode=69" target="_blank" rel="noopener">Shop the swap →</a></div></div>
-</article><article class="piece" id="p03">
-  <img class="ph" src="img/03-crew.jpg" alt="Mongolian Cashmere Crewneck" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">03 · Quince</span>
+</article><article class="pc" id="p03">
+  <button type="button" class="zoom ph" data-big="img/big/03-crew.jpg" aria-label="Mongolian Cashmere Crewneck, full screen"><img src="img/big/03-crew.jpg" width="900" height="1125" alt="Mongolian Cashmere Crewneck, Heather Grey" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">03 · Quince</span>
     <h3>Mongolian Cashmere Crewneck</h3>
-    <div class="pr"><b>$50</b><span>Heather Grey · 100% Grade-A Mongolian cashmere</span></div>
-    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-crewneck-sweater?color=heather-grey" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Heather Grey · 100% Grade-A Mongolian cashmere</p>
+    <p class="pc-role">The everyday sweater that goes with everything.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="50" data-save="50" data-sname=""><b>$50.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p03" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/cashmere/cashmere-crewneck-sweater?color=heather-grey" data-inv="https://www.quince.com/women/cashmere/cashmere-crewneck-sweater?color=heather-grey" data-save="https://www.quince.com/women/cashmere/cashmere-crewneck-sweater?color=heather-grey" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Real cashmere for the price of a mall sweater. Heather grey works with every color in the palette.</p></details><details><summary>In the fitting room</summary><p>Rub the sleeve with your palm: good cashmere stays smooth. The neckline should lie flat, not ripple.</p></details><details><summary>Wear it with</summary><p>Jeans, ponte trousers, camel trousers, or the burgundy skirt. Wear it over the white shirt with the collar out.</p></details><details><summary>Don't be fooled</summary><p>Uniqlo Souffle Yarn Sweater, also $49.90, is 8% wool and 58% acrylic.</p></details>
+    <div class="swap" id="p03-save"><div><span class="eyebrow2">Cheaper swap</span><p>None needed. Uniqlo&#x27;s 100% merino sweater costs the same, $49.90.</p></div></div>
   </div>
-  <div class="swap" id="p03-save"><div><span class="eyebrow">Cheaper swap</span><p>None needed. Uniqlo&#x27;s 100% merino sweater costs the same, $49.90.</p></div></div>
-</article><article class="piece" id="p04">
-  <img class="ph" src="img/04-turtleneck.jpg" alt="Mongolian Cashmere Turtleneck" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">04 · Quince</span>
+</article><article class="pc" id="p04">
+  <button type="button" class="zoom ph" data-big="img/big/04-turtleneck.jpg" aria-label="Mongolian Cashmere Turtleneck, full screen"><img src="img/big/04-turtleneck.jpg" width="900" height="1125" alt="Mongolian Cashmere Turtleneck, Brown" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">04 · Quince</span>
     <h3>Mongolian Cashmere Turtleneck</h3>
-    <div class="pr"><b>$89.90</b><span>Brown · 100% Grade-A Mongolian cashmere</span></div>
-    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-turtleneck-sweater?color=brown" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Brown · 100% Grade-A Mongolian cashmere</p>
+    <p class="pc-role">The dark base layer: under the coat, the blazer, or the cardigan.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="89.9" data-save="89.9" data-sname=""><b>$89.90</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p04" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/cashmere/cashmere-turtleneck-sweater?color=brown" data-inv="https://www.quince.com/women/cashmere/cashmere-turtleneck-sweater?color=brown" data-save="https://www.quince.com/women/cashmere/cashmere-turtleneck-sweater?color=brown" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Chocolate is softer than black and looks richer next to camel.</p></details><details><summary>In the fitting room</summary><p>The collar should fold over once and stay put without squeezing your neck.</p></details><details><summary>Wear it with</summary><p>Camel trousers for a head-to-toe brown-and-camel look, the burgundy skirt, or jeans.</p></details><details><summary>Don't be fooled</summary><p>Gap CashSoft, $69.95, sounds like cashmere and contains none: cotton, nylon, and acrylic.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p05">
-  <img class="ph" src="img/05-cardigan.jpg" alt="Mongolian Cashmere Cardigan" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">05 · Quince</span>
+</article><article class="pc" id="p05">
+  <button type="button" class="zoom ph" data-big="img/big/05-cardigan.jpg" aria-label="Mongolian Cashmere Cardigan, full screen"><img src="img/big/05-cardigan.jpg" width="900" height="1125" alt="Mongolian Cashmere Cardigan, Ivory" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">05 · Quince</span>
     <h3>Mongolian Cashmere Cardigan</h3>
-    <div class="pr"><b>$79.90</b><span>Ivory · 100% Grade-A Mongolian cashmere</span></div>
-    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-cardigan-sweater?color=ivory" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Ivory · 100% Grade-A Mongolian cashmere</p>
+    <p class="pc-role">The third layer that turns a basic outfit into a considered one.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="79.9" data-save="79.9" data-sname=""><b>$79.90</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p05" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/cashmere/cashmere-cardigan-sweater?color=ivory" data-inv="https://www.quince.com/women/cashmere/cashmere-cardigan-sweater?color=ivory" data-save="https://www.quince.com/women/cashmere/cashmere-cardigan-sweater?color=ivory" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Light knitwear near the face looks fresh and cared-for.</p></details><details><summary>In the fitting room</summary><p>Buttons should sit in a straight line, and the placket should not wave.</p></details><details><summary>Wear it with</summary><p>Over the cashmere tee, buttoned up as a sweater over the white shirt, or under the coat.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p06">
-  <img class="ph" src="img/06-tee.jpg" alt="Mongolian Cashmere Tee" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">06 · Quince</span>
+</article><article class="pc" id="p06">
+  <button type="button" class="zoom ph" data-big="img/big/06-tee.jpg" aria-label="Mongolian Cashmere Tee, full screen"><img src="img/big/06-tee.jpg" width="900" height="1125" alt="Mongolian Cashmere Tee, Oatmeal" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">06 · Quince</span>
     <h3>Mongolian Cashmere Tee</h3>
-    <div class="pr"><b>$44.90</b><span>Oatmeal · 100% Grade-A Mongolian cashmere</span></div>
-    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-tee-shirt?color=oatmeal" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Oatmeal · 100% Grade-A Mongolian cashmere</p>
+    <p class="pc-role">The light layer under the cardigan and the blazer.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="44.9" data-save="44.9" data-sname=""><b>$44.90</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p06" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/cashmere/cashmere-tee-shirt?color=oatmeal" data-inv="https://www.quince.com/women/cashmere/cashmere-tee-shirt?color=oatmeal" data-save="https://www.quince.com/women/cashmere/cashmere-tee-shirt?color=oatmeal" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>A plain tee in cashmere instead of cotton jersey. Nobody sees the label, but everyone sees the drape.</p></details><details><summary>In the fitting room</summary><p>Hold it up to the light: it should not be see-through.</p></details><details><summary>Wear it with</summary><p>The cardigan, blazer, ponte trousers, or the burgundy skirt.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p07">
-  <img class="ph" src="img/07-blouse.jpg" alt="Washable Stretch Silk Blouse" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">07 · Quince</span>
+</article><article class="pc" id="p07">
+  <button type="button" class="zoom ph" data-big="img/big/07-blouse.jpg" aria-label="Washable Stretch Silk Blouse, full screen"><img src="img/big/07-blouse.jpg" width="900" height="1125" alt="Washable Stretch Silk Blouse, Ivory" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">07 · Quince</span>
     <h3>Washable Stretch Silk Blouse</h3>
-    <div class="pr"><b>$72</b><span>Ivory · 90% mulberry silk, 10% spandex</span></div>
-    <a class="shop" href="https://www.quince.com/women/washable-stretch-silk-blouse?color=ivory" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Ivory · 90% mulberry silk, 10% spandex</p>
+    <p class="pc-role">The evening and office top.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="72" data-save="72" data-sname=""><b>$72.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p07" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/washable-stretch-silk-blouse?color=ivory" data-inv="https://www.quince.com/women/washable-stretch-silk-blouse?color=ivory" data-save="https://www.quince.com/women/washable-stretch-silk-blouse?color=ivory" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Silk catches the light softly; polyester satin shines hard.</p></details><details><summary>In the fitting room</summary><p>Raise your arms: the blouse should not pull out of your waistband.</p></details><details><summary>Wear it with</summary><p>Camel trousers and the belt, the burgundy skirt, or under the blazer.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p08">
-  <img class="ph" src="img/08-ribturtle.jpg" alt="Organic Cotton Micro-Rib Turtleneck" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">08 · Quince</span>
+</article><article class="pc" id="p08">
+  <button type="button" class="zoom ph" data-big="img/big/08-ribturtle.jpg" aria-label="Organic Cotton Micro-Rib Turtleneck, full screen"><img src="img/big/08-ribturtle.jpg" width="900" height="1125" alt="Organic Cotton Micro-Rib Turtleneck, Heather Grey" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">08 · Quince</span>
     <h3>Organic Cotton Micro-Rib Turtleneck</h3>
-    <div class="pr"><b>$24.90</b><span>Heather Grey · 97% organic cotton, 3% elastane</span></div>
-    <a class="shop" href="https://www.quince.com/women/organic-cotton-rib-turtleneck?color=heather-grey" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Heather Grey · 97% organic cotton, 3% elastane</p>
+    <p class="pc-role">The thin layer under the sleeveless dress and under sweaters.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="24.9" data-save="24.9" data-sname=""><b>$24.90</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p08" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/organic-cotton-rib-turtleneck?color=heather-grey" data-inv="https://www.quince.com/women/organic-cotton-rib-turtleneck?color=heather-grey" data-save="https://www.quince.com/women/organic-cotton-rib-turtleneck?color=heather-grey" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>A fine rib lies smooth under knitwear, so the sweater on top keeps its shape.</p></details><details><summary>In the fitting room</summary><p>The rib should spring back after you stretch the collar.</p></details><details><summary>Wear it with</summary><p>Under the dress, under the grey crewneck on frosty days, or under the blazer.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p09">
-  <img class="ph" src="img/09-blazer.jpg" alt="Italian Wool Oversized Blazer" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">09 · Quince</span>
+</article><article class="pc" id="p09">
+  <button type="button" class="zoom ph" data-big="img/big/09-blazer.jpg" aria-label="Italian Wool Oversized Blazer, full screen"><img src="img/big/09-blazer.jpg" width="900" height="1125" alt="Italian Wool Oversized Blazer, Textured Camel" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">09 · Quince</span>
     <h3>Italian Wool Oversized Blazer</h3>
-    <div class="pr"><b>$100</b><span>Textured Camel · shell 55% recycled Italian wool, 35% recycled polyester, 5% recycled nylon, 5% other fibres; lined</span></div>
-    <a class="shop" href="https://www.quince.com/women/italian-wool-oversized-blazer?color=textured-camel" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Textured Camel · shell 55% recycled Italian wool, 35% recycled polyester, 5% recycled nylon, 5% other fibres; lined</p>
+    <p class="pc-role">Turns jeans and a turtleneck into an office outfit.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="100" data-save="49.9" data-sname="Uniqlo Jersey Tailored Jacket"><b>$100.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p09" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/italian-wool-oversized-blazer?color=textured-camel" data-inv="https://www.quince.com/women/italian-wool-oversized-blazer?color=textured-camel" data-save="https://www.uniqlo.com/us/en/products/E489108-000/00?colorDisplayCode=38" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Camel and texture. Honest note: the wool here is just over half. We keep it because it is lined and mostly wool. Always read the label, not the name.</p></details><details><summary>In the fitting room</summary><p>Button it: no pulling across the chest. The sleeve should end at your wrist bone.</p></details><details><summary>Wear it with</summary><p>Jeans, ponte trousers, or over the silk blouse or cashmere tee.</p></details>
+    <div class="swap in-save has-img" id="p09-save"><img src="img/big/swap-blazer.jpg" alt="Uniqlo Jersey Tailored Jacket" loading="lazy"><div><span class="eyebrow2">Cheaper swap</span><span class="sv-flag">In your Save budget</span><p>Uniqlo Jersey Tailored Jacket, $49.90, polyester-cotton-rayon. It holds its shape, but it is not wool.</p><a class="lnk" href="https://www.uniqlo.com/us/en/products/E489108-000/00?colorDisplayCode=38" target="_blank" rel="noopener">Shop the swap →</a></div></div>
   </div>
-  <div class="swap" id="p09-save"><img src="img/swap-blazer.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Uniqlo Jersey Tailored Jacket, $49.90, polyester-cotton-rayon. It holds its shape, but it is not wool.</p><a class="shop" href="https://www.uniqlo.com/us/en/products/E489108-000/00?colorDisplayCode=38" target="_blank" rel="noopener">Shop the swap →</a></div></div>
-</article><article class="piece" id="p10">
-  <img class="ph" src="img/10-jeans.jpg" alt="Bella Stretch Straight Jeans" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">10 · Quince</span>
+</article><article class="pc" id="p10">
+  <button type="button" class="zoom ph" data-big="img/big/10-jeans.jpg" aria-label="Bella Stretch Straight Jeans, full screen"><img src="img/big/10-jeans.jpg" width="900" height="1125" alt="Bella Stretch Straight Jeans, Deep Rinse" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">10 · Quince</span>
     <h3>Bella Stretch Straight Jeans</h3>
-    <div class="pr"><b>$50</b><span>Deep Rinse · 94% organic cotton, 5% elasterell-p, 1% lycra</span></div>
-    <a class="shop" href="https://www.quince.com/women/high-rise-straight-jeans--28-inseam?color=deep-rinse" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Deep Rinse · 94% organic cotton, 5% elasterell-p, 1% lycra</p>
+    <p class="pc-role">Jeans you can wear with a coat, not just with a hoodie.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="50" data-save="50" data-sname=""><b>$50.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p10" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/high-rise-straight-jeans--28-inseam?color=deep-rinse" data-inv="https://www.quince.com/women/high-rise-straight-jeans--28-inseam?color=deep-rinse" data-save="https://www.quince.com/women/high-rise-straight-jeans--28-inseam?color=deep-rinse" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Dark, even wash, no distressing. Dark denim looks sharper.</p></details><details><summary>In the fitting room</summary><p>High-rise at the waist; the hem should touch the top of your foot.</p></details><details><summary>Wear it with</summary><p>The blazer, coat, any sweater, or all three pairs of shoes.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p11">
-  <img class="ph" src="img/11-ponte.jpg" alt="Ultra-Stretch Ponte Trouser" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">11 · Quince</span>
+</article><article class="pc" id="p11">
+  <button type="button" class="zoom ph" data-big="img/big/11-ponte.jpg" aria-label="Ultra-Stretch Ponte Trouser, full screen"><img src="img/big/11-ponte.jpg" width="900" height="1125" alt="Ultra-Stretch Ponte Trouser, Navy" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">11 · Quince</span>
     <h3>Ultra-Stretch Ponte Trouser</h3>
-    <div class="pr"><b>$44.90</b><span>Navy · 67% rayon, 28% nylon, 5% spandex</span></div>
-    <a class="shop" href="https://www.quince.com/women/womens-ultra-stretch-ponte-trouser---30?color=navy" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Navy · 67% rayon, 28% nylon, 5% spandex</p>
+    <p class="pc-role">The everyday trousers.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="44.9" data-save="44.9" data-sname=""><b>$44.90</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p11" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/womens-ultra-stretch-ponte-trouser---30?color=navy" data-inv="https://www.quince.com/women/womens-ultra-stretch-ponte-trouser---30?color=navy" data-save="https://www.quince.com/women/womens-ultra-stretch-ponte-trouser---30?color=navy" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Navy is softer than black and does not show lint. Honest note: this is not wool. Ponte earns its place because it holds a crease-free shape all day.</p></details><details><summary>In the fitting room</summary><p>Sit down: the waistband should not dig in.</p></details><details><summary>Wear it with</summary><p>Every top in the capsule.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p12">
-  <img class="ph" src="img/12-skirt.jpg" alt="Australian Merino Wool Midi Skirt" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">12 · Quince</span>
+</article><article class="pc" id="p12">
+  <button type="button" class="zoom ph" data-big="img/big/12-skirt.jpg" aria-label="Australian Merino Wool Midi Skirt, full screen"><img src="img/big/12-skirt.jpg" width="900" height="1125" alt="Australian Merino Wool Midi Skirt, Barolo Burgundy" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">12 · Quince</span>
     <h3>Australian Merino Wool Midi Skirt</h3>
-    <div class="pr"><b>$80</b><span>Barolo Burgundy · 94% merino wool, 6% nylon</span></div>
-    <a class="shop" href="https://www.quince.com/women/australian-merino-wool-midi-skirt?color=barolo-burgundy" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Barolo Burgundy · 94% merino wool, 6% nylon</p>
+    <p class="pc-role">The one color accent, for the office and for evenings.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="80" data-save="80" data-sname=""><b>$80.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p12" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/australian-merino-wool-midi-skirt?color=barolo-burgundy" data-inv="https://www.quince.com/women/australian-merino-wool-midi-skirt?color=barolo-burgundy" data-save="https://www.quince.com/women/australian-merino-wool-midi-skirt?color=barolo-burgundy" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Merino, not polyester, in a deep burgundy that works with grey, chocolate, ivory, and camel.</p></details><details><summary>In the fitting room</summary><p>Walk a few steps: the skirt should not ride up.</p></details><details><summary>Wear it with</summary><p>The heeled boots, brown turtleneck, grey crewneck, or silk blouse.</p></details>
+    <div class="swap" id="p12-save"><div><span class="eyebrow2">Cheaper swap</span><p>Not worth it. Uniqlo&#x27;s Pleated Skirt costs $59.90 and is 69% polyester, 29% rayon. Ours is 94% merino for $20 more.</p></div></div>
   </div>
-  <div class="swap" id="p12-save"><div><span class="eyebrow">Cheaper swap</span><p>Not worth it. Uniqlo&#x27;s Pleated Skirt costs $59.90 and is 69% polyester, 29% rayon. Ours is 94% merino for $20 more.</p></div></div>
-</article><article class="piece" id="p13">
-  <img class="ph" src="img/13-dress.jpg" alt="Mongolian Cashmere Sleeveless Midi Sweater Dress" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">13 · Quince</span>
+</article><article class="pc" id="p13">
+  <button type="button" class="zoom ph" data-big="img/big/13-dress.jpg" aria-label="Mongolian Cashmere Sleeveless Midi Sweater Dress, full screen"><img src="img/big/13-dress.jpg" width="900" height="1125" alt="Mongolian Cashmere Sleeveless Midi Sweater Dress, Teak Brown" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">13 · Quince</span>
     <h3>Mongolian Cashmere Sleeveless Midi Sweater Dress</h3>
-    <div class="pr"><b>$109.90</b><span>Teak Brown · 100% Grade-A Mongolian cashmere</span></div>
-    <a class="shop" href="https://www.quince.com/women/mongolian-cashmere-sleeveless-midi-sweater-dress?color=teak-brown" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Teak Brown · 100% Grade-A Mongolian cashmere</p>
+    <p class="pc-role">One piece, and the outfit is done.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="109.9" data-save="109.9" data-sname=""><b>$109.90</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p13" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/mongolian-cashmere-sleeveless-midi-sweater-dress?color=teak-brown" data-inv="https://www.quince.com/women/mongolian-cashmere-sleeveless-midi-sweater-dress?color=teak-brown" data-save="https://www.quince.com/women/mongolian-cashmere-sleeveless-midi-sweater-dress?color=teak-brown" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>A cashmere dress layered over a fine turtleneck looks like a deliberate choice, not &quot;a warm dress.&quot;</p></details><details><summary>In the fitting room</summary><p>Try it over the grey rib turtleneck: no bunching at the armholes.</p></details><details><summary>Wear it with</summary><p>The rib turtleneck or white shirt underneath, heeled boots, and the blazer.</p></details><details><summary>Don't be fooled</summary><p>Quince&#x27;s own &quot;Cotton Cashmere&quot; ribbed midi dress, $77, is 5% cashmere.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p14">
-  <img class="ph" src="img/14-trousers.jpg" alt="Essential Trouser in Wool-Blend Flannel" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">14 · J.Crew</span>
+</article><article class="pc" id="p14">
+  <button type="button" class="zoom ph" data-big="img/big/14-trousers.jpg" aria-label="Essential Trouser in Wool-Blend Flannel, full screen"><img src="img/big/14-trousers.jpg" width="900" height="1125" alt="Essential Trouser in Wool-Blend Flannel, Camel" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">14 · J.Crew</span>
     <h3>Essential Trouser in Wool-Blend Flannel</h3>
-    <div class="pr"><b>$178</b><span>Camel · 66% wool, 28% polyester, 6% elastane</span></div>
-    <a class="shop" href="https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?color_name=camel&amp;colorProductCode=CZ816" target="_blank" rel="noopener">Shop it →</a><p class="second">Also in Brown Grey Glen Plaid, same price <a class="shop" href="https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?colorProductCode=CZ819" target="_blank" rel="noopener">Shop →</a></p>
+    <p class="pc-meta">Camel · 66% wool, 28% polyester, 6% elastane</p>
+    <p class="pc-role">The wool trousers for tonal camel looks.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="178" data-save="0" data-sname="Navy ponte trousers"><b>$178.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p14" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?color_name=camel&amp;colorProductCode=CZ816" data-inv="https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?color_name=camel&amp;colorProductCode=CZ816" data-save="#p11" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Flannel has a soft, matte surface. With the camel coat and blazer, it builds a head-to-toe look that reads as one expensive outfit.</p></details><details><summary>In the fitting room</summary><p>The front crease should fall straight; the hem should touch the top of your boot.</p></details><details><summary>Wear it with</summary><p>The brown turtleneck, silk blouse with the belt, or grey crewneck.</p></details><details class="also" open><summary>Also in Brown Grey Glen Plaid</summary><button type="button" class="zoom also-ph" data-big="img/big/14b-plaid-look.jpg" aria-label="Outfit with the Glen plaid trousers, full screen"><img src="img/big/14b-plaid-look.jpg" width="700" height="874" alt="Outfit with the Brown Grey Glen Plaid trousers" loading="lazy"></button><p>Brown Grey Glen Plaid, same fabric and price. <a class="lnk" href="https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?colorProductCode=CZ819" target="_blank" rel="noopener">Shop the plaid →</a></p></details>
+    <div class="swap in-save" id="p14-save"><div><span class="eyebrow2">Cheaper swap</span><span class="sv-flag">In your Save budget</span><p>Wear the navy ponte trousers (11) you already have. Nothing extra to buy.</p><a class="lnk" href="#p11">See the ponte trousers ↓</a></div></div>
   </div>
-  <div class="swap" id="p14-save"><div><span class="eyebrow">Cheaper swap</span><p>The navy ponte trousers (11), $44.90.</p><a class="shop" href="#p11">See the ponte trousers ↓</a></div></div>
-</article><article class="piece" id="p15">
-  <img class="ph" src="img/15-boot.jpg" alt="Italian Leather Block Heel Boot" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">15 · Quince</span>
+</article><article class="pc" id="p15">
+  <button type="button" class="zoom ph" data-big="img/big/15-boot.jpg" aria-label="Italian Leather Block Heel Boot, full screen"><img src="img/big/15-boot.jpg" width="900" height="1125" alt="Italian Leather Block Heel Boot, Chestnut" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">15 · Quince</span>
     <h3>Italian Leather Block Heel Boot</h3>
-    <div class="pr"><b>$218</b><span>Chestnut · 100% Italian calf leather upper, sheep leather lining</span></div>
-    <a class="shop" href="https://www.quince.com/women/italian-leather-block-heel-boot?color=chestnut" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Chestnut · 100% Italian calf leather upper, sheep leather lining</p>
+    <p class="pc-role">The shoe that makes any outfit look grown-up.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="218" data-save="109" data-sname="H&amp;M Heeled Leather Boots"><b>$218.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p15" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/italian-leather-block-heel-boot?color=chestnut" data-inv="https://www.quince.com/women/italian-leather-block-heel-boot?color=chestnut" data-save="https://www2.hm.com/en_us/productpage.1346247001.html" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Real leather in a warm brown. A block heel is steady on winter sidewalks.</p></details><details><summary>In the fitting room</summary><p>The shaft should not gape or squeeze; walk across the store.</p></details><details><summary>Wear it with</summary><p>The skirt, dress, under trousers, or with jeans.</p></details><details><summary>Don't be fooled</summary><p>The H&amp;M model is called &quot;Leather Boots&quot; in every color, but the dark brown pair is suede. Check the label for the color you pick.</p></details>
+    <div class="swap in-save has-img" id="p15-save"><img src="img/big/swap-boot.jpg" alt="H&amp;M Heeled Leather Boots" loading="lazy"><div><span class="eyebrow2">Cheaper swap</span><span class="sv-flag">In your Save budget</span><p>H&amp;M Heeled Leather Boots, Dark Brown, $109, 100% sheep suede upper. A different shape: ankle height, pointed toe, slim heel.</p><p id="p15-save2" class="sw2">Need a steady block heel? H&amp;M Knee-High Boots, Dark Brown, $79.99, faux leather.</p><a class="lnk" href="https://www2.hm.com/en_us/productpage.1346247001.html" target="_blank" rel="noopener">Shop the swap →</a><a class="lnk" href="https://www2.hm.com/en_us/productpage.1291809014.html" target="_blank" rel="noopener">Shop the block-heel boots →</a></div></div>
   </div>
-  <div class="swap" id="p15-save"><img src="img/swap-boot.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>H&amp;M Heeled Leather Boots, Dark Brown, $109, 100% sheep suede upper. A different shape: ankle height, pointed toe, slim heel. Need a steady block heel? H&amp;M Knee-High Boots, Dark Brown, $79.99, faux leather.</p><a class="shop" href="https://www2.hm.com/en_us/productpage.1346247001.html" target="_blank" rel="noopener">Shop the swap →</a><span id="p15-save2" class="anc"></span><a class="shop" href="https://www2.hm.com/en_us/productpage.1291809014.html" target="_blank" rel="noopener">Shop the block-heel boots →</a></div></div>
-</article><article class="piece" id="p16">
-  <img class="ph" src="img/16-loafer.jpg" alt="Italian Suede Penny Loafer" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">16 · Quince</span>
+</article><article class="pc" id="p16">
+  <button type="button" class="zoom ph" data-big="img/big/16-loafer.jpg" aria-label="Italian Suede Penny Loafer, full screen"><img src="img/big/16-loafer.jpg" width="900" height="1125" alt="Italian Suede Penny Loafer, Cognac" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">16 · Quince</span>
     <h3>Italian Suede Penny Loafer</h3>
-    <div class="pr"><b>$84</b><span>Cognac · 100% Italian sheep suede upper, cow leather lining</span></div>
-    <a class="shop" href="https://www.quince.com/women/women-s-leather-pointy-penny-loafer?color=cognac" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Cognac · 100% Italian sheep suede upper, cow leather lining</p>
+    <p class="pc-role">The shoe for trousers and jeans on dry days.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="84" data-save="84" data-sname=""><b>$84.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p16" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/women-s-leather-pointy-penny-loafer?color=cognac" data-inv="https://www.quince.com/women/women-s-leather-pointy-penny-loafer?color=cognac" data-save="https://www.quince.com/women/women-s-leather-pointy-penny-loafer?color=cognac" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Suede is matte and deep in color; a penny loafer is the classic &quot;old money&quot; shoe.</p></details><details><summary>In the fitting room</summary><p>The heel should not slip out when you walk.</p></details><details><summary>Wear it with</summary><p>Jeans, ponte trousers, or camel trousers.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p17">
-  <img class="ph" src="img/17-shearling.jpg" alt="Australian Shearling Mid-Calf Boot" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">17 · Quince</span>
+</article><article class="pc" id="p17">
+  <button type="button" class="zoom ph" data-big="img/big/17-shearling.jpg" aria-label="Australian Shearling Mid-Calf Boot, full screen"><img src="img/big/17-shearling.jpg" width="900" height="1125" alt="Australian Shearling Mid-Calf Boot, Coffee Bean" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">17 · Quince</span>
     <h3>Australian Shearling Mid-Calf Boot</h3>
-    <div class="pr"><b>$82</b><span>Coffee Bean · suede upper, 100% Australian shearling lining and insole, non-slip rubber sole, water-repellent treatment</span></div>
-    <a class="shop" href="https://www.quince.com/unisex/women-s-australian-shearling-mid-calf-boot?color=coffee-bean" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Coffee Bean · suede upper, 100% Australian shearling lining and insole, non-slip rubber sole, water-repellent treatment</p>
+    <p class="pc-role">For snow and weekends.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="82" data-save="82" data-sname=""><b>$82.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p17" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/unisex/women-s-australian-shearling-mid-calf-boot?color=coffee-bean" data-inv="https://www.quince.com/unisex/women-s-australian-shearling-mid-calf-boot?color=coffee-bean" data-save="https://www.quince.com/unisex/women-s-australian-shearling-mid-calf-boot?color=coffee-bean" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Real shearling and suede in a dark brown instead of a bright logo boot.</p></details><details><summary>In the fitting room</summary><p>A wool sock should fit inside.</p></details><details><summary>Wear it with</summary><p>Jeans, ponte trousers, or the puffer.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="p18">
-  <img class="ph" src="img/18-shirt.jpg" alt="Broadcloth Shirt, Button Down" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">18 · Uniqlo</span>
+</article><article class="pc" id="p18">
+  <button type="button" class="zoom ph" data-big="img/big/18-shirt.jpg" aria-label="Broadcloth Shirt, Button Down, full screen"><img src="img/big/18-shirt.jpg" width="900" height="1125" alt="Broadcloth Shirt, Button Down, White" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">18 · Uniqlo</span>
     <h3>Broadcloth Shirt, Button Down</h3>
-    <div class="pr"><b>$49.90</b><span>White · 100% cotton</span></div>
-    <a class="shop" href="https://www.uniqlo.com/us/en/products/E450260-000/00?colorDisplayCode=00" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">White · 100% cotton</p>
+    <p class="pc-role">The white collar and cuffs that show under knitwear.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="49.9" data-save="49.9" data-sname=""><b>$49.90</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="p18" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.uniqlo.com/us/en/products/E450260-000/00?colorDisplayCode=00" data-inv="https://www.uniqlo.com/us/en/products/E450260-000/00?colorDisplayCode=00" data-save="https://www.uniqlo.com/us/en/products/E450260-000/00?colorDisplayCode=00" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Crisp cotton, no shine. A white collar over a sweater looks put-together.</p></details><details><summary>In the fitting room</summary><p>Hold your arm up to the light: you should not see it through the fabric. It is a unisex fit, so check the size chart before you order.</p></details><details><summary>Wear it with</summary><p>Under the grey crewneck with the collar out, with the blazer and jeans, or tucked into the skirt.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="a1">
-  <img class="ph" src="img/A1-scarf.jpg" alt="Mongolian Cashmere Scarf" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">A1 · Quince</span>
+</article><h3 class="pcs-sub">Accessories</h3><article class="pc" id="a1">
+  <button type="button" class="zoom ph" data-big="img/big/A1-scarf.jpg" aria-label="Mongolian Cashmere Scarf, full screen"><img src="img/big/A1-scarf.jpg" width="900" height="1125" alt="Mongolian Cashmere Scarf, Rich Burgundy" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">A1 · Quince</span>
     <h3>Mongolian Cashmere Scarf</h3>
-    <div class="pr"><b>$54</b><span>Rich Burgundy · 100% Grade-A Mongolian cashmere</span></div>
-    <a class="shop" href="https://www.quince.com/women/cashmere/cashmere-scarf?color=rich-burgundy" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Rich Burgundy · 100% Grade-A Mongolian cashmere</p>
+    <p class="pc-role">Color and softness near your face. Ties the coat and the knitwear into one look.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="54" data-save="24.9" data-sname="Uniqlo HEATTECH Scarf"><b>$54.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="a1" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/cashmere/cashmere-scarf?color=rich-burgundy" data-inv="https://www.quince.com/women/cashmere/cashmere-scarf?color=rich-burgundy" data-save="https://www.uniqlo.com/us/en/products/E486202-000/00?colorDisplayCode=31" target="_blank" rel="noopener">Shop it →</a></span></div>
+    
+    <div class="swap in-save has-img" id="a1-save"><img src="img/big/swap-scarf.jpg" alt="Uniqlo HEATTECH Scarf" loading="lazy"><div><span class="eyebrow2">Cheaper swap</span><span class="sv-flag">In your Save budget</span><p>Uniqlo HEATTECH Scarf, $24.90, 35% wool, 65% acrylic.</p><a class="lnk" href="https://www.uniqlo.com/us/en/products/E486202-000/00?colorDisplayCode=31" target="_blank" rel="noopener">Shop the swap →</a></div></div>
   </div>
-  <div class="swap" id="a1-save"><img src="img/swap-scarf.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Uniqlo HEATTECH Scarf, $24.90, 35% wool, 65% acrylic.</p><a class="shop" href="https://www.uniqlo.com/us/en/products/E486202-000/00?colorDisplayCode=31" target="_blank" rel="noopener">Shop the swap →</a></div></div>
-</article><article class="piece" id="a2">
-  <img class="ph" src="img/A2-tote.jpg" alt="Penelope Tote" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">A2 · Quince</span>
+</article><article class="pc" id="a2">
+  <button type="button" class="zoom ph" data-big="img/big/A2-tote.jpg" aria-label="Penelope Tote, full screen"><img src="img/big/A2-tote.jpg" width="900" height="1125" alt="Penelope Tote, Espresso Brown" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">A2 · Quince</span>
     <h3>Penelope Tote</h3>
-    <div class="pr"><b>$158</b><span>Espresso Brown · 100% full-grain pebbled leather, suede lining</span></div>
-    <a class="shop" href="https://www.quince.com/women/italian-leather-soft-shopper-tote?color=espresso-brown" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Espresso Brown · 100% full-grain pebbled leather, suede lining</p>
+    <p class="pc-role">One bag for work and weekends.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="158" data-save="59.99" data-sname="Gap Factory Vegan-Suede Tote"><b>$158.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="a2" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/italian-leather-soft-shopper-tote?color=espresso-brown" data-inv="https://www.quince.com/women/italian-leather-soft-shopper-tote?color=espresso-brown" data-save="https://www.gapfactory.com/browse/product.do?pid=1179386001" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Why it looks expensive</summary><p>Full-grain leather, no logo, and a color that matches the boots and the belt.</p></details>
+    <div class="swap in-save has-img" id="a2-save"><img src="img/big/swap-tote.jpg" alt="Gap Factory Vegan-Suede Tote" loading="lazy"><div><span class="eyebrow2">Cheaper swap</span><span class="sv-flag">In your Save budget</span><p>Gap Factory Slouchy Vegan-Suede Tote, Chocolate, $59.99 (often on sale; $29.99 on October 22), 100% polyester faux suede. We found no real-leather tote under $80.</p><a class="lnk" href="https://www.gapfactory.com/browse/product.do?pid=1179386001" target="_blank" rel="noopener">Shop the swap →</a></div></div>
   </div>
-  <div class="swap" id="a2-save"><img src="img/swap-tote.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Gap Factory Slouchy Vegan-Suede Tote, Chocolate, $59.99 (often on sale; $29.99 on October 22), 100% polyester faux suede. We found no real-leather tote under $80.</p><a class="shop" href="https://www.gapfactory.com/browse/product.do?pid=1179386001" target="_blank" rel="noopener">Shop the swap →</a></div></div>
-</article><article class="piece" id="a3">
-  <img class="ph" src="img/A3-beanie.jpg" alt="Mongolian Cashmere Ribbed Beanie" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">A3 · Quince</span>
+</article><article class="pc" id="a3">
+  <button type="button" class="zoom ph" data-big="img/big/A3-beanie.jpg" aria-label="Mongolian Cashmere Ribbed Beanie, full screen"><img src="img/big/A3-beanie.jpg" width="900" height="1125" alt="Mongolian Cashmere Ribbed Beanie, Oatmeal" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">A3 · Quince</span>
     <h3>Mongolian Cashmere Ribbed Beanie</h3>
-    <div class="pr"><b>$34.90</b><span>Oatmeal · 96% cashmere, 3% polyester, 1% spandex</span></div>
-    <a class="shop" href="https://www.quince.com/unisex/cashmere/beanie?color=oatmeal" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Oatmeal · 96% cashmere, 3% polyester, 1% spandex</p>
+    <p class="pc-role">Warmth on freezing days.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="34.9" data-save="34.9" data-sname=""><b>$34.90</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="a3" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/unisex/cashmere/beanie?color=oatmeal" data-inv="https://www.quince.com/unisex/cashmere/beanie?color=oatmeal" data-save="https://www.quince.com/unisex/cashmere/beanie?color=oatmeal" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Don't be fooled</summary><p>Uniqlo HEATTECH Beanie, $19.90, is 9-10% wool.</p></details>
+    <div class="swap has-img" id="a3-save"><img src="img/big/swap-beanie.jpg" alt="Uniqlo Wool Cashmere Beanie" loading="lazy"><div><span class="eyebrow2">Cheaper swap</span><p>Uniqlo Wool Cashmere Beanie, $29.90, 85% wool + 15% cashmere.</p><a class="lnk" href="https://www.uniqlo.com/us/en/products/E488440-000/00?colorDisplayCode=05" target="_blank" rel="noopener">Shop the swap →</a></div></div>
   </div>
-  <div class="swap" id="a3-save"><img src="img/swap-beanie.jpg" alt="" loading="lazy"><div><span class="eyebrow">Cheaper swap</span><p>Uniqlo Wool Cashmere Beanie, $29.90, 85% wool + 15% cashmere.</p><a class="shop" href="https://www.uniqlo.com/us/en/products/E488440-000/00?colorDisplayCode=05" target="_blank" rel="noopener">Shop the swap →</a></div></div>
-</article><article class="piece" id="a4">
-  <img class="ph" src="img/A4-belt.jpg" alt="Clean Belt" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">A4 · Uniqlo</span>
+</article><article class="pc" id="a4">
+  <button type="button" class="zoom ph" data-big="img/big/A4-belt.jpg" aria-label="Clean Belt, full screen"><img src="img/big/A4-belt.jpg" width="900" height="1125" alt="Clean Belt, Dark Brown" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">A4 · Uniqlo</span>
     <h3>Clean Belt</h3>
-    <div class="pr"><b>$29.90</b><span>Dark Brown · genuine leather</span></div>
-    <a class="shop" href="https://www.uniqlo.com/us/en/products/E473471-000/00?colorDisplayCode=38" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Dark Brown · genuine leather</p>
+    <p class="pc-role">The small detail that finishes a tucked-in top.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="29.9" data-save="29.9" data-sname=""><b>$29.90</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="a4" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.uniqlo.com/us/en/products/E473471-000/00?colorDisplayCode=38" data-inv="https://www.uniqlo.com/us/en/products/E473471-000/00?colorDisplayCode=38" data-save="https://www.uniqlo.com/us/en/products/E473471-000/00?colorDisplayCode=38" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Wear it with</summary><p>The silk blouse with trousers, the shirt with jeans, or the skirt.</p></details>
+    
   </div>
-  
-</article><article class="piece" id="a5">
-  <img class="ph" src="img/A5-beret.jpg" alt="Mongolian Cashmere Beret" loading="lazy">
-  <div class="txt">
-    <span class="eyebrow">A5 · Quince</span>
+</article><article class="pc" id="a5">
+  <button type="button" class="zoom ph" data-big="img/big/A5-beret.jpg" aria-label="Mongolian Cashmere Beret, full screen"><img src="img/big/A5-beret.jpg" width="900" height="1125" alt="Mongolian Cashmere Beret, Ivory" loading="lazy"></button>
+  <div class="pc-b">
+    <span class="eyebrow2">A5 · Quince</span>
     <h3>Mongolian Cashmere Beret</h3>
-    <div class="pr"><b>$32</b><span>Ivory · 100% cashmere</span></div>
-    <a class="shop" href="https://www.quince.com/women/100-cashmere-beret?color=ivory" target="_blank" rel="noopener">Shop it →</a>
+    <p class="pc-meta">Ivory · 100% cashmere</p>
+    <p class="pc-role">For cold days without snow, when a beanie feels too sporty.</p>
+    <div class="pc-buy"><span class="pc-pr" data-inv="32" data-save="32" data-sname=""><b>$32.00</b><small></small></span>
+      <span class="pc-act"><button type="button" class="pk" data-id="a5" aria-pressed="false">Add to my picks</button><a class="lnk shop-main" href="https://www.quince.com/women/100-cashmere-beret?color=ivory" data-inv="https://www.quince.com/women/100-cashmere-beret?color=ivory" data-save="https://www.quince.com/women/100-cashmere-beret?color=ivory" target="_blank" rel="noopener">Shop it →</a></span></div>
+    <details><summary>Wear it with</summary><p>The coat, the burgundy skirt, or jeans with the blazer.</p></details>
+    
   </div>
-  
-</article>
-</div></section>
-<section id="outfits"><div class="wrap"><span class="eyebrow">30 outfits</span><h2>Ready-made outfits</h2>
-<div class="looks"><figure class="look" id="o1"><img src="img/look-01.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">1 · Work</span><b>Monday in camel</b><span>camel trousers, silk blouse, belt, camel blazer, loafers</span></figcaption></figure><figure class="look" id="o2"><img src="img/look-02.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">2 · Work</span><b>The collar trick</b><span>coat open over navy trousers, grey crewneck over the white shirt, loafers</span></figcaption></figure><figure class="look" id="o3"><img src="img/look-03.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">3 · Work</span><b>Friday</b><span>jeans, but with a blazer - coat open on top, ivory beret</span></figcaption></figure><figure class="look" id="o4"><img src="img/look-04.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">4 · Work</span><b>Burgundy and chocolate</b><span>skirt, brown turtleneck, heeled boots</span></figcaption></figure><figure class="look" id="o5"><img src="img/look-05.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">5 · Work</span><b>The dress for a long day</b><span>cashmere dress over the rib turtleneck, blazer, heeled boots</span></figcaption></figure><figure class="look" id="o6"><img src="img/look-06.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">6 · Work</span><b>Soft layers</b><span>navy trousers, cashmere tee, ivory cardigan, loafers</span></figcaption></figure><figure class="look" id="o7"><img src="img/look-07.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">7 · Work</span><b>Brown on camel</b><span>coat open over camel trousers, brown turtleneck, loafers, beanie, scarf</span></figcaption></figure><figure class="look" id="o8"><img src="img/look-08.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">8 · Work</span><b>Presentation day</b><span>navy trousers, silk blouse, blazer, heeled boots, tote</span></figcaption></figure><figure class="look" id="o9"><img src="img/look-09.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">9 · Work</span><b>Skirt with a collar</b><span>burgundy skirt, grey crewneck over the white shirt, heeled boots</span></figcaption></figure><figure class="look" id="o10"><img src="img/look-10.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">10 · Work</span><b>Grey and camel</b><span>camel trousers, grey crewneck, white shirt, loafers</span></figcaption></figure><figure class="look" id="o11"><img src="img/look-11.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">11 · Weekend</span><b>Snow day errands</b><span>navy puffer, jeans, grey crewneck, shearling boots, beanie, scarf</span></figcaption></figure><figure class="look" id="o12"><img src="img/look-12.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">12 · Weekend</span><b>Coffee with a friend</b><span>jeans, cashmere tee, ivory cardigan, loafers</span></figcaption></figure><figure class="look" id="o13"><img src="img/look-13.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">13 · Weekend</span><b>Brunch</b><span>coat, jeans, brown turtleneck, heeled boots, tote, beanie, scarf</span></figcaption></figure><figure class="look" id="o14"><img src="img/look-14.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">14 · Weekend</span><b>Cardigan as a sweater</b><span>jeans, cardigan buttoned over the white shirt, loafers</span></figcaption></figure><figure class="look" id="o15"><img src="img/look-15.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">15 · Weekend</span><b>Skirt and shearling</b><span>burgundy skirt, grey crewneck, shearling boots, coat, ivory beret</span></figcaption></figure><figure class="look" id="o16"><img src="img/look-16.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">16 · Weekend</span><b>The dress, relaxed</b><span>cashmere dress over the white shirt, loafers</span></figcaption></figure><figure class="look" id="o17"><img src="img/look-17.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">17 · Weekend</span><b>Easy Sunday</b><span>navy trousers, cashmere tee, cardigan, shearling boots</span></figcaption></figure><figure class="look" id="o18"><img src="img/look-18.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">18 · Weekend</span><b>Grey and denim</b><span>jeans, rib turtleneck, blazer, loafers</span></figcaption></figure><figure class="look" id="o19"><img src="img/look-19.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">19 · Evening</span><b>Dinner</b><span>burgundy skirt, silk blouse, belt, heeled boots</span></figcaption></figure><figure class="look" id="o20"><img src="img/look-20.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">20 · Evening</span><b>Dress and silk</b><span>cashmere dress over the silk blouse, heeled boots</span></figcaption></figure><figure class="look" id="o21"><img src="img/look-21.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">21 · Evening</span><b>Camel and silk</b><span>camel trousers, silk blouse, belt, heeled boots</span></figcaption></figure><figure class="look" id="o22"><img src="img/look-22.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">22 · Evening</span><b>Navy night</b><span>navy trousers, cashmere tee, blazer, heeled boots</span></figcaption></figure><figure class="look" id="o23"><img src="img/look-23.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">23 · Evening</span><b>Soft evening</b><span>burgundy skirt, cashmere tee, belt, heeled boots</span></figcaption></figure><figure class="look" id="o24"><img src="img/look-24.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">24 · Evening</span><b>Jeans for a date</b><span>jeans, silk blouse, blazer, heeled boots</span></figcaption></figure><figure class="look" id="o25"><img src="img/look-25.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">25 · Frost</span><b>Below zero</b><span>jeans, rib turtleneck under the grey crewneck, puffer, shearling boots, beanie, scarf</span></figcaption></figure><figure class="look" id="o26"><img src="img/look-26.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">26 · Frost</span><b>Cold office</b><span>camel trousers, brown turtleneck, coat, scarf, beanie, heeled boots</span></figcaption></figure><figure class="look" id="o27"><img src="img/look-27.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">27 · Frost</span><b>Navy in the snow</b><span>navy trousers, grey crewneck, puffer, shearling boots, beanie, scarf</span></figcaption></figure><figure class="look" id="o28"><img src="img/look-28.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">28 · Frost</span><b>Layered weekend</b><span>jeans, brown turtleneck, cardigan, coat, shearling boots, beanie, scarf</span></figcaption></figure><figure class="look" id="o29"><img src="img/look-29.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">29 · Frost</span><b>Skirt in the cold</b><span>burgundy skirt, rib turtleneck under the grey crewneck, coat, heeled boots, ivory beret</span></figcaption></figure><figure class="look" id="o30"><img src="img/look-30.jpg" alt="" loading="lazy">
-  <figcaption><span class="eyebrow">30 · Frost</span><b>Dress in the cold</b><span>cashmere dress over the rib turtleneck, coat, heeled boots, beanie, scarf</span></figcaption></figure></div>
-<p style="font-size:12px;color:var(--muted);margin-top:14px">Outfit photos are AI-generated to show how the pieces work together. Product photos belong to the stores</p>
-</div></section>
-<section id="dont"><div class="wrap"><span class="eyebrow">Don't buy this winter</span><h2>Sounds expensive, isn't</h2>
-<div class="tw"><table><tr><th>Sounds expensive</th><th>What's inside</th><th>Price</th><th>Real thing instead</th></tr><tr><td>Uniqlo Souffle Yarn Sweater</td><td>8% wool, 58% acrylic</td><td>$49.90</td><td><a class="real" href="#p03">Quince cashmere crewneck, 100% cashmere, $50 ↑</a></td></tr><tr><td>Gap &quot;CashSoft&quot; Crew</td><td>no cashmere: cotton, nylon, acrylic</td><td>$69.95</td><td><a class="real" href="#p04">Quince cashmere turtleneck, $89.90 ↑</a></td></tr><tr><td>Quince &quot;Cotton Cashmere&quot; Crew (a best-seller)</td><td>3% cashmere</td><td>$29.90</td><td><a class="real" href="#p03">Quince cashmere crewneck, $50 ↑</a></td></tr><tr><td>Gap Factory Relaxed Wrap Topcoat (a best-seller)</td><td>100% polyester</td><td>$74.99 on sale</td><td><a class="real" href="#p01">Quince merino wrap coat, 100% wool, $200 ↑</a></td></tr><tr><td>Gap &quot;Wool-Blend&quot; Peacoat</td><td>31% wool, 65% polyester</td><td>$198</td><td><a class="real" href="#p01">Quince merino wrap coat, $200 ↑</a></td></tr><tr><td>Uniqlo Double Face Relaxed Long Coat</td><td>33% wool</td><td>$149.90</td><td><a class="real" href="#p01-save2">Quince Cocoon Coat, 90% wool + 10% cashmere, $175 ↑</a></td></tr><tr><td>H&amp;M Wool-Blend Pea Coat</td><td>2% wool, 98% polyester</td><td>$69.99</td><td><a class="real" href="#p01-save">H&amp;M Tie-Belt Coat, honest 100% polyester, $59.99 ↑</a></td></tr><tr><td>H&amp;M Wool-Blend Coat</td><td>25% wool, 70% polyester</td><td>$79.99</td><td><a class="real" href="#p01-save2">Quince Cocoon Coat, 90% wool + 10% cashmere, $175 ↑</a></td></tr><tr><td>H&amp;M &quot;Handmade&quot; Double-Breasted Coat</td><td>100% polyester</td><td>$89.99</td><td><a class="real" href="#p01-save">H&amp;M Tie-Belt Coat, same fabric, $59.99 ↑</a></td></tr></table></div></div></section>
-<section id="updates"><div class="wrap"><span class="eyebrow">What's new</span><h2>Updates</h2>
-<p><b>October 20-22, 2026.</b> First version of the live page. We re-check prices and stock every few weeks through March and note every change here</p></div></section>
-<footer><div class="wrap">MeadowDesk · This page is for buyers of the Winter That Looks Expensive guide. Prices and stock change; the store's page is always the final word</div></footer>
+</article><aside class="warm"><span class="eyebrow2">A tip, not a piece</span><h3>Warm base layers</h3><p>A thin warm layer under your clothes lets you wear fewer bulky layers while keeping your top sweater smooth.</p><ul><li><a href="https://www.quince.com/women/women-s-merino-long-sleeve-base-layer-tee" target="_blank" rel="noopener">Quince 100% Merino Wool Long Sleeve Base Layer</a>, $46</li><li><a href="https://www.uniqlo.com/us/en/products/E471601-000/00" target="_blank" rel="noopener">Uniqlo HEATTECH Cashmere Blend Extra Warm Turtleneck</a> or <a href="https://www.uniqlo.com/us/en/products/E469765-000/00" target="_blank" rel="noopener">crewneck</a>, $29.90 (warm, but synthetic: 57% acrylic, 9% cashmere)</li><li><a href="https://www.uniqlo.com/us/en/products/E469742-000/00" target="_blank" rel="noopener">Uniqlo HEATTECH</a>, $14.90</li><li><a href="https://www.uniqlo.com/us/en/products/E480966-000/00" target="_blank" rel="noopener">Uniqlo HEATTECH Ultra Warm Leggings</a> under trousers, $34.90</li></ul></aside></section><section id="outfits" class="ofs"><h2>Outfits</h2><p class="lead">Tap an outfit to see its pieces</p><div class="chips" role="group" aria-label="Filter outfits"><span class="ch-l" aria-hidden="true">Show</span><button type="button" class="chip" data-f="all" aria-pressed="true">All 30</button><button type="button" class="chip" data-f="Work" aria-pressed="false">Work</button><button type="button" class="chip" data-f="Weekend" aria-pressed="false">Weekend</button><button type="button" class="chip" data-f="Evening" aria-pressed="false">Evening</button><button type="button" class="chip" data-f="Frost" aria-pressed="false">Frost</button><button type="button" class="chip" data-f="mine" aria-pressed="false">From my picks <span class="c-mine"></span></button></div><p class="of-live vh" aria-live="polite"></p><p class="of-empty" role="status" hidden>Pick pieces in Your capsule, and the outfits they make will show up here</p><ul class="lks"><li data-g="Work"><button type="button" class="look" data-n="1" aria-haspopup="dialog"><img src="img/look-01.jpg" width="600" height="749" alt="Outfit 1: camel trousers, silk blouse, belt, camel blazer, loafers" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">01</span> Monday in camel</span></button></li><li data-g="Work"><button type="button" class="look" data-n="2" aria-haspopup="dialog"><img src="img/look-02.jpg" width="600" height="749" alt="Outfit 2: coat open over navy trousers, grey crewneck over the white shirt, loafers" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">02</span> The collar trick</span></button></li><li data-g="Work"><button type="button" class="look" data-n="3" aria-haspopup="dialog"><img src="img/look-03.jpg" width="600" height="749" alt="Outfit 3: jeans, but with a blazer - coat open on top, ivory beret" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">03</span> Friday</span></button></li><li data-g="Work"><button type="button" class="look" data-n="4" aria-haspopup="dialog"><img src="img/look-04.jpg" width="600" height="749" alt="Outfit 4: skirt, brown turtleneck, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">04</span> Burgundy and chocolate</span></button></li><li data-g="Work"><button type="button" class="look" data-n="5" aria-haspopup="dialog"><img src="img/look-05.jpg" width="600" height="749" alt="Outfit 5: cashmere dress over the rib turtleneck, blazer, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">05</span> The dress for a long day</span></button></li><li data-g="Work"><button type="button" class="look" data-n="6" aria-haspopup="dialog"><img src="img/look-06.jpg" width="600" height="749" alt="Outfit 6: navy trousers, cashmere tee, ivory cardigan, loafers" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">06</span> Soft layers</span></button></li><li data-g="Work"><button type="button" class="look" data-n="7" aria-haspopup="dialog"><img src="img/look-07.jpg" width="600" height="749" alt="Outfit 7: coat open over camel trousers, brown turtleneck, loafers, beanie, scarf" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">07</span> Brown on camel</span></button></li><li data-g="Work"><button type="button" class="look" data-n="8" aria-haspopup="dialog"><img src="img/look-08.jpg" width="600" height="749" alt="Outfit 8: navy trousers, silk blouse, blazer, heeled boots, tote" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">08</span> Presentation day</span></button></li><li data-g="Work"><button type="button" class="look" data-n="9" aria-haspopup="dialog"><img src="img/look-09.jpg" width="600" height="749" alt="Outfit 9: burgundy skirt, grey crewneck over the white shirt, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">09</span> Skirt with a collar</span></button></li><li data-g="Work"><button type="button" class="look" data-n="10" aria-haspopup="dialog"><img src="img/look-10.jpg" width="600" height="749" alt="Outfit 10: camel trousers, grey crewneck, white shirt, loafers" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">10</span> Grey and camel</span></button></li><li data-g="Weekend"><button type="button" class="look" data-n="11" aria-haspopup="dialog"><img src="img/look-11.jpg" width="600" height="749" alt="Outfit 11: navy puffer, jeans, grey crewneck, shearling boots, beanie, scarf" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">11</span> Snow day errands</span></button></li><li data-g="Weekend"><button type="button" class="look" data-n="12" aria-haspopup="dialog"><img src="img/look-12.jpg" width="600" height="749" alt="Outfit 12: jeans, cashmere tee, ivory cardigan, loafers" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">12</span> Coffee with a friend</span></button></li><li data-g="Weekend"><button type="button" class="look" data-n="13" aria-haspopup="dialog"><img src="img/look-13.jpg" width="600" height="749" alt="Outfit 13: coat, jeans, brown turtleneck, heeled boots, tote, beanie, scarf" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">13</span> Brunch</span></button></li><li data-g="Weekend"><button type="button" class="look" data-n="14" aria-haspopup="dialog"><img src="img/look-14.jpg" width="600" height="749" alt="Outfit 14: jeans, cardigan buttoned over the white shirt, loafers" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">14</span> Cardigan as a sweater</span></button></li><li data-g="Weekend"><button type="button" class="look" data-n="15" aria-haspopup="dialog"><img src="img/look-15.jpg" width="600" height="749" alt="Outfit 15: burgundy skirt, grey crewneck, shearling boots, coat, ivory beret" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">15</span> Skirt and shearling</span></button></li><li data-g="Weekend"><button type="button" class="look" data-n="16" aria-haspopup="dialog"><img src="img/look-16.jpg" width="600" height="749" alt="Outfit 16: cashmere dress over the white shirt, loafers" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">16</span> The dress, relaxed</span></button></li><li data-g="Weekend"><button type="button" class="look" data-n="17" aria-haspopup="dialog"><img src="img/look-17.jpg" width="600" height="749" alt="Outfit 17: navy trousers, cashmere tee, cardigan, shearling boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">17</span> Easy Sunday</span></button></li><li data-g="Weekend"><button type="button" class="look" data-n="18" aria-haspopup="dialog"><img src="img/look-18.jpg" width="600" height="749" alt="Outfit 18: jeans, rib turtleneck, blazer, loafers" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">18</span> Grey and denim</span></button></li><li data-g="Evening"><button type="button" class="look" data-n="19" aria-haspopup="dialog"><img src="img/look-19.jpg" width="600" height="749" alt="Outfit 19: burgundy skirt, silk blouse, belt, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">19</span> Dinner</span></button></li><li data-g="Evening"><button type="button" class="look" data-n="20" aria-haspopup="dialog"><img src="img/look-20.jpg" width="600" height="749" alt="Outfit 20: cashmere dress over the silk blouse, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">20</span> Dress and silk</span></button></li><li data-g="Evening"><button type="button" class="look" data-n="21" aria-haspopup="dialog"><img src="img/look-21.jpg" width="600" height="749" alt="Outfit 21: camel trousers, silk blouse, belt, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">21</span> Camel and silk</span></button></li><li data-g="Evening"><button type="button" class="look" data-n="22" aria-haspopup="dialog"><img src="img/look-22.jpg" width="600" height="749" alt="Outfit 22: navy trousers, cashmere tee, blazer, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">22</span> Navy night</span></button></li><li data-g="Evening"><button type="button" class="look" data-n="23" aria-haspopup="dialog"><img src="img/look-23.jpg" width="600" height="749" alt="Outfit 23: burgundy skirt, cashmere tee, belt, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">23</span> Soft evening</span></button></li><li data-g="Evening"><button type="button" class="look" data-n="24" aria-haspopup="dialog"><img src="img/look-24.jpg" width="600" height="749" alt="Outfit 24: jeans, silk blouse, blazer, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">24</span> Jeans for a date</span></button></li><li data-g="Frost"><button type="button" class="look" data-n="25" aria-haspopup="dialog"><img src="img/look-25.jpg" width="600" height="749" alt="Outfit 25: jeans, rib turtleneck under the grey crewneck, puffer, shearling boots, beanie, scarf" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">25</span> Below zero</span></button></li><li data-g="Frost"><button type="button" class="look" data-n="26" aria-haspopup="dialog"><img src="img/look-26.jpg" width="600" height="749" alt="Outfit 26: camel trousers, brown turtleneck, coat, scarf, beanie, heeled boots" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">26</span> Cold office</span></button></li><li data-g="Frost"><button type="button" class="look" data-n="27" aria-haspopup="dialog"><img src="img/look-27.jpg" width="600" height="749" alt="Outfit 27: navy trousers, grey crewneck, puffer, shearling boots, beanie, scarf" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">27</span> Navy in the snow</span></button></li><li data-g="Frost"><button type="button" class="look" data-n="28" aria-haspopup="dialog"><img src="img/look-28.jpg" width="600" height="749" alt="Outfit 28: jeans, brown turtleneck, cardigan, coat, shearling boots, beanie, scarf" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">28</span> Layered weekend</span></button></li><li data-g="Frost"><button type="button" class="look" data-n="29" aria-haspopup="dialog"><img src="img/look-29.jpg" width="600" height="749" alt="Outfit 29: burgundy skirt, rib turtleneck under the grey crewneck, coat, heeled boots, ivory beret" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">29</span> Skirt in the cold</span></button></li><li data-g="Frost"><button type="button" class="look" data-n="30" aria-haspopup="dialog"><img src="img/look-30.jpg" width="600" height="749" alt="Outfit 30: cashmere dress over the rib turtleneck, coat, heeled boots, beanie, scarf" loading="lazy"><span class="lk-badge" hidden></span><span class="lk-t"><span class="lk-n">30</span> Dress in the cold</span></button></li></ul><p class="note2">Outfit photos are AI-generated to show how the pieces work together. Product photos belong to the stores</p></section><div class="sh-bg" hidden></div><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title" hidden><div class="sh-grip" aria-hidden="true"></div><button type="button" class="sh-x" aria-label="Close">&#215;</button><div class="sh-in"><button type="button" class="sh-ph" aria-label="Outfit photo, full screen"><img alt=""></button><div class="sh-b"><span class="eyebrow2 sh-g"></span><h3 id="sh-title"></h3><p class="sh-x2"></p><p class="sh-sv" hidden></p><ul class="sh-items"></ul><button type="button" class="btn sh-pick">Pick the whole outfit</button><div class="sh-nav"><button type="button" class="lnk sh-prev">&#8249; Previous</button><button type="button" class="lnk sh-next">Next &#8250;</button></div></div></div></div><section id="fitting" class="ref"><h2>Fitting room</h2><p class="lead">Open this in the store. Tick each check as you go</p><button type="button" class="btn fit-open">Fitting room mode <span class="fit-n"></span></button><ol class="checks"><li><label><input type="checkbox" data-k="0"><span>Read the label before the price tag. Look for wool, cashmere, silk, cotton, and leather first.</span></label></li><li><label><input type="checkbox" data-k="1"><span>Words like &quot;blend,&quot; &quot;soft,&quot; &quot;touch,&quot; and &quot;feel&quot; in a name mean: Check the percentages.</span></label></li><li><label><input type="checkbox" data-k="2"><span>Rub knitwear with your palm. If it pills in the store, it will pill at home.</span></label></li><li><label><input type="checkbox" data-k="3"><span>Hold it up to the light. Thin fabric looks cheap.</span></label></li><li><label><input type="checkbox" data-k="4"><span>Shoulder seams should sit right on the edge of your shoulders.</span></label></li><li><label><input type="checkbox" data-k="5"><span>Sleeves should end at your wrist bone.</span></label></li><li><label><input type="checkbox" data-k="6"><span>Sit down in trousers and skirts to check the fit.</span></label></li><li><label><input type="checkbox" data-k="7"><span>Button the blazer and coat, then cross your arms.</span></label></li><li><label><input type="checkbox" data-k="8"><span>Check the color by a window, not under store lights.</span></label></li><li><label><input type="checkbox" data-k="9"><span>Avoid logos, shine, and hardware you will tire of by February.</span></label></li></ol><button type="button" class="lnk ck-clear">Clear the ticks</button></section><section id="care" class="ref"><h2>Care</h2><p class="lead">Keep the expensive look until spring</p><details><summary>Cashmere and merino</summary><p>Hand wash cold or use the wool cycle, dry flat, fold, and never hang. A fabric comb removes pills.</p></details><details><summary>Silk (washable)</summary><p>Wash cold on gentle, inside out, and hang to dry. Check the label first.</p></details><details><summary>Wool coat</summary><p>Brush after wearing, air it out, and dry clean once a season.</p></details><details><summary>Leather and suede</summary><p>Apply suede brush and water-repellent spray before the first snow; wipe leather clean and use leather cream.</p></details><details><summary>Down puffer</summary><p>Wash rarely; tumble dry low with dryer balls so the down doesn&#x27;t clump.</p></details><p class="note2">Always follow the care label on your piece.</p></section><section id="dont" class="ref"><h2>Don't buy</h2><p class="lead">These sound expensive. Check what's inside</p><ul class="traps"><li class="trap"><span class="eyebrow2">Sounds expensive</span><h3>Uniqlo Souffle Yarn Sweater</h3><p class="tr-in"><b>8% wool, 58% acrylic</b> · $49.90</p><a class="tr-real" href="#p03"><span>The real thing</span>Quince cashmere crewneck, 100% cashmere, $50 ↓</a></li><li class="trap"><span class="eyebrow2">Sounds expensive</span><h3>Gap &quot;CashSoft&quot; Crew</h3><p class="tr-in"><b>no cashmere: cotton, nylon, acrylic</b> · $69.95</p><a class="tr-real" href="#p04"><span>The real thing</span>Quince cashmere turtleneck, $89.90 ↓</a></li><li class="trap"><span class="eyebrow2">Sounds expensive</span><h3>Quince &quot;Cotton Cashmere&quot; Crew (a best-seller)</h3><p class="tr-in"><b>3% cashmere</b> · $29.90</p><a class="tr-real" href="#p03"><span>The real thing</span>Quince cashmere crewneck, $50 ↓</a></li><li class="trap"><span class="eyebrow2">Sounds expensive</span><h3>Gap Factory Relaxed Wrap Topcoat (a best-seller)</h3><p class="tr-in"><b>100% polyester</b> · $74.99 on sale</p><a class="tr-real" href="#p01"><span>The real thing</span>Quince merino wrap coat, 100% wool, $200 ↓</a></li><li class="trap"><span class="eyebrow2">Sounds expensive</span><h3>Gap &quot;Wool-Blend&quot; Peacoat</h3><p class="tr-in"><b>31% wool, 65% polyester</b> · $198</p><a class="tr-real" href="#p01"><span>The real thing</span>Quince merino wrap coat, $200 ↓</a></li><li class="trap"><span class="eyebrow2">Sounds expensive</span><h3>Uniqlo Double Face Relaxed Long Coat</h3><p class="tr-in"><b>33% wool</b> · $149.90</p><a class="tr-real" href="#p01-save2"><span>The real thing</span>Quince Cocoon Coat, 90% wool + 10% cashmere, $175 ↓</a></li><li class="trap"><span class="eyebrow2">Sounds expensive</span><h3>H&amp;M Wool-Blend Pea Coat</h3><p class="tr-in"><b>2% wool, 98% polyester</b> · $69.99</p><a class="tr-real" href="#p01-save"><span>Same fabric, honest name</span>H&amp;M Tie-Belt Coat, 100% polyester, $59.99 ↓</a></li><li class="trap"><span class="eyebrow2">Sounds expensive</span><h3>H&amp;M Wool-Blend Coat</h3><p class="tr-in"><b>25% wool, 70% polyester</b> · $79.99</p><a class="tr-real" href="#p01-save2"><span>The real thing</span>Quince Cocoon Coat, 90% wool + 10% cashmere, $175 ↓</a></li><li class="trap"><span class="eyebrow2">Sounds expensive</span><h3>H&amp;M &quot;Handmade&quot; Double-Breasted Coat</h3><p class="tr-in"><b>100% polyester</b> · $89.99</p><a class="tr-real" href="#p01-save"><span>Same fabric, honest name</span>H&amp;M Tie-Belt Coat, 100% polyester, $59.99 ↓</a></li></ul><p class="note2">Prices checked on October 20-22, 2026 (Gap on October 20, H&amp;M and Gap Factory on October 22, everything else on October 21). Current prices and stock are on the live page.</p></section><section id="updates" class="ref"><h2>What's new</h2><ol class="log"><li><b>October 20-22, 2026</b><p>First version of the live page. Prices are re-checked every two weeks, and every change is noted here</p></li></ol></section><section class="fin"><h2>Open an outfit in the morning<br><em>and be out in five minutes</em></h2><div class="fin-imgs"><img src="img/look-13.jpg" width="600" height="749" alt="" loading="lazy"><img src="img/look-19.jpg" width="600" height="749" alt="" loading="lazy"><img src="img/look-25.jpg" width="600" height="749" alt="" loading="lazy"></div><p class="fin-small">Outfit photos are AI-generated to show how the pieces work together. Product photos belong to the stores. Prices and stock change; the store's page is always the final word</p><p class="fin-brand">MeadowDesk</p></section><div class="fm" role="dialog" aria-modal="true" aria-label="Fitting room mode" hidden><div class="fm-top"><span class="fm-c"></span><button type="button" class="fm-x" aria-label="Close">&#215;</button></div><p class="fm-live vh" aria-live="polite"></p><div class="fm-in"><img class="fm-img" alt=""><span class="eyebrow2 fm-n"></span><h3 class="fm-t"></h3><p class="fm-sv"></p><p class="fm-f"></p><p class="fm-r"></p></div><div class="fm-nav"><button type="button" class="fm-pv" aria-label="Previous piece">&#8249;</button><button type="button" class="fm-nx" aria-label="Next piece">&#8250;</button></div></div>
+</main>
+<div class="dock" role="status" aria-live="polite"><div class="wrap"><span><b class="d-own"></b> picked</span> <span><b class="d-sum"></b></span> <span><b class="d-ready"></b> <span class="l-dready">outfits</span></span></div></div>
+<button type="button" class="up" aria-label="Back to top">&#8593;</button>
+<script>
+(function(){
+var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var cols=[].slice.call(document.querySelectorAll('.col'));
+cols.forEach(function(c,k){
+  var ids=c.dataset.looks.split(',');
+  var img=function(n,first){var i=new Image(600,749);i.alt='';i.decoding='async';i.src='img/look-'+('0'+n).slice(-2)+'.jpg';if(first){i.className='on';if(k===1)i.fetchPriority='high'}c.appendChild(i);return i};
+  var imgs=[c.querySelector('img')],cur=0,run=true;
+  if(still)return;
+  var next=function(){var j=(cur+1)%ids.length;if(!imgs[j])imgs[j]=img(ids[j]);return imgs[j]};
+  window.addEventListener('load',function(){next()});
+  setTimeout(function(){setInterval(function(){if(!run)return;var n=next();if(!n.complete)return;var old=imgs[cur];old.classList.remove('top');old.classList.add('was');cur=(cur+1)%ids.length;n.classList.remove('on','was');void n.offsetWidth;n.classList.add('on','top');setTimeout(function(){old.classList.remove('on','was')},1500);next()},4500)},1500+k*1500);
+  new IntersectionObserver(function(e){run=e[0].isIntersecting}).observe(c);
+});
+var tog=document.querySelector('.tog');
+var setB=function(v){tog.classList.toggle('save',v==='save');document.body.classList.toggle('b-save',v==='save');
+  [].forEach.call(tog.children,function(x){x.setAttribute('aria-pressed',x.dataset.b===v)});try{localStorage.setItem('mdBudget',v)}catch(e){}document.dispatchEvent(new Event('budget'))};
+try{if(localStorage.getItem('mdBudget')==='save')setB('save')}catch(e){}
+tog.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setB(b.dataset.b)});
+document.querySelector('[data-go=budget]').addEventListener('click',function(e){e.preventDefault();
+  var bar=document.querySelector('.bar');window.scrollTo({top:bar.getBoundingClientRect().top+scrollY+1,behavior:still?'auto':'smooth'});
+  tog.focus({preventScroll:true});tog.classList.remove('ping');void tog.offsetWidth;tog.classList.add('ping')});
+var menu=document.querySelector('.menu'),links=[].slice.call(menu.querySelectorAll('a'));
+var setOn=function(id){links.forEach(function(a){var on=a.getAttribute('href')==='#'+id;a.classList.toggle('on',on);
+  if(on)menu.scrollTo({left:a.offsetLeft-menu.offsetLeft,behavior:still?'auto':'smooth'})})};
+var secs=[document.getElementById('overview')].concat(links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean));
+var cur0='',tick=false,spy=function(){tick=false;var id='start';secs.forEach(function(s){if(s.getBoundingClientRect().top<=140)id=s.dataset.sec||s.id});
+  if(innerHeight+scrollY>=document.documentElement.scrollHeight-2)id=secs[secs.length-1].id;if(id!==cur0){cur0=id;setOn(id)}};
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(spy)}},{passive:true});spy();
+if(!still){var cover=document.querySelector('.cover'),nudge=function(){if(cover.getBoundingClientRect().bottom>0)return;removeEventListener('scroll',nudge);
+  if(menu.scrollLeft>0||cur0!=='start')return;menu.scrollTo({left:64,behavior:'smooth'});setTimeout(function(){var on=menu.querySelector('a.on');menu.scrollTo({left:on?Math.max(0,on.offsetLeft-menu.offsetLeft):0,behavior:'smooth'})},750)};addEventListener('scroll',nudge,{passive:true})}
+})();
+</script>
+<script>
+(function(){
+var D={"p": [{"id": "p01", "name": "Merino wrap coat", "img": "01-coat.jpg", "inv": 200, "save": 59.99, "link": "https://www.quince.com/women/double-faced-merino-wool-draped-collar-wrap-coat?color=caramel", "save_link": "https://www2.hm.com/en_us/productpage.1356455002.html", "save_name": "H&M Tie-Belt Coat", "save_img": "swap-coat.jpg"}, {"id": "p02", "name": "Long down puffer", "img": "02-puffer.jpg", "inv": 200, "save": 89.9, "link": "https://www.quince.com/women/responsible-down-long-puffer-jacket?color=atlas-navy", "save_link": "https://www.uniqlo.com/us/en/products/E469871-000/00?colorDisplayCode=69", "save_name": "Uniqlo PUFFTECH Parka", "save_img": "swap-puffer.jpg"}, {"id": "p03", "name": "Cashmere crewneck", "img": "03-crew.jpg", "inv": 50, "save": 50, "link": "https://www.quince.com/women/cashmere/cashmere-crewneck-sweater?color=heather-grey", "save_link": null, "save_name": null, "save_img": null}, {"id": "p04", "name": "Cashmere turtleneck", "img": "04-turtleneck.jpg", "inv": 89.9, "save": 89.9, "link": "https://www.quince.com/women/cashmere/cashmere-turtleneck-sweater?color=brown", "save_link": null, "save_name": null, "save_img": null}, {"id": "p05", "name": "Cashmere cardigan", "img": "05-cardigan.jpg", "inv": 79.9, "save": 79.9, "link": "https://www.quince.com/women/cashmere/cashmere-cardigan-sweater?color=ivory", "save_link": null, "save_name": null, "save_img": null}, {"id": "p06", "name": "Cashmere tee", "img": "06-tee.jpg", "inv": 44.9, "save": 44.9, "link": "https://www.quince.com/women/cashmere/cashmere-tee-shirt?color=oatmeal", "save_link": null, "save_name": null, "save_img": null}, {"id": "p07", "name": "Silk blouse", "img": "07-blouse.jpg", "inv": 72, "save": 72, "link": "https://www.quince.com/women/washable-stretch-silk-blouse?color=ivory", "save_link": null, "save_name": null, "save_img": null}, {"id": "p08", "name": "Rib turtleneck", "img": "08-ribturtle.jpg", "inv": 24.9, "save": 24.9, "link": "https://www.quince.com/women/organic-cotton-rib-turtleneck?color=heather-grey", "save_link": null, "save_name": null, "save_img": null}, {"id": "p09", "name": "Wool blazer", "img": "09-blazer.jpg", "inv": 100, "save": 49.9, "link": "https://www.quince.com/women/italian-wool-oversized-blazer?color=textured-camel", "save_link": "https://www.uniqlo.com/us/en/products/E489108-000/00?colorDisplayCode=38", "save_name": "Uniqlo Jersey Tailored Jacket", "save_img": "swap-blazer.jpg"}, {"id": "p10", "name": "Straight jeans", "img": "10-jeans.jpg", "inv": 50, "save": 50, "link": "https://www.quince.com/women/high-rise-straight-jeans--28-inseam?color=deep-rinse", "save_link": null, "save_name": null, "save_img": null}, {"id": "p11", "name": "Navy ponte trousers", "img": "11-ponte.jpg", "inv": 44.9, "save": 44.9, "link": "https://www.quince.com/women/womens-ultra-stretch-ponte-trouser---30?color=navy", "save_link": null, "save_name": null, "save_img": null}, {"id": "p12", "name": "Merino midi skirt", "img": "12-skirt.jpg", "inv": 80, "save": 80, "link": "https://www.quince.com/women/australian-merino-wool-midi-skirt?color=barolo-burgundy", "save_link": null, "save_name": null, "save_img": null}, {"id": "p13", "name": "Cashmere sweater dress", "img": "13-dress.jpg", "inv": 109.9, "save": 109.9, "link": "https://www.quince.com/women/mongolian-cashmere-sleeveless-midi-sweater-dress?color=teak-brown", "save_link": null, "save_name": null, "save_img": null}, {"id": "p14", "name": "Wool flannel trousers", "img": "14-trousers.jpg", "inv": 178, "save": 0, "link": "https://www.jcrew.com/m/womens/categories/clothing/pants/relaxed/essential-trouser-in-wool-blend-flannel/MQ435?color_name=camel&colorProductCode=CZ816", "save_link": null, "save_name": "Navy ponte trousers", "save_img": "11-ponte.jpg", "save_same": "p11"}, {"id": "p15", "name": "Block-heel boots", "img": "15-boot.jpg", "inv": 218, "save": 109, "link": "https://www.quince.com/women/italian-leather-block-heel-boot?color=chestnut", "save_link": "https://www2.hm.com/en_us/productpage.1346247001.html", "save_name": "H&M Heeled Leather Boots", "save_img": "swap-boot.jpg"}, {"id": "p16", "name": "Suede loafers", "img": "16-loafer.jpg", "inv": 84, "save": 84, "link": "https://www.quince.com/women/women-s-leather-pointy-penny-loafer?color=cognac", "save_link": null, "save_name": null, "save_img": null}, {"id": "p17", "name": "Shearling boots", "img": "17-shearling.jpg", "inv": 82, "save": 82, "link": "https://www.quince.com/unisex/women-s-australian-shearling-mid-calf-boot?color=coffee-bean", "save_link": null, "save_name": null, "save_img": null}, {"id": "p18", "name": "White shirt", "img": "18-shirt.jpg", "inv": 49.9, "save": 49.9, "link": "https://www.uniqlo.com/us/en/products/E450260-000/00?colorDisplayCode=00", "save_link": null, "save_name": null, "save_img": null}, {"id": "a1", "name": "Cashmere scarf", "img": "A1-scarf.jpg", "inv": 54, "save": 24.9, "link": "https://www.quince.com/women/cashmere/cashmere-scarf?color=rich-burgundy", "save_link": "https://www.uniqlo.com/us/en/products/E486202-000/00?colorDisplayCode=31", "save_name": "Uniqlo HEATTECH Scarf", "save_img": "swap-scarf.jpg"}, {"id": "a2", "name": "Leather tote", "img": "A2-tote.jpg", "inv": 158, "save": 59.99, "link": "https://www.quince.com/women/italian-leather-soft-shopper-tote?color=espresso-brown", "save_link": "https://www.gapfactory.com/browse/product.do?pid=1179386001", "save_name": "Gap Factory Vegan-Suede Tote", "save_img": "swap-tote.jpg"}, {"id": "a3", "name": "Cashmere beanie", "img": "A3-beanie.jpg", "inv": 34.9, "save": 34.9, "link": "https://www.quince.com/unisex/cashmere/beanie?color=oatmeal", "save_link": null, "save_name": null, "save_img": null}, {"id": "a4", "name": "Leather belt", "img": "A4-belt.jpg", "inv": 29.9, "save": 29.9, "link": "https://www.uniqlo.com/us/en/products/E473471-000/00?colorDisplayCode=38", "save_link": null, "save_name": null, "save_img": null}, {"id": "a5", "name": "Cashmere beret", "img": "A5-beret.jpg", "inv": 32, "save": 32, "link": "https://www.quince.com/women/100-cashmere-beret?color=ivory", "save_link": null, "save_name": null, "save_img": null}], "o": [["p14", "p07", "a4", "p09", "p16"], ["p01", "p11", "p03", "p18", "p16"], ["p01", "p10", "p09", "p18", "p16", "a5"], ["p12", "p04", "p15"], ["p13", "p08", "p09", "p15"], ["p11", "p06", "p05", "p16"], ["p01", "p14", "p04", "p16", "a3", "a1"], ["p11", "p07", "p09", "p15", "a2"], ["p12", "p03", "p18", "p15"], ["p14", "p03", "p18", "p16"], ["p02", "p10", "p03", "p17", "a3", "a1"], ["p10", "p06", "p05", "p16"], ["p01", "p10", "p04", "p15", "a2", "a3", "a1"], ["p10", "p05", "p18", "p16"], ["p12", "p03", "p17", "p01", "a5"], ["p13", "p18", "p16"], ["p11", "p06", "p05", "p17"], ["p10", "p08", "p09", "p16"], ["p12", "p07", "a4", "p15"], ["p13", "p07", "p15"], ["p14", "p07", "a4", "p15"], ["p11", "p06", "p09", "p15"], ["p12", "p06", "a4", "p15"], ["p10", "p07", "p09", "p15"], ["p10", "p08", "p03", "p02", "p17", "a3", "a1"], ["p14", "p04", "p01", "a1", "a3", "p15"], ["p11", "p03", "p02", "p17", "a3", "a1"], ["p10", "p04", "p05", "p01", "p17", "a3", "a1"], ["p12", "p08", "p03", "p01", "p15", "a5"], ["p13", "p08", "p01", "p15", "a3", "a1"]], "six": ["p01", "p15", "p04", "p12", "p07", "p14"], "then": "Then: dark jeans, camel blazer, suede loafers, white shirt, grey crewneck", "then_save": "Then: dark jeans, Uniqlo jersey jacket, suede loafers, white shirt, grey crewneck", "looks": [{"n": 1, "t": "Monday in camel", "x": "camel trousers, silk blouse, belt, camel blazer, loafers", "g": "Work"}, {"n": 2, "t": "The collar trick", "x": "coat open over navy trousers, grey crewneck over the white shirt, loafers", "g": "Work"}, {"n": 3, "t": "Friday", "x": "jeans, but with a blazer - coat open on top, ivory beret", "g": "Work"}, {"n": 4, "t": "Burgundy and chocolate", "x": "skirt, brown turtleneck, heeled boots", "g": "Work"}, {"n": 5, "t": "The dress for a long day", "x": "cashmere dress over the rib turtleneck, blazer, heeled boots", "g": "Work"}, {"n": 6, "t": "Soft layers", "x": "navy trousers, cashmere tee, ivory cardigan, loafers", "g": "Work"}, {"n": 7, "t": "Brown on camel", "x": "coat open over camel trousers, brown turtleneck, loafers, beanie, scarf", "g": "Work"}, {"n": 8, "t": "Presentation day", "x": "navy trousers, silk blouse, blazer, heeled boots, tote", "g": "Work"}, {"n": 9, "t": "Skirt with a collar", "x": "burgundy skirt, grey crewneck over the white shirt, heeled boots", "g": "Work"}, {"n": 10, "t": "Grey and camel", "x": "camel trousers, grey crewneck, white shirt, loafers", "g": "Work"}, {"n": 11, "t": "Snow day errands", "x": "navy puffer, jeans, grey crewneck, shearling boots, beanie, scarf", "g": "Weekend"}, {"n": 12, "t": "Coffee with a friend", "x": "jeans, cashmere tee, ivory cardigan, loafers", "g": "Weekend"}, {"n": 13, "t": "Brunch", "x": "coat, jeans, brown turtleneck, heeled boots, tote, beanie, scarf", "g": "Weekend"}, {"n": 14, "t": "Cardigan as a sweater", "x": "jeans, cardigan buttoned over the white shirt, loafers", "g": "Weekend"}, {"n": 15, "t": "Skirt and shearling", "x": "burgundy skirt, grey crewneck, shearling boots, coat, ivory beret", "g": "Weekend"}, {"n": 16, "t": "The dress, relaxed", "x": "cashmere dress over the white shirt, loafers", "g": "Weekend"}, {"n": 17, "t": "Easy Sunday", "x": "navy trousers, cashmere tee, cardigan, shearling boots", "g": "Weekend"}, {"n": 18, "t": "Grey and denim", "x": "jeans, rib turtleneck, blazer, loafers", "g": "Weekend"}, {"n": 19, "t": "Dinner", "x": "burgundy skirt, silk blouse, belt, heeled boots", "g": "Evening"}, {"n": 20, "t": "Dress and silk", "x": "cashmere dress over the silk blouse, heeled boots", "g": "Evening"}, {"n": 21, "t": "Camel and silk", "x": "camel trousers, silk blouse, belt, heeled boots", "g": "Evening"}, {"n": 22, "t": "Navy night", "x": "navy trousers, cashmere tee, blazer, heeled boots", "g": "Evening"}, {"n": 23, "t": "Soft evening", "x": "burgundy skirt, cashmere tee, belt, heeled boots", "g": "Evening"}, {"n": 24, "t": "Jeans for a date", "x": "jeans, silk blouse, blazer, heeled boots", "g": "Evening"}, {"n": 25, "t": "Below zero", "x": "jeans, rib turtleneck under the grey crewneck, puffer, shearling boots, beanie, scarf", "g": "Frost"}, {"n": 26, "t": "Cold office", "x": "camel trousers, brown turtleneck, coat, scarf, beanie, heeled boots", "g": "Frost"}, {"n": 27, "t": "Navy in the snow", "x": "navy trousers, grey crewneck, puffer, shearling boots, beanie, scarf", "g": "Frost"}, {"n": 28, "t": "Layered weekend", "x": "jeans, brown turtleneck, cardigan, coat, shearling boots, beanie, scarf", "g": "Frost"}, {"n": 29, "t": "Skirt in the cold", "x": "burgundy skirt, rib turtleneck under the grey crewneck, coat, heeled boots, ivory beret", "g": "Frost"}, {"n": 30, "t": "Dress in the cold", "x": "cashmere dress over the rib turtleneck, coat, heeled boots, beanie, scarf", "g": "Frost"}], "fit": {"p01": {"f": "100% merino wool", "r": "Put it on over your thickest sweater. The shoulders should not pull, and you should be able to cross your arms without the back seam tightening.", "s": "H&M Tie-Belt Coat, Dark Brown, $59.99, 100% polyester, fully lined, with a removable tie belt. Want wool for less? Quince Wool Cashmere Cocoon Coat, $175, 90% wool + 10% cashmere."}, "p02": {"f": "shell and lining 100% recycled polyester, fill 90% goose down / 10% feathers", "r": "Check the color by a window: it should not glare. The hem should cover your hips when you sit.", "s": "Uniqlo PUFFTECH Parka, $89.90, synthetic fill."}, "p03": {"f": "100% Grade-A Mongolian cashmere", "r": "Rub the sleeve with your palm: good cashmere stays smooth. The neckline should lie flat, not ripple.", "s": "None needed. Uniqlo's 100% merino sweater costs the same, $49.90."}, "p04": {"f": "100% Grade-A Mongolian cashmere", "r": "The collar should fold over once and stay put without squeezing your neck.", "s": ""}, "p05": {"f": "100% Grade-A Mongolian cashmere", "r": "Buttons should sit in a straight line, and the placket should not wave.", "s": ""}, "p06": {"f": "100% Grade-A Mongolian cashmere", "r": "Hold it up to the light: it should not be see-through.", "s": ""}, "p07": {"f": "90% mulberry silk, 10% spandex", "r": "Raise your arms: the blouse should not pull out of your waistband.", "s": ""}, "p08": {"f": "97% organic cotton, 3% elastane", "r": "The rib should spring back after you stretch the collar.", "s": ""}, "p09": {"f": "shell 55% recycled Italian wool, 35% recycled polyester, 5% recycled nylon, 5% other fibres; lined", "r": "Button it: no pulling across the chest. The sleeve should end at your wrist bone.", "s": "Uniqlo Jersey Tailored Jacket, $49.90, polyester-cotton-rayon. It holds its shape, but it is not wool."}, "p10": {"f": "94% organic cotton, 5% elasterell-p, 1% lycra", "r": "High-rise at the waist; the hem should touch the top of your foot.", "s": ""}, "p11": {"f": "67% rayon, 28% nylon, 5% spandex", "r": "Sit down: the waistband should not dig in.", "s": ""}, "p12": {"f": "94% merino wool, 6% nylon", "r": "Walk a few steps: the skirt should not ride up.", "s": "Not worth it. Uniqlo's Pleated Skirt costs $59.90 and is 69% polyester, 29% rayon. Ours is 94% merino for $20 more."}, "p13": {"f": "100% Grade-A Mongolian cashmere", "r": "Try it over the grey rib turtleneck: no bunching at the armholes.", "s": ""}, "p14": {"f": "66% wool, 28% polyester, 6% elastane", "r": "The front crease should fall straight; the hem should touch the top of your boot.", "s": "Wear the navy ponte trousers (11) you already have. Nothing extra to buy."}, "p15": {"f": "100% Italian calf leather upper, sheep leather lining", "r": "The shaft should not gape or squeeze; walk across the store.", "s": "H&M Heeled Leather Boots, Dark Brown, $109, 100% sheep suede upper. A different shape: ankle height, pointed toe, slim heel. Need a steady block heel? H&M Knee-High Boots, Dark Brown, $79.99, faux leather."}, "p16": {"f": "100% Italian sheep suede upper, cow leather lining", "r": "The heel should not slip out when you walk.", "s": ""}, "p17": {"f": "suede upper, 100% Australian shearling lining and insole, non-slip rubber sole, water-repellent treatment", "r": "A wool sock should fit inside.", "s": ""}, "p18": {"f": "100% cotton", "r": "Hold your arm up to the light: you should not see it through the fabric. It is a unisex fit, so check the size chart before you order.", "s": ""}, "a1": {"f": "100% Grade-A Mongolian cashmere", "r": "", "s": "Uniqlo HEATTECH Scarf, $24.90, 35% wool, 65% acrylic."}, "a2": {"f": "100% full-grain pebbled leather, suede lining", "r": "", "s": "Gap Factory Slouchy Vegan-Suede Tote, Chocolate, $59.99 (often on sale; $29.99 on October 22), 100% polyester faux suede. We found no real-leather tote under $80."}, "a3": {"f": "96% cashmere, 3% polyester, 1% spandex", "r": "", "s": "Uniqlo Wool Cashmere Beanie, $29.90, 85% wool + 15% cashmere."}, "a4": {"f": "genuine leather", "r": "", "s": ""}, "a5": {"f": "100% cashmere", "r": "", "s": ""}}},still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var byId={};D.p.forEach(function(p){byId[p.id]=p});
+var own={};try{own=JSON.parse(localStorage.getItem('mdPicks')||'{}')||{}}catch(e){own={}}
+var keep=function(){try{localStorage.setItem('mdPicks',JSON.stringify(own))}catch(e){}};
+var acc=function(id){return id.charAt(0)==='a'};
+var isSave=function(){return document.body.classList.contains('b-save')};
+var price=function(p){return isSave()?p.save:p.inv};
+var money=function(x){return '$'+x.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})};
+var has=function(o,i){var p=byId[i];if(p&&isSave()&&p.save_same)return !!o[p.save_same];return !!o[i]};
+var active=function(p){return !(isSave()&&p.save_same)};
+var stat=function(o){var r=0,n=0;D.o.forEach(function(it){var miss=it.filter(function(i){return !acc(i)&&!has(o,i)}).length;if(!miss)r++;else if(miss===1)n++});return {r:r,n:n}};
+var $=function(s){return document.querySelector(s)};
+var tiles=[].slice.call(document.querySelectorAll('.tile'));
+var pks=[].slice.call(document.querySelectorAll('.pk')),prs=[].slice.call(document.querySelectorAll('.pc-pr'));
+var six=$('.six'),nums=$('.nums'),nx=$('.next1'),near=$('.near'),clr=$('.clear'),dock=$('.dock');
+var sixIds=function(){return D.six.map(function(id){var p=byId[id];return isSave()&&p.save_same?p.save_same:id})};
+var drawSix=function(){$('.sixrow').innerHTML=sixIds().map(function(id){var p=byId[id],sw=isSave()&&p.save_name;return '<li><img src="img/'+(sw&&p.save_img?p.save_img:p.img)+'" width="500" height="625" alt="'+(sw?p.save_name:p.name)+'" loading="lazy"></li>'}).join('')};
+
+function render(){
+  var cnt=Object.keys(own).filter(function(k){return active(byId[k])}).length,s=stat(own);
+  tiles.forEach(function(b){b.parentNode.hidden=!active(byId[b.dataset.id]);b.setAttribute('aria-pressed',own[b.dataset.id]?'true':'false');var pr=b.querySelector('.pr');pr.textContent=money(+pr.dataset[isSave()?'save':'inv']);
+    var p=byId[b.dataset.id],sw=isSave()&&p.save_name;b.querySelector('.nm').textContent=sw?p.save_name:p.name;
+    var im=b.querySelector('img'),src='img/'+(sw&&p.save_img?p.save_img:p.img);if(im.getAttribute('src')!==src)im.setAttribute('src',src)});
+  var sum=D.p.reduce(function(a,p){return a+(own[p.id]&&active(p)?price(p):0)},0);
+  drawSix();var six6=sixIds();$('.q-meta').textContent='4 outfits for '+money(six6.reduce(function(a,id){return a+price(byId[id])},0));$('.quick').hidden=six6.every(function(id){return own[id]});$('.then').textContent=isSave()?D.then_save:D.then;$('.sixsum').textContent=money(sixIds().reduce(function(a,id){return a+price(byId[id])},0));
+  six.hidden=cnt>0;nums.hidden=cnt===0;clr.hidden=cnt===0;
+  $('.n-own').textContent=cnt;$('.l-own').textContent=cnt===1?'piece picked':'pieces picked';$('.n-sum').textContent=money(sum);
+  $('.n-ready').textContent=s.r;$('.l-ready').textContent=s.r===1?'complete outfit':'complete outfits';
+  $('.n-near').textContent=s.n;$('.l-near').textContent=s.n===1?'outfit needs just one more piece':'outfits need just one more piece each';
+  // какой вещи не хватает: вещь → образы, которые она соберёт; в Save вместо брюк кэмел - ponte
+  var grp={};D.o.forEach(function(it,k){var m=it.filter(function(i){return !acc(i)&&!has(own,i)});if(m.length!==1)return;
+    var id=m[0];if(isSave()&&byId[id].save_same)id=byId[id].save_same;(grp[id]=grp[id]||[]).push(k+1)});
+  var rows=Object.keys(grp).sort(function(a,b){return grp[b].length-grp[a].length||price(byId[a])-price(byId[b])});
+  var esc=function(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')};
+  var pad=function(n){return (n<10?'0':'')+n};
+  near.hidden=!rows.length;
+  $('.nr-list').innerHTML=rows.map(function(id){var p=byId[id],sw=isSave()&&p.save_name,nm=sw?p.save_name:p.name,ls=grp[id];
+    return '<li><img src="img/'+esc(sw&&p.save_img?p.save_img:p.img)+'" width="500" height="625" alt="" loading="lazy">'
+      +'<div class="nr-b"><b class="nr-nm">'+esc(nm)+'</b><span class="nr-meta"><span>'+money(price(p))+'</span>'+(ls.length>1?'<span class="nx-gain">+'+ls.length+' outfits</span>':'')+'</span>'
+      +'<span class="nr-o">'+ls.map(function(n){return '<button type="button" class="nr-look" data-n="'+n+'">→ '+pad(n)+' '+esc(D.looks[n-1].t)+'</button>'}).join('')+'</span></div>'
+      +'<button type="button" class="nr-add" data-id="'+id+'" aria-label="Add '+esc(nm)+' to my picks">Add</button></li>'}).join('');
+  var best=null,bk=null;
+  D.p.forEach(function(p){if(own[p.id]||acc(p.id)||!active(p))return;var o2=Object.assign({},own);o2[p.id]=1;var t=stat(o2);
+    var cl=D.o.filter(function(it){return it.indexOf(p.id)>=0&&it.some(function(i){return !acc(i)&&has(own,i)})}).length;
+    var k=[t.r-s.r,t.n-s.n,cl,-price(p)];
+    var better=!bk;for(var x=0;!better&&x<k.length&&k[x]>=bk[x];x++)if(k[x]>bk[x])better=true;
+    if(better){bk=k;best=p}});
+  if(best&&bk[0]<=0&&bk[1]<=0&&bk[2]<=0)best=null;
+  nx.hidden=cnt===0||!best||rows.length>0;
+  if(best){var sw=isSave()&&best.save_link;
+    $('.nx-img').src='img/'+(sw&&best.save_img?best.save_img:best.img);$('.nx-img').alt=sw?best.save_name:best.name;
+    $('.nx-name').textContent=sw?best.save_name:best.name;$('.nx-price').textContent=money(price(best));
+    $('.nx-gain').textContent=bk[0]>0?'+'+bk[0]+(bk[0]===1?' outfit':' outfits'):(function(n){return 'brings '+n+(n===1?' outfit':' outfits')+' closer'})(bk[1]>0?bk[1]:bk[2]);
+    nx.dataset.id=best.id;$('.nx-more').href='#'+best.id;$('.nx-more').hidden=!document.getElementById(best.id)}
+  pks.forEach(function(b){var p=byId[b.dataset.id],on=!!own[p.id];b.hidden=!active(p);b.setAttribute('aria-pressed',on?'true':'false');b.textContent=on?'In my picks ✓':'Add to my picks'});
+  prs.forEach(function(s){var p=byId[s.parentNode.parentNode.parentNode.id],sv=isSave();s.querySelector('b').textContent=money(+s.dataset[sv?'save':'inv']);
+    s.querySelector('b').hidden=sv&&!!p.save_same;
+    s.querySelector('small').textContent=!sv?'':p.save_same?'In Save, the navy ponte trousers (11) take its place':s.dataset.sname?'Save pick: '+s.dataset.sname:'';
+    var a=s.parentNode.querySelector('.shop-main');if(a){var u=a.dataset[sv?'save':'inv'],inner=u.charAt(0)==='#';a.href=u;a.textContent=sv&&p.save_same?'See the ponte trousers ↓':sv&&s.dataset.sname?'Shop the swap →':'Shop it →';
+      if(inner){a.removeAttribute('target')}else{a.target='_blank'}}});
+  $('.d-own').textContent=cnt;$('.d-sum').textContent=money(sum);$('.d-ready').textContent=s.r;$('.l-dready').textContent=s.r===1?'outfit':'outfits';
+  dock.classList.toggle('on',cnt>0);document.body.classList.toggle('has-dock',cnt>0);
+  (window.mdHooks||[]).forEach(function(f){f()});
+}
+pks.forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.id;if(own[id])delete own[id];else own[id]=1;keep();render()})});
+tiles.forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.id;if(own[id])delete own[id];else own[id]=1;
+  keep();
+  render();if(!still){var c=b.querySelector('.ck');c.classList.remove('pop');void c.offsetWidth;c.classList.add('pop')}})});
+clr.addEventListener('click',function(){
+  if(!clr.classList.contains('sure')){clr.classList.add('sure');clr.textContent='Tap again to clear all picks';
+    setTimeout(function(){clr.classList.remove('sure');clr.textContent='Clear my picks'},3000);return}
+  own={};try{localStorage.removeItem('mdPicks')}catch(e){}clr.classList.remove('sure');clr.textContent='Clear my picks';render();six.focus({preventScroll:true})});
+document.addEventListener('budget',render);
+var pickSix=function(){sixIds().forEach(function(id){own[id]=1});keep();render();nums.focus({preventScroll:true})};
+$('.q-pick').addEventListener('click',function(){pickSix();nums.scrollIntoView({behavior:still?'auto':'smooth',block:'center'})});
+$('.six-pick').addEventListener('click',function(){sixIds().forEach(function(id){own[id]=1});keep();render();nums.focus({preventScroll:true})});
+$('.nx-add').addEventListener('click',function(){var id=nx.dataset.id;if(!id)return;own[id]=1;keep();render()});
+near.addEventListener('click',function(ev){var a=ev.target.closest('.nr-add'),l=ev.target.closest('.nr-look');
+  if(a){own[a.dataset.id]=1;keep();render();nums.focus({preventScroll:true})}
+  else if(l&&window.mdOpenLook)window.mdOpenLook(+l.dataset.n)});
+var up=$('.up'),cover=$('.cover');
+up.addEventListener('click',function(){scrollTo({top:0,behavior:still?'auto':'smooth'})});
+addEventListener('scroll',function(){up.classList.toggle('on',cover.getBoundingClientRect().bottom<0)},{passive:true});
+window.md={D:D,byId:byId,own:function(){return own},isSave:isSave,price:price,money:money,has:has,acc:acc,
+  add:function(ids){ids.forEach(function(id){own[id]=1});keep();render()}};
+render();
+})();
+
+(function(){
+var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lb=document.createElement('div');lb.className='lb';lb.hidden=true;lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Photo');
+lb.innerHTML='<img alt=""><button type="button" class="x" aria-label="Close">&#215;</button><button type="button" class="pv" aria-label="Previous photo">&#8249;</button><button type="button" class="nx" aria-label="Next photo">&#8250;</button><p class="lb-cap"></p>';
+document.body.appendChild(lb);
+var im=lb.querySelector('img'),cap=lb.querySelector('.lb-cap'),list=[],i=0,back=null;
+var zooms=[].slice.call(document.querySelectorAll('.zoom')),fromZoom=zooms.map(function(b){var s=b.querySelector('img');return {src:b.dataset.big,alt:s.alt}});
+function show(k){i=(k+list.length)%list.length;var it=list[i];im.src=it.src;im.alt=it.alt;cap.textContent=it.alt;lb.classList.remove('zm');lb.querySelector('.pv').hidden=lb.querySelector('.nx').hidden=list.length<2}
+function open(items,k){list=items;back=document.activeElement;show(k);lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.x').focus()}
+function close(){lb.hidden=true;document.documentElement.style.overflow=document.querySelector('.sheet:not([hidden])')?'hidden':'';if(back)back.focus({preventScroll:true})}
+window.mdZoom=open;
+zooms.forEach(function(b,k){b.addEventListener('click',function(){open(fromZoom,k)})});
+zooms.forEach(function(b){b.addEventListener('mousemove',function(ev){var r=b.getBoundingClientRect(),s=b.querySelector('img');s.style.transformOrigin=((ev.clientX-r.left)/r.width*100)+'% '+((ev.clientY-r.top)/r.height*100)+'%'})});
+lb.querySelector('.x').addEventListener('click',close);
+lb.querySelector('.pv').addEventListener('click',function(){show(i-1)});
+lb.querySelector('.nx').addEventListener('click',function(){show(i+1)});
+im.addEventListener('click',function(ev){if(!matchMedia('(hover:hover)').matches)return;var r=im.getBoundingClientRect();im.style.transformOrigin=((ev.clientX-r.left)/r.width*100)+'% '+((ev.clientY-r.top)/r.height*100)+'%';lb.classList.toggle('zm')});
+addEventListener('keydown',function(ev){if(lb.hidden)return;ev.stopImmediatePropagation();if(ev.key==='Tab'){var f=[].slice.call(lb.querySelectorAll('button')).filter(function(x){return !x.hidden}),n=f.indexOf(document.activeElement);ev.preventDefault();f[(n+(ev.shiftKey?-1:1)+f.length)%f.length].focus();return}if(ev.key==='Escape')close();else if(ev.key==='ArrowLeft')show(i-1);else if(ev.key==='ArrowRight')show(i+1)});
+var x0=null,y0=0,multi=false;
+lb.addEventListener('touchstart',function(ev){multi=ev.touches.length>1;if(!multi){x0=ev.touches[0].clientX;y0=ev.touches[0].clientY}},{passive:true});
+lb.addEventListener('touchend',function(ev){if(multi||x0===null||(window.visualViewport&&visualViewport.scale>1.01)){x0=null;return}
+  var t=ev.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;
+  if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy))show(i+(dx<0?1:-1));else if(dy>80&&dy>Math.abs(dx))close()},{passive:true});
+function hl(){var h=location.hash.slice(1);if(!/^(p\d\d|a\d)(-save2?)?$/.test(h))return;var c=document.getElementById(h.replace(/-save2?$/,''));if(!c||still)return;c.classList.remove('hl');void c.offsetWidth;c.classList.add('hl')}
+addEventListener('hashchange',hl);hl();
+var h0=location.hash.slice(1),t0=document.getElementById(h0);
+if(t0&&document.fonts){var moved=false;addEventListener('touchstart',function(){moved=true},{once:true,passive:true});addEventListener('wheel',function(){moved=true},{once:true,passive:true});
+  document.fonts.ready.then(function(){if(!moved)t0.scrollIntoView({block:'start'})})}
+})();
+
+(function(){
+var M=window.md;if(!M)return;
+var L=M.D.looks,sec=document.getElementById('outfits'),cards=[].slice.call(sec.querySelectorAll('.look')),chips=[].slice.call(sec.querySelectorAll('.chip'));
+var sh=document.querySelector('.sheet'),bg=document.querySelector('.sh-bg'),lb=function(){return document.querySelector('.lb')};
+var f='all',cur=1,back=null;try{f=localStorage.getItem('mdLookF')||'all'}catch(e){}
+var pad=function(n){return (n<10?'0':'')+n};
+var esc=function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')};
+var items=function(n){return M.D.o[n-1].map(function(id){var p=M.byId[id];return M.isSave()&&p.save_same?p.save_same:id})};
+var miss=function(n){var o=M.own();return M.D.o[n-1].filter(function(i){return !M.acc(i)&&!M.has(o,i)}).length};
+var vis=function(){return cards.filter(function(c){return !c.parentNode.hidden}).map(function(c){return +c.dataset.n})};
+function upd(){
+  var any=Object.keys(M.own()).length>0,mine=0;
+  cards.forEach(function(b){var n=+b.dataset.n,m=miss(n),bd=b.querySelector('.lk-badge'),ready=any&&m===0;if(ready)mine++;
+    bd.hidden=!any||m>1;bd.textContent=m===0?'Ready':'1 piece away';bd.classList.toggle('rd',m===0);
+    var li=b.parentNode;li.hidden=f==='mine'?!ready:(f!=='all'&&li.dataset.g!==f)});
+  sec.querySelector('.c-mine').textContent=any?'('+mine+')':'';
+  sec.querySelector('.of-empty').hidden=!(f==='mine'&&mine===0);
+  sec.querySelector('.of-live').textContent=(function(n){return 'Showing '+n+(n===1?' outfit':' outfits')})(vis().length);
+  chips.forEach(function(c){c.setAttribute('aria-pressed',c.dataset.f===f?'true':'false')});
+  if(!sh.hidden)fill(cur);
+}
+function fill(n){
+  cur=n;var o=L[n-1],own=M.own(),ids=items(n);
+  var im=sh.querySelector('.sh-ph img');im.src='img/look-'+pad(n)+'.jpg';im.alt='Outfit '+n+': '+o.x;
+  sh.querySelector('.sh-g').textContent=pad(n)+' · '+o.g;sh.querySelector('h3').textContent=o.t;
+  sh.querySelector('.sh-x2').textContent=o.x.charAt(0).toUpperCase()+o.x.slice(1);
+  var sw=M.isSave()?M.D.o[n-1].map(function(id){return M.byId[id]}).filter(function(p){return p.save_name}).map(function(p){return p.save_name}):[];
+  var sn=sh.querySelector('.sh-sv');sn.hidden=!sw.length;sn.textContent=sw.length?'In Save: '+sw.join(', '):'';
+  sh.querySelector('.sh-items').innerHTML=ids.map(function(id){var p=M.byId[id],sw=M.isSave()&&p.save_name,nm=sw?p.save_name:p.name,img=sw&&p.save_img?p.save_img:p.img;
+    return '<li><a class="sh-it" href="#'+id+'"><img src="img/'+esc(img)+'" width="500" height="625" alt=""><span class="nm">'+esc(nm)+'</span><span class="pr">'+M.money(M.price(p))+'</span>'+(own[id]?'<span class="in">In my picks</span>':'')+'</a></li>'}).join('');
+  var left=ids.filter(function(id){return !own[id]}),pk=sh.querySelector('.sh-pick');
+  pk.disabled=!left.length;pk.textContent=left.length?'Pick the whole outfit':'All pieces are in my picks';pk.dataset.ids=left.join(',');
+  var v=vis(),k=v.indexOf(n);sh.querySelector('.sh-prev').hidden=sh.querySelector('.sh-next').hidden=v.length<2||k<0;
+}
+function open(n){back=document.activeElement;fill(n);bg.hidden=sh.hidden=false;sh.scrollTop=0;sh.querySelector('.sh-in').scrollTop=0;document.documentElement.style.overflow='hidden';sh.querySelector('.sh-x').focus()}
+function close(go){bg.hidden=sh.hidden=true;document.documentElement.style.overflow='';if(!go&&back)back.focus({preventScroll:true})}
+cards.forEach(function(b){b.addEventListener('click',function(){open(+b.dataset.n)})});
+window.mdOpenLook=open;
+chips.forEach(function(c){c.addEventListener('click',function(){f=c.dataset.f;try{localStorage.setItem('mdLookF',f)}catch(e){}upd()})});
+sh.querySelector('.sh-x').addEventListener('click',function(){close()});bg.addEventListener('click',function(){close()});
+sh.querySelector('.sh-pick').addEventListener('click',function(){var ids=this.dataset.ids;if(ids){M.add(ids.split(','));var a=sh.querySelector('.sh-it');if(a)a.focus()}});
+var step=function(d){var v=vis(),k=v.indexOf(cur);if(k<0)return;fill(v[(k+d+v.length)%v.length]);sh.querySelector('.sh-in').scrollTop=0};
+sh.querySelector('.sh-prev').addEventListener('click',function(){step(-1)});sh.querySelector('.sh-next').addEventListener('click',function(){step(1)});
+sh.querySelector('.sh-ph').addEventListener('click',function(){window.mdZoom([{src:'img/look-'+pad(cur)+'.jpg',alt:'Outfit '+cur+': '+L[cur-1].t}],0)});
+sh.querySelector('.sh-items').addEventListener('click',function(ev){if(ev.target.closest('.sh-it'))close(true)});
+addEventListener('keydown',function(ev){if(sh.hidden||!lb().hidden)return;
+  if(ev.key==='Escape'){close();return}
+  if(ev.key==='Tab'){var q=[].slice.call(sh.querySelectorAll('button,a')).filter(function(x){return !x.hidden&&!x.disabled&&x.offsetParent}),k=q.indexOf(document.activeElement);ev.preventDefault();q[(k+(ev.shiftKey?-1:1)+q.length)%q.length].focus()}});
+var y0=null;sh.querySelector('.sh-grip').parentNode.addEventListener('touchstart',function(ev){y0=sh.querySelector('.sh-in').scrollTop<=0?ev.touches[0].clientY:null},{passive:true});
+sh.addEventListener('touchend',function(ev){if(y0===null)return;var dy=ev.changedTouches[0].clientY-y0;y0=null;if(dy>90)close()},{passive:true});
+(window.mdHooks=window.mdHooks||[]).push(upd);upd();
+})();
+
+(function(){
+var M=window.md;if(!M)return;
+var $=function(s){return document.querySelector(s)};
+// чек-лист примерочной: галочки живут в этом телефоне
+var ck={};try{ck=JSON.parse(localStorage.getItem('mdChecks')||'{}')||{}}catch(e){ck={}}
+var boxes=[].slice.call(document.querySelectorAll('.checks input'));
+boxes.forEach(function(b){b.checked=!!ck[b.dataset.k];b.addEventListener('change',function(){if(b.checked)ck[b.dataset.k]=1;else delete ck[b.dataset.k];try{localStorage.setItem('mdChecks',JSON.stringify(ck))}catch(e){}})});
+$('.ck-clear').addEventListener('click',function(){ck={};boxes.forEach(function(b){b.checked=false});try{localStorage.removeItem('mdChecks')}catch(e){}});
+// режим примерочной: одна вещь на экран
+var fm=$('.fm'),list=[],i=0,back=null;
+var ids=function(){var own=M.own(),all=M.D.p.map(function(p){return p.id}).filter(function(id){return !(M.isSave()&&M.byId[id].save_same)}),
+  mine=all.filter(function(id){return own[id]||(M.isSave()&&M.D.p.some(function(q){return q.save_same===id&&own[q.id]}))});return mine.length?mine:all};
+function label(){var L=ids(),n=L.length,own=M.own(),mine=L.some(function(id){return own[id]||(M.isSave()&&M.D.p.some(function(q){return q.save_same===id&&own[q.id]}))});$('.fit-n').textContent='('+(mine?n+(n===1?' picked piece':' picked pieces'):'all '+n+' pieces')+')'}
+function show(k){i=(k+list.length)%list.length;var p=M.byId[list[i]],d=M.D.fit[p.id],sw=M.isSave()&&p.save_name;
+  var im=fm.querySelector('.fm-img');im.src='img/big/'+(sw&&p.save_img?p.save_img:p.img);im.alt=sw?p.save_name:p.name;
+  fm.querySelector('.fm-c').textContent=(i+1)+' of '+list.length;
+  fm.querySelector('.fm-n').textContent=(p.id.charAt(0)==='p'?p.id.slice(1):p.id.toUpperCase())+' · '+M.money(M.price(p));
+  fm.querySelector('.fm-t').textContent=sw?p.save_name:p.name;
+  var orig=M.isSave()?M.D.p.filter(function(q){return q.save_same===p.id&&M.own()[q.id]})[0]:null;
+  var sv=fm.querySelector('.fm-sv');sv.hidden=!(sw||orig);sv.textContent=sw?'Save pick, instead of the '+p.name.toLowerCase():orig?'Save pick, instead of the '+orig.name.toLowerCase():'';
+  fm.querySelector('.fm-f').textContent=sw?d.s:d.f;fm.querySelector('.fm-r').textContent=d.r;fm.querySelector('.fm-r').hidden=!d.r;
+  fm.querySelector('.fm-pv').hidden=fm.querySelector('.fm-nx').hidden=list.length<2;
+  fm.querySelector('.fm-live').textContent='Piece '+(i+1)+' of '+list.length+': '+(sw?p.save_name:p.name)}
+function open(){list=ids();back=document.activeElement;show(0);fm.hidden=false;var lv=fm.querySelector('.fm-live'),tx=lv.textContent;lv.textContent='';setTimeout(function(){lv.textContent=tx},60);document.documentElement.style.overflow='hidden';fm.querySelector('.fm-x').focus()}
+function close(){fm.hidden=true;document.documentElement.style.overflow='';if(back)back.focus({preventScroll:true})}
+$('.fit-open').addEventListener('click',open);fm.querySelector('.fm-x').addEventListener('click',close);
+fm.querySelector('.fm-pv').addEventListener('click',function(){show(i-1)});fm.querySelector('.fm-nx').addEventListener('click',function(){show(i+1)});
+addEventListener('keydown',function(ev){if(fm.hidden)return;
+  if(ev.key==='Escape')close();else if(ev.key==='ArrowLeft')show(i-1);else if(ev.key==='ArrowRight')show(i+1);
+  else if(ev.key==='Tab'){var q=[].slice.call(fm.querySelectorAll('button')).filter(function(x){return !x.hidden}),n=q.indexOf(document.activeElement);ev.preventDefault();q[(n+(ev.shiftKey?-1:1)+q.length)%q.length].focus()}});
+var x0=null,y0=0;fm.addEventListener('touchstart',function(ev){if(ev.touches.length>1){x0=null;return}x0=ev.touches[0].clientX;y0=ev.touches[0].clientY},{passive:true});
+fm.addEventListener('touchend',function(ev){if(x0===null)return;var t=ev.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy))show(i+(dx<0?1:-1))},{passive:true});
+(window.mdHooks=window.mdHooks||[]).push(label);label();
+})();
+
+</script>
 </body></html>
