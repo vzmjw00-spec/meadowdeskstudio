@@ -1,5 +1,59 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MeadowDesk</title>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#faf6f0;color:#2e2520;font-family:Georgia,serif;text-align:center}h1{font-weight:500;font-size:44px;color:#24493a;margin:0}p{font-family:system-ui,sans-serif;color:#7a6b60}</style>
-</head><body><div><h1>MeadowDesk</h1><p>Thoughtful digital downloads for everyday life</p></div></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MeadowDesk - Winter Capsule Wardrobe Guide</title>
+<meta name="description" content="Winter That Looks Expensive: a winter capsule wardrobe guide with 30 outfits from 23 pieces. Printable PDF + live page, $19 on Etsy.">
+<meta property="og:title" content="Winter That Looks Expensive - MeadowDesk">
+<meta property="og:description" content="30 outfits from 23 pieces. Printable PDF + live page, $19 on Etsy.">
+<meta property="og:image" content="https://meadowdeskstudio.com/img/guide-cover.jpg">
+<meta property="og:url" content="https://meadowdeskstudio.com/">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/favicon.png">
+<style>
+:root{--bg:#faf6f0;--ink:#2e2520;--green:#274839;--gold:#b88f46;--muted:#7a6b60;--card:#fffaf2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:1040px;margin:0 auto;padding:28px 16px 24px;min-height:100vh;display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:18px}
+header img{width:48px;height:48px;border-radius:50%}
+header span{font-family:Georgia,serif;font-size:26px;color:var(--green);letter-spacing:.5px}
+.guide{display:grid;gap:18px;align-items:center;flex:1}
+.cover{width:100%;height:auto;max-width:300px;margin:0 auto;aspect-ratio:1;border-radius:14px;box-shadow:0 18px 40px rgba(46,37,32,.12);display:block}
+.text{text-align:center}
+.kicker{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:Georgia,serif;font-weight:400;font-size:34px;line-height:1.12;color:var(--green);margin:0 0 12px}
+.facts{font-size:16px;color:var(--muted);margin:0 0 6px}
+.price{font-family:Georgia,serif;font-size:26px;color:var(--ink);margin:10px 0 18px}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-size:17px;font-weight:700;padding:16px 34px;border-radius:999px;min-width:240px;transition:background .2s}
+.btn:hover,.btn:focus-visible{background:#1c3529}
+.shop{display:inline-block;margin-top:18px;color:var(--green);font-size:15px;text-underline-offset:3px}
+footer{text-align:center;font-size:13px;color:var(--muted);margin-top:32px}
+@media(min-width:860px){
+  main{padding-top:40px}
+  .guide{grid-template-columns:1.1fr 1fr;gap:56px}
+  .cover{max-width:520px}
+  .text{text-align:left}
+  h1{font-size:46px}
+}
+</style>
+</head>
+<body>
+<main>
+  <header><img src="img/emblem.jpg" alt="" width="48" height="48"><span>MeadowDesk</span></header>
+  <section class="guide">
+    <img class="cover" src="img/guide-cover.jpg" srcset="img/guide-cover-600.jpg 600w, img/guide-cover.jpg 1000w" sizes="(min-width:860px) 520px, 100vw" alt="Winter capsule wardrobe guide: same budget, different look" width="1000" height="1000">
+    <div class="text">
+      <p class="kicker">Winter capsule wardrobe guide</p>
+      <h1>Winter That Looks Expensive</h1>
+      <p class="facts">30 outfits · 23 pieces · printable PDF + live page</p>
+      <p class="price">$19</p>
+      <a class="btn" href="https://meadowdesk.etsy.com/listing/4602437507/winter-capsule-wardrobe-guide-for-women">Get it on Etsy</a><br>
+      <a class="shop" href="https://meadowdesk.etsy.com">Visit the MeadowDesk shop on Etsy</a>
+    </div>
+  </section>
+  <footer>© MeadowDesk 2026</footer>
+</main>
+</body>
+</html>
